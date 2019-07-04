@@ -26,13 +26,14 @@
 		&:before{
 			content: "";
 			position: absolute;
+			top: -50px;
 			left: 0;
 			width: 100%;
 			
 			background-image: url('./arcade.png');
 			background-repeat: no-repeat;
 			background-position: center;
-			padding-top: 62%;
+			padding-top: 75%;
 			mix-blend-mode: lighten;
 		}
 
