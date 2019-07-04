@@ -1,0 +1,97 @@
+.splash {
+	background-image: url('./background.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+
+	.content{
+		display: flex;
+		padding-top: 160px;
+		padding-bottom: 100px;
+	}
+
+	.right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex: 1;
+		margin-top: 100px;
+	}
+
+	.left{
+		position: relative;
+		font-size: 0;
+		flex: 1;
+		
+		&:before{
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			
+			background-image: url('./arcade.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-top: 62%;
+			mix-blend-mode: lighten;
+		}
+
+		h1{
+			padding: 30px;
+			display: inline-block;
+			margin-top: 60px;
+			margin-left: 210px;
+			margin-bottom: 0;
+			font-size: 120px;
+			background-image: url('./EkoLogo.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100%;
+			color: rgba(255,255,255, 0);
+		}
+
+		h2{
+			position: relative;
+			top: -28px;
+			margin: 0;
+			margin-left: 210px;
+			font-size: 32px;
+			text-transform: uppercase;
+			animation: neon3 1.5s ease-in-out infinite alternate;
+
+			@keyframes neon3 {
+				from {
+					text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+				}
+				to {
+					text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+				}
+			}
+			
+		}
+		
+	}
+
+	h2{
+		font-size: 52px;
+		font-weight: 400;
+		margin: 0;
+
+
+		em{
+			color: #ebab19;
+			text-transform: uppercase;
+			font-style: normal;
+		}
+	}
+
+	h3{
+		font-size: 26px;
+		font-weight: 300;
+		max-width: 500px;
+	}
+
+	.ctaButton{
+		margin-top: 15px;
+	}
+}
