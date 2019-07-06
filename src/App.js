@@ -4,6 +4,7 @@ import Splash from "./components/splash/Splash";
 import Header from "./components/header/Header";
 import Tech from "./components/tech/Tech";
 import Gallery from "./components/gallery/Gallery";
+import Jobs from "./components/jobs/Jobs";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Splash/>
       <Tech/>
       <Gallery/>
+      <Jobs/>
     </div>
   );
 }

@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5{
 h4{
   font-size: 43px;
   position: relative;
+  text-align: left;
   &:before{
     content: "";
     position: absolute;
@@ -44,6 +45,7 @@ a{
 .App {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 .App-logo {
@@ -79,4 +81,7 @@ a{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 15px;
+
+  display: flex;
+  flex-direction: column;
 }
