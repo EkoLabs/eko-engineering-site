@@ -1,9 +1,5 @@
 import React from "react";
 import "./Jobs.scss";
-import NewYorker from "../../media/NewYorker.png";
-import Forbes from "../../media/Forbes.png";
-import RollingStone from "../../media/RollingStone.png";
-import Polygon from "../../media/Polygon.png";
 
 function Jobs(props){
     props = {
