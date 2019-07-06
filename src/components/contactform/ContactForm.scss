@@ -1,0 +1,65 @@
+.contact {
+  form{
+    max-width: 600px;
+    text-align: left;
+  }
+
+  input, textarea{
+    background: transparent;
+    color: white;
+
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .form-field {
+    position: relative;
+    margin: 50px 0px;
+
+    .input-text {
+      padding: 0;
+      font-family: "Raleway", sans-serif;
+      //text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 15px;
+      width: 100%;
+      border-width: 0 0 1px 0;
+      border-color: #fff;
+      transition: all 200ms ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .label {
+      position: absolute;
+      font-family: "Raleway", sans-serif;
+      //text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 15px;
+      color: #888;
+      pointer-events: none;
+      top: -10px;
+      left: 0;
+      transition: all 200ms ease-in-out;
+    }
+
+    textarea {
+      resize: none;
+      padding: 0;
+      height: 100px;
+    }
+  }
+
+  .input-text:focus + .label,
+  .input-text.has-value + .label {
+    top: -25px;
+  }
+
+  .ctaButton{
+    border-color: var(--color2);
+  }
+}

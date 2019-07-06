@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
 
+:root{
+  --color2: #f2395a;
+}
 
 h1, h2, h3, h4, h5{
   font-family: 'Raleway', sans-serif;
@@ -81,6 +84,8 @@ a{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 15px;
+  background: transparent;
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
