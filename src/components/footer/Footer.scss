@@ -1,0 +1,28 @@
+.footer {
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-weight: bold; // font-weight is action funky when hovering. It affects other titles' weight.
+
+      &:hover {
+        color: #96263a;
+      }
+  }
+
+}

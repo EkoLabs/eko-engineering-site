@@ -8,6 +8,7 @@ import Jobs from "./components/jobs/Jobs";
 import ContactForm from "./components/contactform/ContactForm";
 import Projects from "./components/projects/Projects";
 import Investors from "./components/investors/Investors";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Investors/>
       <Jobs/>
       <ContactForm/>
+      <Footer/>
     </div>
   );
 }
