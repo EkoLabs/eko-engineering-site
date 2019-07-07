@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     margin: 100px auto;
+    justify-content: flex-start;
   }
 
   ul {
@@ -11,18 +12,21 @@
     padding: 0;
     list-style-type: none;
     text-align: left;
+    margin-right: 150px;
   }
 
   li {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .title {
     font-weight: bold; // font-weight is action funky when hovering. It affects other titles' weight.
+    color: white;
+    font-size: 12px;
 
-      &:hover {
-        color: #96263a;
-      }
+     &:hover {
+       color: #96263a;
+     }
   }
 
 }
