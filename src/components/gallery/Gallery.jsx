@@ -37,8 +37,8 @@ function Gallery(props){
         ]
     }
 
-    let items = props.items.map(item =>(
-        <li className="item">
+    let items = props.items.map((item, i)=>(
+        <li className="item" key={i}>
             <a href={item.URL}>
                 <img src={item.imageURL} />
                 <div className="title">{item.title}</div>

@@ -12,7 +12,7 @@ function Splash() {
                 <div className="right">
                     <h2>We're all about <em>choice</em></h2>
                     <h3>Join our team and help us blur the lines between TV and video games</h3>
-                    <a className="ctaButton" href="/jobs">Zoom in</a>
+                    <a className="ctaButton" href="/#careers">Zoom in</a>
                 </div>
             </div>
         </section>

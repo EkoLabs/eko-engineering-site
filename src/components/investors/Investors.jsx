@@ -29,8 +29,8 @@ function Investors(props) {
         ]
     }
 
-    let items = props.items.map(item => (
-        <li className="item">
+    let items = props.items.map((item, i) => (
+        <li className="item" key={i}>
             <img src={item.imageURL} alt="Eko investor" />
         </li>
     ));

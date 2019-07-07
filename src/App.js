@@ -1,28 +1,15 @@
 import React from 'react';
 import './App.scss';
-import Splash from "./components/splash/Splash";
-import Header from "./components/header/Header";
-import Tech from "./components/tech/Tech";
-import Gallery from "./components/gallery/Gallery";
-import Jobs from "./components/jobs/Jobs";
-import ContactForm from "./components/contactform/ContactForm";
-import Projects from "./components/projects/Projects";
-import Investors from "./components/investors/Investors";
-import Footer from "./components/footer/Footer";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Homepage from "./components/homepage/Homepage";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Splash/>
-      <Tech/>
-      <Projects/>
-      <Gallery/>
-      <Investors/>
-      <Jobs/>
-      <ContactForm/>
-      <Footer/>
-    </div>
+      <Router>
+        <div className="App">
+          <Route path="/" exact component={Homepage} />
+        </div>
+      </Router>
   );
 }
 

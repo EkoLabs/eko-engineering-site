@@ -1,12 +1,12 @@
 import React, { useEffect} from "react";
 import BezierEasing from  "bezier-easing"
 import "./Projects.scss";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 
-
+let itemsCoords = [];
 function Projects(){
     let gridRef = React.createRef();
-    let itemsCoords = [];
 
     let hoverTimeout;
 
@@ -95,14 +95,16 @@ function Projects(){
     }
 
     return (
-        <section className="projects">
-            <div className="content">
-                <h4>Driven by Eko technology</h4>
-            </div>
-            <ul className="hexGrid" ref={gridRef}>
-            {hexGrid}
-            </ul>
-        </section>
+        <ScrollableAnchor id={'ecosystem'}>
+            <section className="projects">
+                <div className="content">
+                    <h4>Driven by Eko technology</h4>
+                </div>
+                <ul className="hexGrid" ref={gridRef}>
+                {hexGrid}
+                </ul>
+            </section>
+        </ScrollableAnchor>
     )
 }
 

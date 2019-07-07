@@ -1,4 +1,6 @@
 import React from "react";
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 import "./Jobs.scss";
 
 function Jobs(props){
@@ -43,28 +45,30 @@ function Jobs(props){
         ]
     }
     
-    let positionItems = props.positions.map(positionData => (
-        <li className="position">
+    let positionItems = props.positions.map((positionData , i)=> (
+        <li className="position" key={i}>
             <a href={positionData.URL} className="title">{positionData.title}</a>
             <div className="location">{positionData.location}</div>
         </li>
     ))
 
     return (
-        <section className="jobs">
-            <div className="content">
-                <h4>Open positions</h4>
-                <ul className="positions">
-                    {positionItems}
-                </ul>
+        <ScrollableAnchor id={'careers'}>
+            <section className="jobs">
+                <div className="content">
+                    <h4>Open positions</h4>
+                    <ul className="positions">
+                        {positionItems}
+                    </ul>
 
-                <div className="ctaDescription">
-                    <em>Didn't find a good fit? Send us your resume anyway</em>
-                    We’re always looking for cool people to join our team. Apply now and we’ll reach out to you whenever the right opportunity comes up.
+                    <div className="ctaDescription">
+                        <em>Didn't find a good fit? Send us your resume anyway</em>
+                        We’re always looking for cool people to join our team. Apply now and we’ll reach out to you whenever the right opportunity comes up.
+                    </div>
+                    <a href="#" className="ctaButton">Send resume</a>
                 </div>
-                <a href="#" className="ctaButton">Send resume</a>
-            </div>
-        </section>
+            </section>
+        </ScrollableAnchor>
     );
 }
 

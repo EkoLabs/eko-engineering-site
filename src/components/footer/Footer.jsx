@@ -59,7 +59,7 @@ function Footer(props){
                 },
                 {
                     title: 'Twitter',
-                    URL: 'https://twitter.com/ekovideo'
+                    URL: 'https://twitter.com/ekoengi'
                 },
                 {
                     title: 'LinkedIn',
@@ -83,10 +83,10 @@ function Footer(props){
         ]
     }
     
-    let footerItems = props.columns.map(column => (
-        <ul className="column">
+    let footerItems = props.columns.map((column, i) => (
+        <ul className="column" key={i}>
             {column.map(item => (
-                <li className="item">
+                <li className="item" key={item.title}>
                     <a className="title" href={item.URL} target="_blank">{item.title}</a>
                 </li>
             ))}
