@@ -31,6 +31,13 @@
     font-size: 14px;
   }
 
+  em{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0px;
+  }
+
   .ctaButton{
     display: inline-flex;
     border-color: var(--color2);
