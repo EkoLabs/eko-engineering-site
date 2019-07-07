@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tech.scss";
-
 import videoPlaceholder from "./video_placeholder.png";
+import techVideo from './tech_video.mp4'
 
 function Tech(){
     return (
@@ -9,7 +9,10 @@ function Tech(){
             <div className="content">
                 <div className="left">
                     <div className="preview">
-                        <img src={videoPlaceholder} />
+                        <video autoPlay loop muted playsInline webkit-playsinline="true" poster={videoPlaceholder}>
+                            <source src={techVideo} type='video/mp4' />
+                            <img src={videoPlaceholder} title='Your browser does not support the <video> tag' alt="Eko.Enigneering"/>
+                        </video>
                     </div>
                 </div>
                 <div className="right">
