@@ -7,6 +7,7 @@ import Gallery from "./components/gallery/Gallery";
 import Jobs from "./components/jobs/Jobs";
 import ContactForm from "./components/contactform/ContactForm";
 import Projects from "./components/projects/Projects";
+import Investors from "./components/investors/Investors";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Tech/>
       <Projects/>
       <Gallery/>
+      <Investors/>
       <Jobs/>
       <ContactForm/>
     </div>
