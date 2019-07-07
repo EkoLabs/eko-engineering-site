@@ -6,6 +6,7 @@ import Tech from "./components/tech/Tech";
 import Gallery from "./components/gallery/Gallery";
 import Jobs from "./components/jobs/Jobs";
 import ContactForm from "./components/contactform/ContactForm";
+import Projects from "./components/projects/Projects";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header/>
       <Splash/>
       <Tech/>
+      <Projects/>
       <Gallery/>
       <Jobs/>
       <ContactForm/>
