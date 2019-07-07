@@ -1,5 +1,4 @@
 import React from "react";
-import { HashLink as Link } from 'react-router-hash-link';
 import "./Tech.scss";
 import videoPlaceholder from "./video_placeholder.png";
 import techVideo from './tech_video.mp4'
