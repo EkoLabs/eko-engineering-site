@@ -1,16 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.b73e3692.chunk.css",
-    "main.js": "/static/js/main.9d8cf760.chunk.js",
-    "main.js.map": "/static/js/main.9d8cf760.chunk.js.map",
+    "main.css": "/static/css/main.e9ab72bf.chunk.css",
+    "main.js": "/static/js/main.ccac39c9.chunk.js",
+    "main.js.map": "/static/js/main.ccac39c9.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.3310f33a.chunk.js": "/static/js/2.3310f33a.chunk.js",
-    "static/js/2.3310f33a.chunk.js.map": "/static/js/2.3310f33a.chunk.js.map",
+    "static/js/2.28e01130.chunk.js": "/static/js/2.28e01130.chunk.js",
+    "static/js/2.28e01130.chunk.js.map": "/static/js/2.28e01130.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b2817a6a0c911d61660ece0f00ad621f.js": "/precache-manifest.b2817a6a0c911d61660ece0f00ad621f.js",
+    "precache-manifest.3b63783b770bc06de10bf9dfcfd188fb.js": "/precache-manifest.3b63783b770bc06de10bf9dfcfd188fb.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b73e3692.chunk.css.map": "/static/css/main.b73e3692.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "static/css/main.e9ab72bf.chunk.css.map": "/static/css/main.e9ab72bf.chunk.css.map",
+    "static/media/Splash.scss": "/static/media/background.3e57ba37.png",
+    "static/media/Forbes.png": "/static/media/Forbes.13d4041d.png",
+    "static/media/Intel.svg": "/static/media/Intel.87d8ddeb.svg",
+    "static/media/MGM.svg": "/static/media/MGM.f9d3c29b.svg",
+    "static/media/NewYorker.png": "/static/media/NewYorker.25b99f96.png",
+    "static/media/Polygon.png": "/static/media/Polygon.1df1cb02.png",
+    "static/media/RollingStone.png": "/static/media/RollingStone.fc47e890.png",
+    "static/media/Samsung.svg": "/static/media/Samsung.04d441cf.svg",
+    "static/media/Sequoia.svg": "/static/media/Sequoia.86b3e8eb.svg",
+    "static/media/Sony.svg": "/static/media/Sony.a4e20ff6.svg",
+    "static/media/Header.scss": "/static/media/ekoengineering_logo.777fc117.svg",
+    "static/media/tech_video.mp4": "/static/media/tech_video.9be249d2.mp4",
+    "static/media/video_placeholder.png": "/static/media/video_placeholder.bd845230.png"
   }
 }
