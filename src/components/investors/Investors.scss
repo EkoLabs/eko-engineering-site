@@ -21,30 +21,34 @@
     align-items: center;
     flex-wrap: wrap;
 
-    img {
-      max-height: 56px;
-      margin-bottom: 25px;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+
+      .inner-row {
+        display: flex;
+      }
+
+      .item {
+        height: 100px;
+        width: 100px;
+        margin-right: 25px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        transition: .2s ease transform;
+
+        img {
+          max-width: 56px;
+          max-height: 56px;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
-
   }
-
-  img {
-    width: 150px;
-    fill: white;
-
-    &[src*=Sequoia],
-    &[src*=Warner],
-    &[src*=Intel] {
-      max-width: 56px;
-    }
-
-    &[src*=MGM] {
-      max-width: 98px;
-    }
-  }
-
-  .item {
-    margin-right: 25px;
-  }
-  
 }
