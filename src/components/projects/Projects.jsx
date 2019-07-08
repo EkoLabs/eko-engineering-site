@@ -45,17 +45,18 @@ function Projects(){
 
     function mouseLeave(index){
         hoverTimeout = setTimeout(()=>{
-            let hexItems = gridRef.current.querySelectorAll('.hex');
-            let currentItem = hexItems[index];
-            for (let x=0; x<hexItems.length; x++){
-                let gridItem = hexItems[x];
-                gridItem.style.transform= ``;
+            if (gridRef.current) {
+                let hexItems = gridRef.current.querySelectorAll('.hex');
+                let currentItem = hexItems[index];
+                for (let x = 0; x < hexItems.length; x++) {
+                    let gridItem = hexItems[x];
+                    gridItem.style.transform = ``;
+                }
+                currentItem.style.zIndex = 1;
+                currentItem.classList.remove("hover");
+                gridRef.current.classList.remove("active");
             }
-            currentItem.style.zIndex = 1;
-            currentItem.classList.remove("hover");
-            gridRef.current.classList.remove("active");
         }, 300);
-
     }
 
     let hexGrid = [];
