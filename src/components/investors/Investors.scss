@@ -3,6 +3,7 @@
   ul {
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
   .title {
@@ -18,9 +19,11 @@
   .items {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     img {
-      max-height: 65px;
+      max-height: 56px;
+      margin-bottom: 25px;
     }
 
   }
@@ -28,23 +31,20 @@
   img {
     width: 150px;
     fill: white;
-  }
 
-  .item {
-    display: flex;
-    flex-direction: column;
-    margin-right: 30px;
-  }
-  
-  .item:first-child {
-    img:first-child {
-      width: 65px;
-      margin-right: 30px;
+    &[src*=Sequoia],
+    &[src*=Warner],
+    &[src*=Intel] {
+      max-width: 56px;
+    }
+
+    &[src*=MGM] {
+      max-width: 98px;
     }
   }
 
-  .item:last-child {
-    margin-left: 10px;
+  .item {
+    margin-right: 25px;
   }
-
+  
 }
