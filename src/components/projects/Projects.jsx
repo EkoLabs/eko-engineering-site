@@ -4,6 +4,71 @@ import "./Projects.scss";
 import ScrollableAnchor from "react-scrollable-anchor";
 
 
+let data = {
+    projects: [
+        {
+            title: "Mind Blown",
+            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/promotions/4sbgwy/landingpages_mindblown.png",
+            URL: "https://helloeko.com/mindblown/stop-with-these-questions?autoplay=true"
+        },
+        {
+            title: "Bob Dylan",
+            subtitle: "Like a Rolling Stone",
+            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/projects/ljfeyc/Bob%20Dylan_Rolling_Stone_medium.png",
+            URL: "https://helloeko.com/music/like-a-rolling-stone?autoplay=true"
+        },
+        {
+            title: "Marvel",
+            subtitle: "Coke",
+            imageURL: "https://d2zoj4vo9uf0uk.cloudfront.net/wp-content/uploads/2016/02/07010009/ad_sharing_image_1920x1080.jpg",
+            URL: "https://helloeko.com/v/coke"
+        },
+        {
+            title: "Coldplay",
+            subtitle: "Ink",
+            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/projects/oEZGcv/152112809764508.UHENiOdJpbM7vJfbnu3B_height640.png",
+            URL: "https://helloeko.com/music/coldplay-ink?autoplay=true"
+        },
+        {
+            title: "Tasty",
+            subtitle: "Create Your Own: Chocolate Chip Cookie",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/production/projects/An9Q5B/neta_eko_tasty_68_low_res_768x432-190625133839.jpg",
+            URL: "https://helloeko.com/buzzfeed-tasty-eko-fast/cookies-fast?autoplay=true"
+        },
+        {
+            title: "That Moment When",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/b706223d6acae0a7f478f77e2eb82be7.jpg",
+            URL: "https://helloeko.com/tmw/101?autoplay=true"
+        },
+        {
+            title: "#WarGames",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/836b2709232e01b48f203673c213e2b8.jpg",
+            URL: "https://helloeko.com/wargames/episode-one-chasing-bryce?autoplay=true"
+        },
+        {
+            title: "Charlie Gets Fired",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/falcon_storage/production/projects/agvsRG/charlie%201-171107213501-768.jpg",
+            URL: "https://helloeko.com/charlie/charlie-pitches-a-pilot?autoplay=true"
+        },
+        {
+            title: "Jeff Buckley",
+            subtitle: "Just Like a Woman",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/falcon_storage/production/projects/InWy6m/jeff%20buckley_preview%202-171110165337.jpeg",
+            URL: "https://helloeko.com/v/jeff-buckley-just-like-a-woman?autoplay=true"
+        },
+        {
+            title: "Possibilia",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/staging/episode/D3iXb9/Possibillia768x432_2.jpg",
+            URL: "https://helloeko.com/v/possibilia?autoplay=true"
+        },
+        {
+            title: "Buzzfeed",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/remote_efu/upload/a912253eeec7e76bf25fc0024f61bbaa.jpg",
+            URL: "https://helloeko.com/buzzfeed-x-eko/V5oPXz?autoplay=true"
+        },
+    ]
+};
+
 let itemsCoords = [];
 function Projects(){
     let gridRef = React.createRef();
@@ -65,9 +130,12 @@ function Projects(){
         16,17,18,19,
          28,29,30
     ];
+    let projectDataIndex = 0;
     for (let x=0;x<35;x++){
         let hexItem;
-        if (activeHexes.includes(x)) {
+        let itemData = data.projects[projectDataIndex];
+
+        if (activeHexes.includes(x) && itemData) {
                 hexItem = (
                     <li className="hex"
                         key={x}
@@ -76,12 +144,14 @@ function Projects(){
                     >
                         <div className="hexIn">
                             <a className="hexLink" href="#">
-                                <img src={`https://picsum.photos/300/300?${Math.random().toFixed(2)}`} alt=""/>
-                                <div className="title">distance</div>
+                                <img src={itemData.imageURL} alt=""/>
+                                <div className="title">{itemData.title}</div>
                             </a>
                         </div>
                     </li>
                 );
+
+                projectDataIndex++;
         } else {
             hexItem = (
                 <li className="hex" key={x}>

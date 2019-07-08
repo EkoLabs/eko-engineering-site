@@ -1,3 +1,5 @@
+@import "../../breakpoints";
+
 .projects{
 	position: relative;
 	overflow: hidden;
@@ -11,7 +13,6 @@
 		overflow: hidden;
 		font-size: 15px;
 		list-style-type: none;
-		margin-left: calc(-50% + 35vw);
 		padding: 0;
 		padding-bottom: 2.5vw;
 		z-index: 1;
@@ -23,13 +24,68 @@
 		height: 12px;
 		z-index: 5;
 	}
-	
-	.hex {
-		width: 10vw; /* = 100 / 15 */
+
+	.hex{
 		transition: all 0.4s ease-out;
 	}
-	.hex:nth-child(23n+13){ /* first hexagon of even rows */
-		margin-left: 5vw;  /* = width of .hex / 2  to indent even rows */
+
+	@include for-phone-only {
+		.hexGrid {
+			width: 280vw;
+			margin-left: calc(-50% - 52vw);
+		}
+
+		.hex {
+			width: 23.3vw;
+		}
+		.hex:nth-child(23n+13){ /* first hexagon of even rows */
+			margin-left: 11.65vw;  /* = width of .hex / 2  to indent even rows */
+		}
+	}
+
+
+	@include for-tablet-portrait-up {
+		.hexGrid {
+			width: 240vw;
+			margin-left: calc(-50% - 30vw);
+		}
+
+		.hex {
+			width: 20vw;
+		}
+		.hex:nth-child(23n+13){ /* first hexagon of even rows */
+			margin-left: 10vw;  /* = width of .hex / 2  to indent even rows */
+		}
+	}
+
+
+
+	@include for-tablet-landscape-up {
+		.hexGrid {
+			width: 180vw;
+			margin-left: calc(-50%);
+		}
+
+		.hex {
+			width: 15vw;
+		}
+		.hex:nth-child(23n+13){ /* first hexagon of even rows */
+			margin-left: 7.5vw;  /* = width of .hex / 2  to indent even rows */
+		}
+	}
+
+	@include for-desktop-up {
+		.hexGrid {
+			width: 120vw;
+			margin-left: calc(-50% + 35vw);
+		}
+
+		.hex {
+			width: 10vw;
+		}
+		.hex:nth-child(23n+13){ /* first hexagon of even rows */
+			margin-left: 5vw;  /* = width of .hex / 2  to indent even rows */
+		}
 	}
 
 	.hexIn{
@@ -95,48 +151,5 @@
 			opacity: 1;
 		}
 	}
-	
-	//
-	//@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
-	//	.hexGrid{
-	//		padding-bottom: 5.5%
-	//	}
-	//	.hex {
-	//		width: 25%; /* = 100 / 4 */
-	//	}
-	//	.hex:nth-child(7n+5){ /* first hexagon of even rows */
-	//		margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
-	//	}
-	//}
-	//
-	//@media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
-	//	.hexGrid{
-	//		padding-bottom: 7.4%
-	//	}
-	//	.hex {
-	//		width: 33.333%; /* = 100 / 3 */
-	//	}
-	//	.hex:nth-child(5n+4){ /* first hexagon of even rows */
-	//		margin-left:16.666%;  /* = width of .hex / 2  to indent even rows */
-	//	}
-	//}
-	//
-	//@media (max-width: 600px) { /* <- 2-1  hexagons per row */
-	//	.hexGrid{
-	//		padding-bottom: 11.2%
-	//	}
-	//	.hex {
-	//		width: 50%; /* = 100 / 3 */
-	//	}
-	//	.hex:nth-child(3n+3){ /* first hexagon of even rows */
-	//		margin-left:25%;  /* = width of .hex / 2  to indent even rows */
-	//	}
-	//}
-	//
-	//@media (max-width: 400px) {
-	//	.hexGrid {
-	//		font-size: 13px;
-	//	}
-	//}
 
 }
