@@ -7,7 +7,6 @@ import "./Header.scss";
 configureAnchors({offset: -60, scrollDuration: 600})
 
 function Header({ location: { hash } }){
-    console.log('11',hash);
     return (
         <header>
            <a className="logo">Eko <span>Engineering</span></a>
