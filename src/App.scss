@@ -37,6 +37,11 @@ section {
   .content{
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 25px;
+
+    @include for-desktop-up{
+      padding: 0 0;
+    }
   }
 }
 
