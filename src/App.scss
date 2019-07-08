@@ -96,3 +96,64 @@ a{
   display: flex;
   flex-direction: column;
 }
+
+.bm-burger-button {
+  position: fixed;
+  height: 20px;
+  width: 20px;
+  top: 38px;
+  right: 50px;
+
+  button {
+    backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    display: none;
+  }
+
+}
+
+.menu-open {
+  overflow: hidden; // Prevents scrolling inside mobile menu
+}
+
+.bm-menu-wrap {
+  background-color: black;
+  padding: 110px 0;
+  width: 100% !important;
+
+  .bm-cross-button {
+    height: 20px !important;
+    width: 20px !important;
+    top: 38px !important;
+    right: 50px !important;
+    
+    button {
+      backface-visibility: hidden;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+      outline: 0;
+    }
+  }
+
+  .bm-item {
+    color: white;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 20px;
+    backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+
+}
