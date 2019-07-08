@@ -2,9 +2,9 @@
 
   .content {
     display: flex;
-    justify-content: space-between;
     margin: 100px auto;
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   ul {
