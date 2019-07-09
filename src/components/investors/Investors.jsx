@@ -81,7 +81,7 @@ function Investors(props) {
             {row.map(innerRow => (
                 <ul className="inner-row">
                     {innerRow.map(item => (
-                        <a target="_blank" href={item.URL}>
+                        <a target="_blank" rel="noopener noreferrer" href={item.URL}>
                             <li className="item" key={i}>
                                 <img src={item.imageURL} alt="Eko investor" />
                             </li>
