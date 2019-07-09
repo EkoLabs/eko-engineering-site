@@ -17,79 +17,64 @@ function Investors(props) {
     props = {
         title: "Backed by top investors",
         items: [
-            [
-                [
-                    {
-                        imageURL: Sequoia,
-                        URL: "https://www.sequoiacap.com/companies/eko/"
-                    },
-                    {
-                        imageURL: NEA,
-                        URL: "http://www.nea.com/"
-                    },
-                    {
-                        imageURL: Marker,
-                        URL: "http://www.marker-llc.com/"
-                    }
-                ],
-                [
-                    {
-                        imageURL: Innovation,
-                        URL: "http://www.innovationendeavors.com/"
-                    },
-                    {
-                        imageURL: Sony,
-                        URL: "http://www.sonypictures.com/corp/press_releases/2016/06_16/061616_interlude.html"
-                    },
-                    {
-                        imageURL: MGM,
-                        URL: "http://www.businesswire.com/news/home/20151208005564/en/Interlude-Announces-Strategic-Investment-Metro-Goldwyn-Mayer-Studios"
-                    }
-                ]
-            ],
-            [
-                [
-                    {
-                        imageURL: Intel,
-                        URL: "http://www.intelcapital.com/"
-                    },
-                    {
-                        imageURL: Warner,
-                        URL: "http://www.wmg.com/news/warner-music-group-becomes-founding-major-label-partner-interlude-music-19996"
-                    },
-                    {
-                        imageURL: Samsung,
-                        URL: "http://www.businesswire.com/news/home/20151105005316/en/Samsung-Strategic-Investment-Interlude"
-                    }
-                ],
-                [
-                    {
-                        imageURL: Wpp,
-                        URL: "http://www.wpp.com/wpp/companies/atinterlude/"
-                    },
-                    {
-                        imageURL: Walmart,
-                        URL: "https://news.walmart.com/2018/10/11/walmart-and-eko-announce-joint-venture-to-create-interactive-storytelling-for-entertainment-and-retail"
-                    }
-                ]
-            ]
+            {
+                imageURL: Sequoia,
+                URL: "https://www.sequoiacap.com/companies/eko/"
+            },
+            {
+                imageURL: NEA,
+                URL: "http://www.nea.com/"
+            },
+            {
+                imageURL: Marker,
+                URL: "http://www.marker-llc.com/"
+            },
+            {
+                imageURL: Innovation,
+                URL: "http://www.innovationendeavors.com/"
+            },
+            {
+                imageURL: Sony,
+                URL:
+                    "http://www.sonypictures.com/corp/press_releases/2016/06_16/061616_interlude.html"
+            },
+            {
+                imageURL: MGM,
+                URL:
+                    "http://www.businesswire.com/news/home/20151208005564/en/Interlude-Announces-Strategic-Investment-Metro-Goldwyn-Mayer-Studios"
+            },
+            {
+                imageURL: Intel,
+                URL: "http://www.intelcapital.com/"
+            },
+            {
+                imageURL: Warner,
+                URL:
+                    "http://www.wmg.com/news/warner-music-group-becomes-founding-major-label-partner-interlude-music-19996"
+            },
+            {
+                imageURL: Samsung,
+                URL:
+                    "http://www.businesswire.com/news/home/20151105005316/en/Samsung-Strategic-Investment-Interlude"
+            },
+            {
+                imageURL: Wpp,
+                URL: "http://www.wpp.com/wpp/companies/atinterlude/"
+            },
+            {
+                imageURL: Walmart,
+                URL:
+                    "https://news.walmart.com/2018/10/11/walmart-and-eko-announce-joint-venture-to-create-interactive-storytelling-for-entertainment-and-retail"
+            }
         ]
-    }
+    };
 
-    let items = props.items.map((row, i) => (
-        <ul className="row">
-            {row.map(innerRow => (
-                <ul className="inner-row">
-                    {innerRow.map(item => (
-                        <a target="_blank" rel="noopener noreferrer" href={item.URL}>
-                            <li className="item" key={i}>
-                                <img src={item.imageURL} alt="Eko investor" />
-                            </li>
-                        </a>
-                    ))}
-                </ul>
-            ))}
-        </ul>
+    let items = props.items.map((item, i) => (
+        <a target="_blank" rel="noopener noreferrer" href={item.URL}>
+            <li className="item" key={i}>
+                <img src={item.imageURL} alt="Eko investor" />
+            </li>
+        </a>
     ));
 
     return (
