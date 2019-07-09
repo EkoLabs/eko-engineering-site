@@ -43,9 +43,11 @@ function About(props) {
     return (
         <ScrollableAnchor id={'about'}>
             <section>
-                <div className="content about">
-                    <h4>{props.title}</h4>
-                    {items}
+                <div className="about-inner">
+                    <div className="content about">
+                        <h4>{props.title}</h4>
+                        {items}
+                    </div>
                 </div>
             </section>
         </ScrollableAnchor>

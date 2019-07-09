@@ -1,36 +1,39 @@
-.about {
+.about-inner {
     background-image: url(./about_bg.jpg);
     background-position: center 97%;
     background-repeat: no-repeat;
 
-    .item-container {
-        text-align: right;
+    .about {
 
-        .item {
-            display: inline-block;
-            text-align: center;
-            width: 50%;
-            padding: 0px 90px;
-            box-sizing: border-box;
+        .item-container {
+            text-align: right;
 
-            .about-title {
-                font-weight: bold;
-                margin: 10px 0;
+            .item {
+                display: inline-block;
+                text-align: center;
+                width: 50%;
+                padding: 0px 90px;
+                box-sizing: border-box;
+
+                .about-title {
+                    font-weight: bold;
+                    margin: 10px 0;
+                }
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 80px;
+                }
+            }
+
+            &:nth-child(2n) {
+                text-align: left;
             }
 
             @media screen and (max-width: 768px) {
-                width: 100%;
-                margin-bottom: 80px;
-            }
-        }
-
-        &:nth-child(2n) {
-            text-align: left;
-        }
-
-        @media screen and (max-width: 768px) {
-            &:last-child {
-                margin-bottom: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
