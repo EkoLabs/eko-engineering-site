@@ -67,11 +67,12 @@ function ContactForm(props){
                                       name="message"
                                       required />
                         </div>
-                        <div className="form-field">
-                            <input className="input-cv" type="file" name="cv" required/>
-                            <label className="label" htmlFor="cv">CV</label>
-                        </div>
-                        
+                        { positionForm &&
+                            <div className="form-field">
+                                <input className="input-cv" type="file" name="cv" required/>
+                                <label className="label" htmlFor="cv">CV</label>
+                            </div>
+                        }
                         <div className="form-field">
                             <button type="submit"
                                     className="ctaButton"
