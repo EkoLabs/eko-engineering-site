@@ -5,6 +5,10 @@
     margin: 100px auto;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+      margin: 80px auto 20px auto;
+    }
   }
 
   ul {
@@ -13,6 +17,10 @@
     list-style-type: none;
     text-align: left;
     margin-right: 150px;
+
+    @media screen and (max-width: 984px) {
+      margin-bottom: 40px;
+    }
   }
 
   li {

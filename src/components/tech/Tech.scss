@@ -5,6 +5,11 @@
     display: flex;
     padding-top: 160px;
     padding-bottom: 100px;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   .right {
@@ -13,6 +18,15 @@
     align-items: center;
     flex: 1;
     text-align: left;
+
+    .preview {
+      display: none;
+      margin-bottom: 60px;
+
+      @media screen and (max-width: 1024px) {
+        display: block;
+      }
+    }
   }
 
   .left {
@@ -21,6 +35,11 @@
     font-size: 0;
     flex: 1;
     padding-right: 40px;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+    
   }
 
   .item{
@@ -59,7 +78,7 @@
 
   // preview
 
-  .preview{
+  .preview {
     box-shadow: #60082a 0 15px 1500px 15px;
 
     video {
