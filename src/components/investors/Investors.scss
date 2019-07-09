@@ -21,34 +21,101 @@
     align-items: center;
     flex-wrap: wrap;
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
+    a {
+      flex: 1 0 8%;
+      max-width: 10%;
 
-      .inner-row {
-        display: flex;
-      }
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+          margin-right: 20px;
+          background-color: white;
+          margin-bottom: 25px;
+          transition: .2s ease transform;
+  
+          img {
+            max-width: 56px;
+            max-height: 56px;
+          }
+  
+          &:hover {
+            transform: scale(1.2);
+          }
 
-      .item {
-        height: 100px;
-        width: 100px;
-        margin-right: 25px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 25px;
-        transition: .2s ease transform;
-
-        img {
-          max-width: 56px;
-          max-height: 56px;
+        }
+        
+        &:last-child {
+          .item {
+            margin-right: 0;
+          }
         }
 
-        &:hover {
-          transform: scale(1.2);
+        @media screen and (max-width: 1070px) {
+          flex: 1 0 16%;
+          max-width: 17%;
+
+          &:nth-child(6) {
+            .item {
+              margin-right: 0;
+            }
+          }
         }
+
+        @media screen and (max-width: 700px) {
+          flex: 1 0 20%;
+          max-width: 20%;
+
+          &:nth-child(6) {
+            .item {
+              margin-right: 20px;
+            }
+          }
+
+          &:nth-child(5n) {
+            .item {
+              margin-right: 0;
+            }
+          }
+        }
+
+        @media screen and (max-width: 510px) {
+          flex: 1 0 25%;
+          max-width: 25%;
+
+          &:nth-child(5n) {
+            .item {
+              margin-right: 20px;
+            }
+          }
+
+          &:nth-child(4n) {
+            .item {
+              margin-right: 0;
+            }
+          }
+        }
+
+        @media screen and (max-width: 410px) {
+
+          flex: 1 0 33%;
+          max-width: 33%;
+
+          &:nth-child(4n) {
+            .item {
+              margin-right: 20px;
+            }
+          }
+
+          &:nth-child(3n) {
+            .item {
+              margin-right: 0;
+            }
+          }
+        }
+
       }
     }
-  }
+
 }
