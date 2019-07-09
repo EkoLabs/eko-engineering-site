@@ -5,20 +5,26 @@ import techVideo from './tech_video.mp4'
 import ScrollableAnchor from "react-scrollable-anchor";
 
 function Tech(){
+
+    let preview = (
+        <div className="preview">
+            <video autoPlay loop muted playsInline webkit-playsinline="true" poster={videoPlaceholder}>
+                <source src={techVideo} type='video/mp4' />
+                <img src={videoPlaceholder} title='Your browser does not support the <video> tag' alt="Eko.Enigneering"/>
+            </video>
+        </div>
+    );
+
     return (
         <ScrollableAnchor id={'tech'}>
             <section className="tech" id="tech">
                 <div className="content">
                     <div className="left">
-                        <div className="preview">
-                            <video autoPlay loop muted playsInline webkit-playsinline="true" poster={videoPlaceholder}>
-                                <source src={techVideo} type='video/mp4' />
-                                <img src={videoPlaceholder} title='Your browser does not support the <video> tag' alt="Eko.Enigneering"/>
-                            </video>
-                        </div>
+                        {preview}
                     </div>
                     <div className="right">
                         <h4>What We're Working On</h4>
+                        {preview}
                         <div className="item">
                             <h5><a href="https://helloeko.com">Interactive Video Playback</a></h5>
                             <div className="text">
