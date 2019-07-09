@@ -6,10 +6,12 @@ header {
   display: flex;
   width: 100%;
   padding: 25px;
+  padding-top: 15px;
   box-sizing: border-box;
   justify-content: space-between;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
 
   a.logo{
     position: relative;
