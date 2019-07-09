@@ -1,6 +1,6 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {withRouter} from "react-router";
-import { configureAnchors, goToTop } from 'react-scrollable-anchor'
+import { configureAnchors } from 'react-scrollable-anchor'
 
 import "./Header.scss";
 
@@ -9,7 +9,7 @@ configureAnchors({offset: -60, scrollDuration: 600})
 function Header({ location: { hash } }){
     return (
         <header>
-           <a className="logo">Eko <span>Engineering</span></a>
+           <a href="#" className="logo">Eko <span>Engineering</span></a>
            <nav>
                <a href="#" className={hash===''?'selected':''}>Home</a>
                <a href="#about" className={hash==='#about'?'selected':''} >About</a>

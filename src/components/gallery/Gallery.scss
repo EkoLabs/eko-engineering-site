@@ -100,6 +100,10 @@
       max-width: 25%;
     }
 
+    .item:nth-child(2n){
+      margin-right: 30px;
+    }
+
     .item:nth-child(4n){
       margin-right: 0;
     }
