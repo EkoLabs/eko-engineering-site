@@ -42,9 +42,13 @@
       font-size: 15px;
       color: #888;
       pointer-events: none;
-      top: -10px;
+      top: -25px;
       left: 0;
       transition: all 200ms ease-in-out;
+    }
+
+    .input-cv + .label{
+      top: -20px;
     }
 
     textarea {
@@ -54,9 +58,8 @@
     }
   }
 
-  .input-text:focus + .label,
-  .input-text.has-value + .label {
-    top: -25px;
+  .input-text:placeholder-shown + .label {
+    top: -10px;
   }
 
   .ctaButton{

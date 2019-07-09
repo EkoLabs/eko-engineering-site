@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./ContactForm.scss";
 import ScrollableAnchor from "react-scrollable-anchor";
-import {send} from "q";
 
 function ContactForm(props){
     const [formState, setFormState] = useState("idle");
@@ -21,17 +20,23 @@ function ContactForm(props){
         return false;
     }
 
+
+
     let isSending = formState === 'sending';
     let success = formState === "success";
     let error = formState === "error";
+    let positionForm = props.formType === 'position';
+    let formAction = `https://formspree.io/${positionForm?'mpkkjwbx':';mdyydewx'}`;
 
+    let title = positionForm?`Shall we?`:'Questions about Joining Eko?';
+    
     return (
         <ScrollableAnchor id={'contact'}>
             <section className="contact" id="contact">
                 <div className="content">
-                    <h4>Questions about Joining Eko?</h4>
+                    <h4>{title}</h4>
                     <form className="contact-form"
-                          action="https://formspree.io/mdyydewx"
+                          action={formAction}
                           method="POST"
                           ref={formRef}
                           onSubmit={doSubmit}
@@ -42,21 +47,31 @@ function ContactForm(props){
                                    type="input-text"
                                    maxLength="100"
                                    name="name"
+                                   placeholder=" "
                                    required/>
                                 <label className="label" htmlFor="name">Name</label>
                         </div>
                         <div className="form-field">
-                            <input className="input-text" type="email" maxLength="100" name="email" required/>
+                            <input className="input-text"
+                                   type="email"
+                                   maxLength="100"
+                                   name="email"
+                                   placeholder=" "
+                                   required/>
                             <label className="label" htmlFor="email">E-mail</label>
                         </div>
                         <div className="form-field">
                             <textarea className="input-text"
-                                      placeholder="Message"
+                                      placeholder="Tell us something interesting about yourself"
                                       maxLength="2000"
                                       name="message"
                                       required />
                         </div>
-
+                        <div className="form-field">
+                            <input className="input-cv" type="file" name="cv" required/>
+                            <label className="label" htmlFor="cv">CV</label>
+                        </div>
+                        
                         <div className="form-field">
                             <button type="submit"
                                     className="ctaButton"
@@ -64,7 +79,7 @@ function ContactForm(props){
                             >Send</button>
                         </div>
                         {isSending &&
-                        <div className="formMessage">Thanks! We’ll get back to you as soon as possible.</div> }
+                        <div className="formMessage">Sending...</div> }
                         {success &&
                         <div className="formMessage">Thanks! We’ll get back to you as soon as possible.</div> }
                         {/* Hiding this for the time being until an issue with Formspree is resolved */}

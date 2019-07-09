@@ -9,37 +9,37 @@ function Jobs(props){
             {
                 title: "Junior Frontend Developer",
                 location: "Tel Aviv / NYC",
-                URL: ""
+                URL: "/positions/junior-frontend-developer"
             },
             {
                 title: "Senior Frontend Developer",
                 location: "Tel Aviv / NYC",
-                URL: ""
+                URL: "/positions/senior-frontend-developer"
             },
             {
                 title: "Junior Backend Developer",
                 location: "Tel Aviv / NYC",
-                URL: ""
+                URL: "/positions/junior-backend-developer"
             },
             {
                 title: "Senior Backend Developer",
                 location: "Tel Aviv / NYC",
-                URL: ""
+                URL: "/positions/senior-backend-developer"
             },
             {
                 title: "Junior Fullstack Developer",
                 location: "Tel Aviv / NYC",
-                URL: ""
+                URL: "/positions/junior-fullstack-developer"
             },
             {
                 title: "Senior Fullstack Developer",
                 location: "Tel Aviv / NYC",
-                URL: ""
+                URL: "/positions/senior-fullstack-developer"
             },
             {
                 title: "DevOps Engineer",
                 location: "Tel Aviv / NYC",
-                URL: ""
+                URL: "/positions/devops-engineer"
             },
 
         ]

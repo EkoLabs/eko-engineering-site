@@ -105,7 +105,7 @@ function Projects(){
         }
         currentItem.style.zIndex = 5;
         currentItem.classList.add("hover");
-        gridRef.current.classList.add("active");
+        gridRef.current && gridRef.current.classList.add("active");
     }
 
     function mouseLeave(index){
