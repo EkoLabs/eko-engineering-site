@@ -24,10 +24,9 @@ let data = {
             URL: "https://helloeko.com/v/coke"
         },
         {
-            title: "Coldplay",
-            subtitle: "Ink",
-            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/projects/oEZGcv/152112809764508.UHENiOdJpbM7vJfbnu3B_height640.png",
-            URL: "https://helloeko.com/music/coldplay-ink?autoplay=true"
+            title: "#WarGames",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/836b2709232e01b48f203673c213e2b8.jpg",
+            URL: "https://helloeko.com/wargames/episode-one-chasing-bryce?autoplay=true"
         },
         {
             title: "Tasty",
@@ -41,9 +40,10 @@ let data = {
             URL: "https://helloeko.com/tmw/101?autoplay=true"
         },
         {
-            title: "#WarGames",
-            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/836b2709232e01b48f203673c213e2b8.jpg",
-            URL: "https://helloeko.com/wargames/episode-one-chasing-bryce?autoplay=true"
+            title: "Coldplay",
+            subtitle: "Ink",
+            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/projects/oEZGcv/152112809764508.UHENiOdJpbM7vJfbnu3B_height640.png",
+            URL: "https://helloeko.com/music/coldplay-ink?autoplay=true"
         },
         {
             title: "Charlie Gets Fired",
@@ -109,19 +109,21 @@ function Projects(){
     }
 
     function mouseLeave(index){
-        hoverTimeout = setTimeout(()=>{
-            if (gridRef.current) {
-                let hexItems = gridRef.current.querySelectorAll('.hex');
-                let currentItem = hexItems[index];
+        if (gridRef.current) {
+            let hexItems = gridRef.current.querySelectorAll('.hex');
+            let currentItem = hexItems[index];
+            currentItem.classList.remove("hover");
+
+            hoverTimeout = setTimeout(() => {
                 for (let x = 0; x < hexItems.length; x++) {
                     let gridItem = hexItems[x];
                     gridItem.style.transform = ``;
                 }
                 currentItem.style.zIndex = 1;
-                currentItem.classList.remove("hover");
                 gridRef.current.classList.remove("active");
-            }
-        }, 300);
+            }, 300);
+
+        }
     }
 
     let hexGrid = [];
@@ -145,7 +147,10 @@ function Projects(){
                         <div className="hexIn">
                             <a className="hexLink" href="#">
                                 <img src={itemData.imageURL} alt=""/>
-                                <div className="title">{itemData.title}</div>
+                                <div className="hexText">
+                                    <div className="title">{itemData.title}</div>
+                                    { itemData.subtitle &&  <div className="subtitle">{itemData.subtitle}</div> }
+                                </div>
                             </a>
                         </div>
                     </li>

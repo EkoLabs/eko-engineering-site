@@ -14,15 +14,34 @@
 		font-size: 15px;
 		list-style-type: none;
 		padding: 0;
-		padding-bottom: 2.5vw;
+		padding-bottom: 3.5vw;
 		z-index: 1;
 	}
 
-	.title{
+	.hexText{
+		display: flex;
+		flex-direction: column;
 		width: 100%;
-		top: 50%;
-		height: 12px;
-		z-index: 5;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		z-index: 20;
+		opacity: 0;
+		transition: all 0.2s ease-out;
+
+		.title, .subtitle {
+			position: relative;
+		}
+	}
+
+	.title{
+		font-size: 14px;
+	}
+
+	.subtitle{
+		color: #e2e2e2;
+		font-size: 12px;
+		margin-top: 4px;
 	}
 
 	.hex{
@@ -127,6 +146,19 @@
 		transform: skewY(-30deg) rotate3d(0,0,1,60deg);
 	}
 
+	.hexLink:before{
+		content: "";
+		left: 0;
+		top: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(165, 80, 199, 0);
+		z-index: 10;
+
+		transition: all 0.3s ease-in;;
+	}
+
 	.hexDud{
 		background: #202020;
 	}
@@ -142,14 +174,22 @@
 		transform: rotate3d(0,0,0,0deg);
 	}
 
-	.hexGrid.active{
-		.hex{
+	.hexGrid.active {
+		.hex {
 			opacity: 0.8;
 		}
 
-		.hex.hover{
+		.hex.hover {
 			opacity: 1;
-		}
-	}
 
+			.hexText {
+				opacity:1;
+			}
+
+			.hexLink:before {
+				background: rgba(159, 52, 199, 0.8);
+			}
+		}
+
+	}
 }
