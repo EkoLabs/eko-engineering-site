@@ -7,7 +7,7 @@ function Footer(props){
             [ // TODO: add anchor links
                 {
                     title: 'About',
-                    URL: ''
+                    URL: '#about'
                 },
                 {
                     title: 'Tech',
@@ -87,7 +87,7 @@ function Footer(props){
         <ul className="column" key={i}>
             {column.map(item => (
                 <li className="item" key={item.title}>
-                    <a className="title" href={item.URL} target="_blank">{item.title}</a>
+                    <a className="title" href={item.URL} target={(!i) ? "" : "_blank"}>{item.title}</a>
                 </li>
             ))}
         </ul>

@@ -4,6 +4,7 @@ import crossIcon from '../header/mobile-menu/cross.svg';
 import burgerIcon from '../header/mobile-menu/burger.svg';
 import { slide as Menu } from 'react-burger-menu';
 import Header from "../header/Header";
+import About from "../about/About";
 import Splash from "../splash/Splash";
 import Tech from "../tech/Tech";
 import Projects from "../projects/Projects";
@@ -27,6 +28,7 @@ function Homepage(){
             </Menu>
             <Header/>
             <Splash/>
+            <About/>
             <Tech/>
             <Jobs/>
             <Projects/>
