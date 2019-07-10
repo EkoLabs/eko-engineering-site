@@ -1,3 +1,5 @@
+@import "../../breakpoints.scss";
+
 .about-inner {
     background-image: url(./about_bg.jpg);
     background-position: center 97%;
@@ -34,7 +36,7 @@
                 }
             }
 
-            &:nth-child(2n) {
+            &:nth-child(2n + 1) {
                 text-align: left;
             }
 

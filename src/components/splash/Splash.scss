@@ -1,4 +1,5 @@
 @import "../../shared.scss";
+@import "../../breakpoints.scss";
 
 .splash {
 	background-image: url('./background.png');
@@ -12,13 +13,17 @@
 		padding-top: 160px;
 		padding-bottom: 100px;
 
-		@media screen and (max-width: 1300px) {
-			flex-direction: column;
-			align-items: center;
+		flex-direction: column;
+		align-items: center;
+
+		@include for-tablet-landscape-up{
+			flex-direction: row;
+			align-items: normal;
 		}
 
-		@media screen and (max-width: 1024px) {
-			padding-bottom: 0;
+		@include for-desktop-up{
+			flex-direction: row;
+			align-items: normal;
 		}
 	}
 
@@ -27,45 +32,33 @@
 		flex-direction: column;
 		align-items: center;
 		flex: 1;
-		margin-top: 100px;
-		
-		@media screen and (max-width: 1300px) {
-			flex: none;
-    		width: 100%;
-			margin-top: 40px;
-		}
-		
-		@media screen and (max-width: 768px) {
-			padding-bottom: 0;
+		margin-top: 10vw;
+
+		h2{
+			font-size: 43px;
 		}
 
-		@media screen and (max-width: 635px) {
-			 h2 { 
-				font-size: 42px;
-			 }
-			 h3 { 
-				font-size: 21px;
-			 }
+		h3{
+			font-size: 20px;
 		}
-		@media screen and (max-width: 358px) {
-			 h2 { 
-				font-size: 36px;
-			 }
-			 h3 { 
-				font-size: 18px;
-			 }
+
+
+		@include for-desktop-up{
+		
 		}
+
 	}
 
 	.left {
 		position: relative;
 		font-size: 0;
 		flex: 1;
+		width: 90%;
 		
 		&:before {
 			content: "";
 			position: absolute;
-			top: -50px;
+			top: -30px;
 			left: 0;
 			width: 100%;
 			
@@ -74,53 +67,79 @@
 			background-position: center;
 			padding-top: 75%;
 			mix-blend-mode: lighten;
+			background-size: 100%;
+			
+			@include for-tablet-portrait-up{
+				top: -50px;
+				margin-top: 60px;
+				margin-left: 110px;
+			}
+		}
 
-			@media screen and (max-width: 1300px) {
-    			background-size: 100%;
+		.titleContainer{
+			display: flex;
+			flex-direction: column;
+			
+			align-items: center;
+			align-content: center;
+			justify-content: center;
+			margin-left: 42%;
+			width: 47%;
+			min-height: 31vw;
+			//background: rgba(100,200,50,1);
+
+
+			@include for-phone-only{
+				margin-top: 8vw;
+			}
+
+			@include for-tablet-portrait-up{
+				margin-top: 13vw;
+			}
+
+			@include for-tablet-landscape-up{
+				margin-top: 120px;
+				width: 47%;
+				height: 260px;
+				margin-left: 59%;
+				min-height: 0;
 			}
 		}
 
 		h1 {
 			display: inline-block;
-			padding: 30px;
-			margin-top: 60px;
-			margin-left: 210px;
+			width: 75%;
+			padding-bottom: 32%;
 			margin-bottom: 0;
-			font-size: 120px;
+			font-size: 12px;
 			background-image: url('./EkoLogo.png');
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: 100%;
 			color: rgba(255,255,255, 0);
+
+			@include for-desktop-up{
+
+			}
 		}
 
 		h2 {
 			position: relative;
-			top: -28px;
 			margin: 0;
-			margin-left: 210px;
-			font-size: 32px;
+			padding-bottom: 10%;
 			text-transform: uppercase;
+			width: 100%;
+			font-size: 3.2vw;
+			margin-top: 1vw;
+
 			@include neon;
-		}
-	
-		@media screen and (max-width: 1300px) {
-			flex: none;
-			height: 25vw;
-    		width: 50%;
-		}
 
-		@media screen and (max-width: 768px) {
-    		width: 60%;
+			@include for-tablet-portrait-up{
+				font-size: 32px;
+				margin-top: 3px;
+			}
 		}
-
-		@media screen and (max-width: 440px) {
-    		width: 75%;
-		}
-
-		@media screen and (max-width: 320px) {
-    		width: 90%;
-		}
+		
 		
 	}
 

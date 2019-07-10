@@ -8,7 +8,6 @@ import ScrollableAnchor from "react-scrollable-anchor";
 
 function About(props) {
     props = {
-        title: 'About us',
         items: [
             {
                 icon: createIcon,
@@ -47,8 +46,8 @@ function About(props) {
         <ScrollableAnchor id={'about'}>
             <section>
                 <div className="about-inner">
+                    {/*<h4>About us</h4>*/}
                     <div className="content about">
-                        <h4>{props.title}</h4>
                         {items}
                     </div>
                 </div>

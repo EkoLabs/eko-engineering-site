@@ -27,7 +27,7 @@ function Jobs(){
                         <em>Didn't find a good fit? Send us your resume anyway</em>
                         We’re always looking for cool people to join our team. Apply now and we’ll reach out to you whenever the right opportunity comes up.
                     </div>
-                    <a href="#" className="ctaButton">Send resume</a>
+                    <a href="#contact" className="ctaButton">Send resume</a>
                 </div>
             </section>
         </ScrollableAnchor>

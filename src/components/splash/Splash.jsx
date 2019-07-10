@@ -6,8 +6,10 @@ function Splash(props) {
         <section className="splash">
             <div className="content">
                 <div className="left">
-                    <h1>Eko</h1>
-                    <h2>Engineering</h2>
+                    <div className="titleContainer">
+                        <h1>Eko</h1>
+                        <h2>Engineering</h2>
+                    </div>
                 </div>
                 <div className="right">
                     <h2>We're all about <em>choice</em></h2>

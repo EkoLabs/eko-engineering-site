@@ -73,6 +73,12 @@ function ContactForm(props){
                                 <label className="label" htmlFor="cv">CV</label>
                             </div>
                         }
+                        { !positionForm &&
+                        <div className="form-field">
+                            <input className="input-cv" type="file" name="attachment"/>
+                            <label className="label" htmlFor="attachment">Attachment (CV, a picture of your dog, whatever - make us happy!)</label>
+                        </div>
+                        }
                         <div className="form-field">
                             <button type="submit"
                                     className="ctaButton"
