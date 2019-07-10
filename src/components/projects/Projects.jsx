@@ -120,7 +120,7 @@ function Projects(){
                     gridItem.style.transform = ``;
                 }
                 currentItem.style.zIndex = 1;
-                gridRef.current.classList.remove("active");
+                gridRef.current && gridRef.current.classList.remove("active");
             }, 300);
 
         }
