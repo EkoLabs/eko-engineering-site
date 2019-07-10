@@ -7,11 +7,19 @@
 	background-size: cover;
 	padding-bottom: 50px;
 
-	.content{
+	.content {
 		display: flex;
-		flex-wrap: wrap;
 		padding-top: 160px;
 		padding-bottom: 100px;
+
+		@media screen and (max-width: 1300px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media screen and (max-width: 1024px) {
+			padding-bottom: 0;
+		}
 	}
 
 	.right {
@@ -20,14 +28,41 @@
 		align-items: center;
 		flex: 1;
 		margin-top: 100px;
+		
+		@media screen and (max-width: 1300px) {
+			flex: none;
+    		width: 100%;
+			margin-top: 40px;
+		}
+		
+		@media screen and (max-width: 768px) {
+			padding-bottom: 0;
+		}
+
+		@media screen and (max-width: 635px) {
+			 h2 { 
+				font-size: 42px;
+			 }
+			 h3 { 
+				font-size: 21px;
+			 }
+		}
+		@media screen and (max-width: 358px) {
+			 h2 { 
+				font-size: 36px;
+			 }
+			 h3 { 
+				font-size: 18px;
+			 }
+		}
 	}
 
-	.left{
+	.left {
 		position: relative;
 		font-size: 0;
 		flex: 1;
 		
-		&:before{
+		&:before {
 			content: "";
 			position: absolute;
 			top: -50px;
@@ -39,11 +74,15 @@
 			background-position: center;
 			padding-top: 75%;
 			mix-blend-mode: lighten;
+
+			@media screen and (max-width: 1300px) {
+    			background-size: 100%;
+			}
 		}
 
-		h1{
-			padding: 30px;
+		h1 {
 			display: inline-block;
+			padding: 30px;
 			margin-top: 60px;
 			margin-left: 210px;
 			margin-bottom: 0;
@@ -55,7 +94,7 @@
 			color: rgba(255,255,255, 0);
 		}
 
-		h2{
+		h2 {
 			position: relative;
 			top: -28px;
 			margin: 0;
@@ -63,6 +102,24 @@
 			font-size: 32px;
 			text-transform: uppercase;
 			@include neon;
+		}
+	
+		@media screen and (max-width: 1300px) {
+			flex: none;
+			height: 25vw;
+    		width: 50%;
+		}
+
+		@media screen and (max-width: 768px) {
+    		width: 60%;
+		}
+
+		@media screen and (max-width: 440px) {
+    		width: 75%;
+		}
+
+		@media screen and (max-width: 320px) {
+    		width: 90%;
 		}
 		
 	}
@@ -88,5 +145,9 @@
 
 	.ctaButton{
 		margin-top: 15px;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding-bottom: 0;
 	}
 }
