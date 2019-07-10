@@ -64,5 +64,8 @@
 
   .ctaButton{
     border-color: var(--color2);
+    &:after{
+      background: var(--color2);
+    }
   }
 }
