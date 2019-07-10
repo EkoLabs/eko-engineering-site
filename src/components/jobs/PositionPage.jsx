@@ -12,16 +12,14 @@ import Investors from "../investors/Investors";
 import ContactForm from "../contactform/ContactForm";
 import Footer from "../footer/Footer";
 
-function JobPage(props){
+function PositionPage(props){
 
     return (
         <Fragment>
             <MobileMenu/>
             <Header/>
             <Splash hideCTA/>
-            <Position>
-                {props.positionTextEl}
-            </Position>
+            <Position title={props.title} />
             <ContactForm formType="position"/>
             <About/>
             <Tech/>
@@ -34,4 +32,4 @@ function JobPage(props){
     )
 }
 
-export default JobPage;
+export default PositionPage;
