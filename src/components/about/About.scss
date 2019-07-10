@@ -14,19 +14,23 @@
                 width: 50%;
                 padding: 0px 90px;
                 box-sizing: border-box;
-
+                
                 img{
                     width: 70px;
                 }
-
+                
                 .about-title {
                     font-weight: bold;
                     margin: 10px 0;
                 }
-
+                
                 @media screen and (max-width: 768px) {
                     width: 100%;
                     margin-bottom: 80px;
+                }
+                
+                @media screen and (max-width: 560px) {
+                    padding: 0px 10px;
                 }
             }
 
