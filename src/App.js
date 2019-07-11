@@ -19,15 +19,16 @@ function App() {
   });
 
     return (
-        <Router>
-          <Switch>
-            <div className="App">
-              {careersRoutes}
-               { /* <Route path="/" exact component={Placeholder} /> */}
-              <Route path="/" component={Homepage} />
-            </div>
-          </Switch>
-        </Router>
+        <div className="App">
+            <Router>
+                <Switch>
+                  {careersRoutes}
+                   { /* <Route path="/" exact component={Placeholder} /> */}
+                  <Route path="/" component={Homepage} />
+            </Switch>
+            </Router>
+        </div>
+
   );
 }
 
