@@ -27,7 +27,7 @@ function About(props) {
             {
                 icon: developersIcon,
                 title: 'We ARE Developers',
-                description: 'As a developer at Eko, you’ll be creating the tech and infrastructure for a new era of digital storytelling. Choose your own hardware and software as you lead projects, take an active part in the creative process, enjoy a flat organizational structure and push interactive video to the edge, or over it!'
+                description: 'As a developer at eko, you’ll be creating the tech and infrastructure for a new era of digital storytelling. Choose your own hardware and software as you lead projects, take an active part in the creative process, enjoy a flat organizational structure and push interactive video to the edge, or over it!'
             },
         ]
     };

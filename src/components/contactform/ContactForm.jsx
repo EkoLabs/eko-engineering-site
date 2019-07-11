@@ -28,7 +28,7 @@ function ContactForm(props){
     let positionForm = props.formType === 'position';
     let formAction = `https://formspree.io/${positionForm?'mpkkjwbx':';mdyydewx'}`;
 
-    let title = positionForm?`Shall we?`:'Questions about Joining Eko?';
+    let title = positionForm?`Shall we?`:'Questions about Joining eko?';
     
     return (
         <ScrollableAnchor id={'contact'}>

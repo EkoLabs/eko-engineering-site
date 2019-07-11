@@ -10,7 +10,7 @@ function Tech(){
         <div className="preview">
             <video autoPlay loop muted playsInline webkit-playsinline="true" poster={videoPlaceholder}>
                 <source src={techVideo} type='video/mp4' />
-                <img src={videoPlaceholder} title='Your browser does not support the <video> tag' alt="Eko.Enigneering"/>
+                <img src={videoPlaceholder} title='Your browser does not support the <video> tag' alt="eko.Enigneering"/>
             </video>
         </div>
     );
@@ -34,13 +34,13 @@ function Tech(){
                         <div className="item">
                             <h5><a href="https://studio.helloeko.com">Creation Tools</a></h5>
                             <div className="text">
-                                Eko Studio: A powerful WYSIWYG editor that enables teams of film makers, editors, designers & developers to collaborate on an interactive video project from conception to delivery.
+                                eko Studio: A powerful WYSIWYG editor that enables teams of film makers, editors, designers & developers to collaborate on an interactive video project from conception to delivery.
                             </div>
                         </div>
                         <div className="item">
                             <h5><a href="https://developer.helloeko.com">JavaScript Framework</a></h5>
                             <div className="text">
-                                A robust, modern framework for developing interactions that allows developers to completely customize Eko projects by adding logic, UI, API integration or anything else they can dream of.
+                                A robust, modern framework for developing interactions that allows developers to completely customize eko projects by adding logic, UI, API integration or anything else they can dream of.
                             </div>
                         </div>
                         <div className="item">

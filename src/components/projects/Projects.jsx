@@ -174,7 +174,7 @@ function Projects(){
         <ScrollableAnchor id={'ecosystem'}>
             <section className="projects">
                 <div className="content">
-                    <h4>Driven by Eko technology</h4>
+                    <h4>Driven by eko technology</h4>
                 </div>
                 <ul className="hexGrid" ref={gridRef}>
                 {hexGrid}
