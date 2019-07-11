@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Placeholder from "./components/placeholder/Placeholder";
 import Homepage from "./components/homepage/Homepage";
 import careersData from "./careersData";
 import PositionPage from "./components/jobs/PositionPage";

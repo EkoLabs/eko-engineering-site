@@ -33,7 +33,7 @@ function About(props) {
     };
 
     let items = props.items.map((item, i) => (
-        <div className="item-container">
+        <div className="item-container" key={i}>
             <div className="item" key={i}>
                 <img src={item.icon} alt={item.title} />
                 <div className="about-title">{item.title}</div>

@@ -145,7 +145,7 @@ function Projects(){
                         onMouseLeave={() => mouseLeave(x)}
                     >
                         <div className="hexIn">
-                            <a className="hexLink" href="#">
+                            <a className="hexLink" href={itemData.URL} target="_blank" rel="noopener noreferrer">
                                 <img src={itemData.imageURL} alt=""/>
                                 <div className="hexText">
                                     <div className="title">{itemData.title}</div>

@@ -70,9 +70,9 @@ function Investors(props) {
     };
 
     let items = props.items.map((item, i) => (
-        <a target="_blank" rel="noopener noreferrer" href={item.URL}>
+        <a target="_blank" rel="noopener noreferrer" href={item.URL} key={i}>
             <li className="item" key={i}>
-                <img src={item.imageURL} alt="Eko investor" />
+                <img src={item.imageURL} alt="Eko Investor" key={i}/>
             </li>
         </a>
     ));

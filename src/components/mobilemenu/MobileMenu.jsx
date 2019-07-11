@@ -7,7 +7,7 @@ import crossIcon from "./cross.svg";
 function MobileMenu(){
     return (
         <Menu bodyClassName={"menu-open"} right customBurgerIcon={<img src={burgerIcon} alt="Open Menu" />} customCrossIcon={<img src={crossIcon} alt="Close Menu"/>} >
-            <a id="home" className="menu-item" href="#">Home</a>
+            <a id="home" className="menu-item" href="/">Home</a>
             <a id="about" className="menu-item" href="#about">About</a>
             <a id="tech" className="menu-item" href="#tech">Tech</a>
             <a id="ecosystem" className="menu-item" href="#ecosystem">Ecosystem</a>
