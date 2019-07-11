@@ -4,26 +4,26 @@ import "./Footer.scss";
 function Footer(props){
     props = {
         columns: [ 
-            [ // TODO: add anchor links
+            [
                 {
                     title: 'About',
-                    URL: '#about'
+                    URL: '/#about'
                 },
                 {
                     title: 'Tech',
-                    URL: ''
+                    URL: '/#tech'
                 },
                 {
                     title: 'Careers',
-                    URL: ''
+                    URL: '/#careers'
                 },
                 {
                     title: 'Ecosystem',
-                    URL: ''
+                    URL: '/#ecosystem'
                 },
                 {
                     title: 'Contact',
-                    URL: ''
+                    URL: '/#contact'
                 }
             ],
             [
@@ -66,18 +66,18 @@ function Footer(props){
                     URL: 'https://www.linkedin.com/company/ekovideo'
                 },
             ],
-            [ // TODO: add links
+            [
                 {
                     title: 'Privacy Policy',
-                    URL: ''
+                    URL: 'https://company.helloeko.com/legal/privacy'
                 },
                 {
                     title: 'Terms',
-                    URL: ''
+                    URL: 'https://company.helloeko.com/legal/website-terms-of-use'
                 },
                 {
                     title: 'Legal',
-                    URL: ''
+                    URL: 'https://company.helloeko.com/legal/legal-terms'
                 },
             ]
         ]
