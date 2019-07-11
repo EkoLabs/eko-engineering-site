@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Placeholder from "./components/placeholder/Placeholder";
 import Homepage from "./components/homepage/Homepage";
 import careersData from "./careersData";
@@ -20,13 +20,15 @@ function App() {
   });
 
     return (
-      <Router>
-        <div className="App">
-          {careersRoutes}
-           { /* <Route path="/" exact component={Placeholder} /> */}
-          <Route path="/" exact component={Homepage} />
-        </div>
-      </Router>
+        <Router>
+          <Switch>
+            <div className="App">
+              {careersRoutes}
+               { /* <Route path="/" exact component={Placeholder} /> */}
+              <Route path="/" component={Homepage} />
+            </div>
+          </Switch>
+        </Router>
   );
 }
 
