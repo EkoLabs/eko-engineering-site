@@ -28,7 +28,7 @@ function ContactForm(props){
     let positionForm = props.formType === 'position';
     let formAction = `https://formspree.io/${positionForm?'mpkkjwbx':';mdyydewx'}`;
 
-    let title = positionForm?`Shall we?`:'Questions about Joining eko?';
+    let title = positionForm?`Shall we?`:'Questions about joining eko?';
     
     return (
         <ScrollableAnchor id={'contact'}>
@@ -69,23 +69,21 @@ function ContactForm(props){
                                       required />
                         </div>
                         { positionForm &&
-                            <div className="form-field">
+                            <div className="form-field cvRow">
                                 <input className="input-cv" type="file" name="cv" required/>
                                 <label className="label" htmlFor="cv">CV</label>
                             </div>
                         }
                         { !positionForm &&
-                        <div className="form-field">
+                        <div className="form-field cvRow">
                             <input className="input-cv" type="file" name="attachment"/>
                             <label className="label" htmlFor="attachment">Attachment (CV, a picture of your dog, whatever - make us happy!)</label>
                         </div>
                         }
-                        <div className="form-field">
-                            <button type="submit"
-                                    className="ctaButton"
-                                    disabled={isSending}
-                            >Send</button>
-                        </div>
+                        <button type="submit"
+                                className="ctaButton"
+                                disabled={isSending}
+                        >Send</button>
                         {isSending &&
                         <div className="formMessage">Sending...</div> }
                         {success &&

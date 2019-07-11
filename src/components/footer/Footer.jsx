@@ -29,10 +29,10 @@ function Footer(props){
             [
                 {
                     title: 'Eko',
-                    URL: 'https://company.helloeko.com/'
+                    URL: 'https://helloeko.com/'
                 }, 
                 {
-                    title: 'Hello Eko',
+                    title: 'About Eko',
                     URL: 'https://helloeko.com/'
                 }, 
                 {
@@ -53,12 +53,9 @@ function Footer(props){
                 }
             ],
             [
+
                 {
-                    title: 'Facebook',
-                    URL: 'https://www.facebook.com/helloeko'
-                },
-                {
-                    title: 'Twitter',
+                    title: 'Follow us on Twitter',
                     URL: 'https://twitter.com/ekoengi'
                 },
                 {

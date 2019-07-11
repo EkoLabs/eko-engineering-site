@@ -23,7 +23,7 @@ function Tech(){
                         {preview}
                     </div>
                     <div className="right">
-                        <h4>What We're Working On</h4>
+                        <h4>What we're working On</h4>
                         {preview}
                         <div className="item">
                             <h5><a href="https://helloeko.com">Interactive Video Playback</a></h5>

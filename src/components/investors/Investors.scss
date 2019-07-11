@@ -1,4 +1,7 @@
+@import "../../breakpoints";
+
 .investors {
+  $itemMargin: 20px;
 
   ul {
     margin: 0;
@@ -29,8 +32,9 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          box-sizing: border-box;
           height: 100px;
-          margin-right: 20px;
+          margin-right: $itemMargin;
           background-color: white;
           margin-bottom: 25px;
           transition: .2s ease transform;
@@ -45,18 +49,12 @@
           }
 
         }
-        
-        &:last-child {
-          .item {
-            margin-right: 0;
-          }
-        }
 
         @media screen and (max-width: 1070px) {
-          flex: 1 0 16%;
-          max-width: 17%;
+          flex: 1 0 15%;
+          max-width: 16.6%;
 
-          &:nth-child(6) {
+          &:nth-child(6n) {
             .item {
               margin-right: 0;
             }

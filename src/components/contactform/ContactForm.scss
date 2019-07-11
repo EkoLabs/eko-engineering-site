@@ -1,7 +1,11 @@
+@import "../../breakpoints.scss";
+
 .contact {
   form{
     max-width: 600px;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   input, textarea{
@@ -16,7 +20,9 @@
 
   .form-field {
     position: relative;
-    margin: 50px 0px;
+    margin: 0;
+    margin-bottom: 50px;
+    text-align: left;
 
     .input-text {
       padding: 0;
@@ -47,8 +53,15 @@
       transition: all 200ms ease-in-out;
     }
 
+    &.cvRow{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
     .input-cv + .label{
-      top: -20px;
+      position: relative;
+      top: 0;
+      margin-bottom: 10px;
     }
 
     textarea {
@@ -63,9 +76,15 @@
   }
 
   .ctaButton{
+    align-self: center;
     border-color: var(--color2);
     &:after{
       background: var(--color2);
     }
+
+    @include for-tablet-portrait-up{
+        align-self: flex-start;
+    }
+
   }
 }
