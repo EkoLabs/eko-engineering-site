@@ -22,10 +22,9 @@ function App() {
     return (
       <Router>
         <div className="App">
-          <Route path="/" exact component={Homepage} />
           {careersRoutes}
-          <Route path="/" exact component={Placeholder} />
-          <Route path="/dev" exact component={Homepage} />
+           { /* <Route path="/" exact component={Placeholder} /> */}
+          <Route path="/" exact component={Homepage} />
         </div>
       </Router>
   );
