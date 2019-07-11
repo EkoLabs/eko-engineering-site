@@ -13,7 +13,7 @@ function ContactForm(props){
 
         setFormState("sending");
         makeRequest(data, form.method, form.action)
-            .then(()=>setFormState("sucess"))
+            .then(()=>setFormState("success"))
             .catch(()=>setFormState("error"));
 
         e.preventDefault();
@@ -42,6 +42,7 @@ function ContactForm(props){
                           onSubmit={doSubmit}
                     >
                         <input type="hidden" name="_next" value=""/>
+                        { positionForm && <input type="hidden" name="positionTitle" value={props.positionTitle} /> }
                         <div className="form-field">
                             <input className="input-text"
                                    type="input-text"
@@ -89,8 +90,7 @@ function ContactForm(props){
                         <div className="formMessage">Sending...</div> }
                         {success &&
                         <div className="formMessage">Thanks! We’ll get back to you as soon as possible.</div> }
-                        {/* Hiding this for the time being until an issue with Formspree is resolved */}
-                        {false && error && <div className="formMessage">Whoops! Something went wrong. Try again?</div> }
+                        {error && <div className="formMessage">Whoops! Something went wrong. Try again?</div> }
                     </form>
                 </div>
             </section>
@@ -119,6 +119,7 @@ function makeRequest (data, method, url) {
                 statusText: xhr.statusText
             });
         };
+        xhr.setRequestHeader("accept", "application/json;charset=UTF-8");
         xhr.send(data);
     });
 }
