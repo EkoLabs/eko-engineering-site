@@ -26,7 +26,7 @@ function ContactForm(props){
     let success = formState === "success";
     let error = formState === "error";
     let positionForm = props.formType === 'position';
-    let formAction = `https://formspree.io/${positionForm?'mpkkjwbx':';mdyydewx'}`;
+    let formAction = `https://formspree.io/${positionForm?'mpkkjwbx':'mdyydewx'}`;
 
     let title = positionForm?`Shall we?`:'Questions about joining eko?';
     
