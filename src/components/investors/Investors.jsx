@@ -4,7 +4,7 @@ import "./Investors.scss";
 import Sequoia from "./logos/Sequoia.svg";
 import NEA from "./logos/NEA.svg";
 import Marker from "./logos/Marker.svg";
-import Innovation from "./logos/Innovation_black.png";
+import Innovation from "./logos/Innovation_white.png";
 import Sony from "./logos/Sony.svg";
 import MGM from "./logos/MGM.svg";
 import Intel from "./logos/Intel.svg";
@@ -19,33 +19,40 @@ function Investors(props) {
         items: [
             {
                 imageURL: Sequoia,
-                URL: "https://www.sequoiacap.com/companies/eko/"
+                URL: "https://www.sequoiacap.com/companies/eko/",
+                name: "Sequoia"
+
             },
             {
                 imageURL: NEA,
-                URL: "http://www.nea.com/"
+                URL: "http://www.nea.com/",
+                name: "NEA"
             },
             {
                 imageURL: Marker,
-                URL: "http://www.marker-llc.com/"
+                URL: "http://www.marker-llc.com/",
+                name: "Marker"
             },
             {
                 imageURL: Innovation,
-                URL: "http://www.innovationendeavors.com/"
+                URL: "http://www.innovationendeavors.com/",
+                name: "Innovation Endeavors"
             },
             {
                 imageURL: Sony,
-                URL:
-                    "http://www.sonypictures.com/corp/press_releases/2016/06_16/061616_interlude.html"
+                URL: "http://www.sonypictures.com/corp/press_releases/2016/06_16/061616_interlude.html",
+                name: "Sony"
             },
             {
                 imageURL: MGM,
-                URL:
-                    "http://www.businesswire.com/news/home/20151208005564/en/Interlude-Announces-Strategic-Investment-Metro-Goldwyn-Mayer-Studios"
+                URL: "http://www.businesswire.com/news/home/20151208005564/en/Interlude-Announces-Strategic-Investment-Metro-Goldwyn-Mayer-Studios",
+                name: "Sony"
+
             },
             {
                 imageURL: Intel,
-                URL: "http://www.intelcapital.com/"
+                URL: "http://www.intelcapital.com/",
+                name: "Intel Capital"
             },
             {
                 imageURL: Warner,
@@ -54,25 +61,26 @@ function Investors(props) {
             },
             {
                 imageURL: Samsung,
-                URL:
-                    "http://www.businesswire.com/news/home/20151105005316/en/Samsung-Strategic-Investment-Interlude"
+                URL: "http://www.businesswire.com/news/home/20151105005316/en/Samsung-Strategic-Investment-Interlude",
+                name: "Samsung"
             },
             {
                 imageURL: Wpp,
-                URL: "http://www.wpp.com/wpp/companies/atinterlude/"
+                URL: "http://www.wpp.com/wpp/companies/atinterlude/",
+                name: "WPP"
             },
             {
                 imageURL: Walmart,
-                URL:
-                    "https://news.walmart.com/2018/10/11/walmart-and-eko-announce-joint-venture-to-create-interactive-storytelling-for-entertainment-and-retail"
+                URL: "https://news.walmart.com/2018/10/11/walmart-and-eko-announce-joint-venture-to-create-interactive-storytelling-for-entertainment-and-retail",
+                name: "Walmart"
             }
         ]
     };
 
     let items = props.items.map((item, i) => (
         <a target="_blank" rel="noopener noreferrer" href={item.URL} key={i}>
-            <li className="item" key={i}>
-                <img src={item.imageURL} alt="eko Investor" key={i}/>
+            <li className="item" key={i} title={item.name}>
+                <img src={item.imageURL} alt={item.name} key={i}/>
             </li>
         </a>
     ));
