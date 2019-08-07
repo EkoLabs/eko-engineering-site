@@ -11,6 +11,7 @@ import ContactForm from "../contactform/ContactForm";
 import Footer from "../footer/Footer";
 import Office from "../office/Office";
 import MobileMenu from "../mobilemenu/MobileMenu";
+import Blurb from "../blurb/Blurb";
 
 function Homepage(){
     return (
@@ -18,6 +19,7 @@ function Homepage(){
             <MobileMenu/>
             <Header/>
             <Splash/>
+            <Blurb/>
             <About/>
             <Tech/>
             <Jobs/>

@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
 @import "breakpoints";
+@import "./shared";
 
 :root{
   --color1: #f25fe7;
   --color2: #f2395a;
+}
+
+body{
+  background-image: url(media/space_bg.jpg);
 }
 
 h1, h2, h3, h4, h5{
@@ -16,15 +21,8 @@ h4{
   font-size: 39px;
   position: relative;
   text-align: left;
-  &:before{
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 5px;
-    height: 5px;
-    width: 50px;
-    background-color: #f2395a;
-  }
+
+  @include headerDivider;
 }
 
 h5{

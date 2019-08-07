@@ -10,3 +10,17 @@
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
   }
 }
+
+@mixin headerDivider{
+  &:after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right,  rgba(173,85,177,0) 0%, rgba(173,85,177,1) 40%, rgba(173,85,177,1) 60%, rgba(173,85,177,0) 100%);
+    z-index: 5
+  }
+}

@@ -1,49 +1,120 @@
 @import "../../shared.scss";
+@import "../../breakpoints.scss";
 
 .tech {
-  .content {
-    display: flex;
-    padding-top: 160px;
-    padding-bottom: 100px;
+  position: relative;
 
-    @media screen and (max-width: 1024px) {
-      padding-top: 0;
-      padding-bottom: 0;
+  $topOffset: 80px;
+
+  .reel{
+    position: absolute;
+    top: $topOffset;
+    left: 0;
+    width: 100%;
+    height: calc(100% - #{$topOffset});
+    object-fit: cover;
+    z-index: 1;
+
+    &:before, &:after, .wash, .wash:before, .wash:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
-  }
 
-  .right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    text-align: left;
+    .wash{
+      position: absolute;
+      top: $topOffset;
+      left: 0;
+      width: 100%;
+      height: calc(100% - #{$topOffset});
 
-    .preview {
-      display: none;
-      margin-bottom: 60px;
+      &:before{
+        background-color: #5d0e4d;
+        mix-blend-mode: screen;
+        z-index: 5;
+      }
 
-      @media screen and (max-width: 1024px) {
-        display: block;
+      &:after{
+        background-image: url(./paper_bg.jpg);
+        background-size: cover;
+        mix-blend-mode: overlay;
+        opacity: 0.3;
+        z-index: 5;
       }
     }
+
+    &:before{
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'%3E%3Crect fill='rgba(0,0,0,1)' width='2' height='1' /%3E%3C/svg%3E");
+      background-size: 2px;
+      z-index: 10;
+    }
+
+    &:after{
+      background: rgba(0,0,0,0.4);
+      z-index: 15;
+
+    }
+
+
+
+
+    video{
+      width: 100%;
+      height: calc(100% - #{$topOffset} - 1px);
+    }
   }
 
-  .left {
+  .content {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    box-sizing: border-box;
-    font-size: 0;
-    flex: 1;
-    padding-right: 40px;
+    padding-top: 160px;
+    z-index: 5;
+    align-items: center;
 
-    @media screen and (max-width: 1024px) {
-      display: none;
+  }
+
+  .items{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 950px;
+    text-align: left;
+    justify-items: center;
+    margin-top: 400px;
+
+    @include for-phone-only{
+      flex-direction: column;
+      margin-top: 0;
     }
     
   }
 
-  .item{
+  .item {
+    box-sizing: border-box;
+    width: 47%;
     margin-bottom: 60px;
+    font-weight: 200;
+
+    @include for-phone-only {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    a{
+      color: #f8aa1a;
+    }
+  }
+
+  .item:nth-child(2n - 1){
+    margin-right: 30px;
+  }
+
+  .item:nth-child(2n){
+    page-break-after: always;
+    break-after: always;
   }
 
   .text{
@@ -53,9 +124,7 @@
   }
 
   h4{
-    align-self: flex-start;
-    margin: 50px 0;
-    margin-top: 0;
+    margin-top: -100px;
   }
 
   h5, h5 a{
@@ -69,12 +138,13 @@
       0 0 0px rgba(255,255,255,0),
       0 0 0px rgba(255,255,255,0),
       0 0 0px rgba(255,255,255,0);
+      font-size: 30px;
   }
 
-  h5 a:hover{
-    color: white;
-    @include neon;
-  }
+  //h5 a:hover{
+  //  color: white;
+  //  @include neon;
+  //}
 
   // preview
 

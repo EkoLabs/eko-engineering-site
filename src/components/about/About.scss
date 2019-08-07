@@ -1,50 +1,142 @@
 @import "../../breakpoints.scss";
+@import "../../shared.scss";
 
 .about-inner {
-    background-image: url(./about_bg.jpg);
-    background-position: center 97%;
+    background-image: url(./terrain_bg.jpg);
+    background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: 300%;
+    padding-bottom: 100%;
+    
+    @include for-phone-only {
+
+    }
+
+    @include for-tablet-portrait-up {
+        padding-bottom: 70%;
+        background-size: 200%;
+    }
+
+
+    @include for-desktop-up{
+        padding-bottom: 600px;
+        background-size: 100%;
+    }
+
+    .defs{
+        max-height: 0;
+    }
 
     .about {
+        display:flex;
+        flex-direction: column;
 
         .item-container {
-            text-align: right;
+            display: flex;
+
+            @include for-phone-only{
+             flex-direction: column;
+                align-items: center;
+            }
+
+            &:last-child .icon:before{
+                display: none;
+            }
+
+
+            .icon{
+                width: 230px;
+                position: relative;
+
+                svg{
+                    position: relative;
+                    z-index: 10;
+                }
+
+                .hex{
+                    stroke: #b75ab9;
+                    stroke-width: 4px;
+                }
+
+                img{
+                    position: absolute;
+                    width: 30%;
+                    left: 50%;
+                    top: 115px;
+                    transform: translateX(-50%) translateY(-50%);
+                    z-index: 15;
+                }
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    height: 120%;
+                    width: 2px;
+                    top: 100px;
+                    left: 50%;
+                    background: rgba(173,85,177,1);
+                    z-index: 1;
+                    @include for-phone-only {
+                        display: none;
+                    }
+
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 700px;
+                    top: 113.5px;
+                    left: 50%;
+                    background: linear-gradient(to right,  rgba(173,85,177,1) 0%,rgba(173,85,177,0) 100%);
+                    z-index: 5;
+                    
+                    @include for-phone-only {
+                        display: none;
+                    }
+
+                }
+            }
 
             .item {
-                display: inline-block;
-                text-align: center;
-                width: 50%;
-                padding: 0px 90px;
+                width: 500px;
                 box-sizing: border-box;
-                
-                img{
-                    width: 70px;
-                }
-                
-                .about-title {
-                    font-weight: bold;
-                    margin: 10px 0;
-                }
-                
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                    margin-bottom: 80px;
-                }
-                
-                @media screen and (max-width: 560px) {
-                    padding: 0px 10px;
-                }
-            }
-
-            &:nth-child(2n + 1) {
                 text-align: left;
-            }
+                margin-left: -30px;
+                margin-bottom: 40px;
 
-            @media screen and (max-width: 768px) {
-                &:last-child {
-                    margin-bottom: 0;
+                @include for-phone-only {
+                    width: 100%;
+                    text-align: center;
+                    margin-left: 0;
+                }
+
+                .title {
+                    position: relative;
+                    margin-top: 75px;
+                    margin-bottom: 25px;
+                    font-size: 31px;
+                    font-weight: 300;
+                    font-family: "Stolzl";
+
+                    @include for-phone-only {
+                        margin-top: 0;
+                        @include headerDivider;
+                    }
+
+                }
+
+                .description{
+                    font-size: 17px;
+                    color: white;
+                    line-height: 1.2;
+                    font-weight: 200;
+
                 }
             }
+                
         }
+
     }
 }

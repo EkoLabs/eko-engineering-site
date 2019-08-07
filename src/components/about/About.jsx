@@ -34,10 +34,16 @@ function About(props) {
 
     let items = props.items.map((item, i) => (
         <div className="item-container" key={i}>
-            <div className="item" key={i}>
+            <div className="icon">
                 <img src={item.icon} alt={item.title} />
-                <div className="about-title">{item.title}</div>
-                <div className="about-description">{item.description}</div>
+                <svg version="1.1" width="100%" viewBox="-100 -100 500 500">
+                    <polygon fill="red" className="glow" points="300,150 225,280 75,280 0,150 75,20 225,20" transform="scale(1.3) translate(-37 -34)" filter="url(#purple-glow)"></polygon>
+                    <polygon className="hex" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
+                </svg>
+            </div>
+            <div className="item" key={i}>
+                <div className="title">{item.title}</div>
+                <div className="description">{item.description}</div>
             </div>
         </div>
     ));
@@ -46,7 +52,16 @@ function About(props) {
         <ScrollableAnchor id={'about'}>
             <section>
                 <div className="about-inner">
-                    {/*<h4>About us</h4>*/}
+                    <svg className="defs">
+                        <filter id="purple-glow" x="-5000%" y="-5000%" width="10000%" height="10000%">
+                            <feFlood result="flood" flood-color="#b75ab9" flood-opacity="0.6"></feFlood>
+                            <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
+                            <feGaussianBlur in="mask" result="blurred" stdDeviation="25"></feGaussianBlur>
+                            <feMerge>
+                                <feMergeNode in="blurred"></feMergeNode>
+                            </feMerge>
+                        </filter>
+                    </svg>
                     <div className="content about">
                         {items}
                     </div>

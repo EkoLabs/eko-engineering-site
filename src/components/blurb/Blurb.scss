@@ -1,0 +1,48 @@
+@import "../../breakpoints.scss";
+
+.blurb{
+	display: flex;
+	justify-content: center;
+	
+	p{
+		position: relative;
+		font-family: "Raleway";
+		max-width: 750px;
+		line-height: 1.917;
+		font-size: 24px;
+		margin: 200px 0;
+		text-align: left;
+
+		&:before{
+			content: "";
+			position: absolute;
+			left: -6%;
+			top: -10%;
+			background: url(./quotes.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 320px;
+			height: 200px;
+			z-index: -1;
+
+			@include for-phone-only{
+				left: 0%;
+				top: 0%;
+			}
+
+		}
+
+		@include for-phone-only{
+			padding: 50px;
+			margin: 0;
+		}
+
+		@include for-tablet-portrait-up{
+
+		}
+
+		@include for-tablet-landscape-up{
+
+		}
+	}
+}
