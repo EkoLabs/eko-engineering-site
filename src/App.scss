@@ -6,6 +6,7 @@
 :root{
   --color1: #f25fe7;
   --color2: #f2395a;
+  --color3: #f8aa1a;
 }
 
 body{
@@ -20,8 +21,6 @@ h1, h2, h3, h4, h5{
 h4{
   font-size: 39px;
   position: relative;
-  text-align: left;
-
   @include headerDivider;
 }
 

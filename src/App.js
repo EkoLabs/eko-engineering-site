@@ -3,7 +3,7 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Homepage from "./components/homepage/Homepage";
 import careersData from "./careersData";
-import PositionPage from "./components/jobs/PositionPage";
+import PositionPage from "./components/careers/PositionPage";
 
 function App() {
 

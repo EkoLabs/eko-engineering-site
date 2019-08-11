@@ -6,7 +6,7 @@ import Tech from "../tech/Tech";
 import Projects from "../projects/Projects";
 import News from "../news/News";
 import Investors from "../investors/Investors";
-import Jobs from "../jobs/Jobs";
+import Careers from "../careers/Careers";
 import ContactForm from "../contactform/ContactForm";
 import Footer from "../footer/Footer";
 import Office from "../office/Office";
@@ -22,7 +22,7 @@ function Homepage(){
             <Blurb/>
             <About/>
             <Tech/>
-            <Jobs/>
+            <Careers/>
             <Projects/>
             <Office/>
             <News/>

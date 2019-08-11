@@ -1,0 +1,219 @@
+@import "../../breakpoints.scss";
+@import "../../shared.scss";
+
+.careers{
+  padding-top: 150px;
+  position: relative;
+
+  .filters{
+    position: absolute;
+    visibility: hidden;
+    left: -500%;
+  }
+
+  &:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: -1;
+    opacity: 0.5;
+    background-image: url(./careers_bg.jpg);
+    background-size: 300%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+      @include for-tablet-landscape-up {
+        background-size: 100%;
+      }
+    }
+
+
+  .content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+  }
+
+  .positions{
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 40px;
+
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    @include for-tablet-landscape-up{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+  }
+
+
+  .position {
+    display: flex;
+    width: 100%;
+    margin-bottom: -50px;
+    min-width: 300px;
+
+    @include for-phone-only {
+      margin-bottom: -20px;
+    }
+
+
+    @include for-tablet-landscape-up{
+      width: 45%;
+    }
+
+    &:nth-child(2n - 1){
+      flex-direction: row-reverse;
+
+      .item{
+        margin-left: 0px;
+        margin-right: -30px;
+        text-align: right;
+      }
+      
+      .icon:after{
+        right: 80%;
+        left: auto;
+        background: linear-gradient(to left,  rgba(173,85,177,1) 0%,rgba(173,85,177,0) 100%);
+      }
+    }
+    
+    &:last-child .icon:before{
+      display: none;
+    }
+
+
+    .icon{
+      width: 230px;
+      min-width: 230px;
+      position: relative;
+
+      svg{
+        position: relative;
+        z-index: 10;
+      }
+
+      .hex{
+        stroke: #b75ab9;
+        stroke-width: 4px;
+        fill: rgba(0,0,0,0.5);
+      }
+
+      img{
+        position: absolute;
+        width: 30%;
+        left: 50%;
+        top: 115px;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 15;
+      }
+
+      &:after{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 400px;
+        top: 113.5px;
+        left: 80%;
+        background: linear-gradient(to right,  rgba(173,85,177,1) 0%,rgba(173,85,177,0) 100%);
+        z-index: 5;
+
+      }
+    }
+
+    .item {
+      width: 200px;
+      box-sizing: border-box;
+      text-align: left;
+      margin-left: -30px;
+      margin-bottom: 40px;
+
+      @include for-phone-only {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+      }
+
+      .title {
+        position: relative;
+        margin-top: 75px;
+        margin-bottom: 10px;
+        font-size: 31px;
+        font-weight: 300;
+        font-family: "Stolzl";
+
+      }
+
+      .description{
+        font-size: 17px;
+        color: white;
+        line-height: 1.2;
+        font-weight: 200;
+
+        a{
+          color: var(--color3);
+        }
+
+      }
+    }
+
+  }
+
+
+  .title{
+    font-weight: bold;
+    &:hover{
+      color: #96263a;
+    }
+  }
+
+  .location{
+    font-size: 14px;
+  }
+
+  em{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0px;
+  }
+
+  .ctaDescription{
+    max-width: 450px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-align: left;
+    align-self: center;
+  }
+
+  .ctaButton{
+    margin-bottom: 70px;
+    
+    align-self: center;
+    display: inline-flex;
+    border-color: var(--color2);
+
+    &:after{
+      background: var(--color2);
+    }
+  }
+
+}
