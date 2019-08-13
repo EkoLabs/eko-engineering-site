@@ -170,6 +170,9 @@
 
         a{
           color: var(--color3);
+          &:hover{
+            color: var(--color2);
+          }
         }
 
       }
@@ -180,9 +183,6 @@
 
   .title{
     font-weight: bold;
-    &:hover{
-      color: #96263a;
-    }
   }
 
   .location{
@@ -196,24 +196,21 @@
     margin: 10px 0px;
   }
 
-  .ctaDescription{
-    max-width: 450px;
-    margin-top: 70px;
-    margin-bottom: 40px;
-    text-align: left;
-    align-self: center;
-  }
-
-  .ctaButton{
+  .sendResumeBtn{
+    @include vaporButton('f2395a');
     margin-bottom: 70px;
     
     align-self: center;
     display: inline-flex;
-    border-color: var(--color2);
+    max-width: 450px;
+    margin-top: 70px;
+    text-align: left;
+    align-self: center;
 
-    &:after{
-      background: var(--color2);
-    }
+  }
+
+  .ctaButton{
+    align-self: center;
   }
 
 }

@@ -1,14 +1,11 @@
 @import "../../breakpoints";
+@import "../../shared.scss";
 
 .gallery {
-  text-align: left;
 
   ul {
     margin: 0;
     padding: 0;
-  }
-
-  h4{
     text-align: left;
   }
 
@@ -73,6 +70,11 @@
       width: 100%;
       height: 100%;
       display: block;
+    }
+
+    .vaporFrame{
+      position: relative;
+      @include vaporFrame();
     }
 
 

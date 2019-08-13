@@ -159,8 +159,9 @@
 		max-width: 500px;
 	}
 
-	.ctaButton{
+	.zoomInButton{
 		margin-top: 15px;
+		@include vaporButton()
 	}
 
 	@media screen and (max-width: 768px) {

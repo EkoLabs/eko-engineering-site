@@ -1,4 +1,5 @@
 @import "../../breakpoints.scss";
+@import "../../shared.scss";
 
 .contact {
   form{
@@ -75,16 +76,8 @@
     top: -10px;
   }
 
-  .ctaButton{
-    align-self: center;
-    border-color: var(--color2);
-    &:after{
-      background: var(--color2);
-    }
-
-    @include for-tablet-portrait-up{
-        align-self: flex-start;
-    }
-
+  .sendButton{
+    @include vaporButton('f2395a');
+    align-self: flex-start;
   }
 }

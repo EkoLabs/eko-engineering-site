@@ -8,14 +8,26 @@ function Gallery(props){
         if (item.title){
             itemEl = (
                     <a href={item.URL}>
-                        <div className="image" style={{backgroundImage: `url(${item.imageURL})`}}></div>
+                        <div className="vaporFrame">
+                            <div className="frameContent">
+                                <div className="image" style={{backgroundImage: `url(${item.imageURL})`}}></div>
+                            </div>
+                            <div className="glow"></div>
+                        </div>
                         <div className="title">{item.title}</div>
                         <div className="subtitle">{item.subtitle}</div>
                     </a>
+
             )
         } else {
             itemEl = (
-                <div className="image" style={{backgroundImage: `url(${item.imageURL})`}}></div>
+                <div className="vaporFrame">
+                    <div className="frameContent">
+                        <div className="image" style={{backgroundImage: `url(${item.imageURL})`}}></div>
+                    </div>
+                    <div className="glow"></div>
+                </div>
+
             )
         }
 

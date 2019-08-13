@@ -130,7 +130,9 @@ function Careers(){
                         <em>Didn't find a good fit? Send us your resume anyway</em>
                         We’re always looking for cool people to join our team. Apply now and we’ll reach out to you whenever the right opportunity comes up.
                     </div>
-                    <a href="#contact" className="ctaButton">Send resume</a>
+                    <a href="#contact" className="sendResumeBtn">
+                        <div className="frameContent">Send resume</div>
+                    </a>
                 </div>
             </section>
         </ScrollableAnchor>

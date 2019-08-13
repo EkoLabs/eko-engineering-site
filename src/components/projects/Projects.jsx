@@ -121,7 +121,7 @@ function Projects(){
                 }
                 currentItem.style.zIndex = 1;
                 gridRef.current && gridRef.current.classList.remove("active");
-            }, 300);
+            }, 150);
 
         }
     }

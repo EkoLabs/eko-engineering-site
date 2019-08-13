@@ -81,9 +81,11 @@ function ContactForm(props){
                         </div>
                         }
                         <button type="submit"
-                                className="ctaButton"
+                                className="sendButton"
                                 disabled={isSending}
-                        >Send</button>
+                        >
+                                <div className="frameContent">Send </div>
+                        </button>
                         {isSending &&
                         <div className="formMessage">Sending...</div> }
                         {success &&
