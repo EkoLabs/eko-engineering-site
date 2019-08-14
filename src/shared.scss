@@ -134,29 +134,33 @@ $scale: 1.04;
             100% calc(100% - 15px), calc(100% - 15px) 100%, 6px 100%, 0 calc(100% - 6px));
   }
 
-  .glow{
+  //.glow{
+  //
+  //  &:before, &:after{
+  //    content: "";
+  //    width: 100%;
+  //    height: 100%;
+  //    top: 0;
+  //    position: absolute;
+  //    z-index: -1;
+  //    filter: blur(10px);
+  //    transform: scale(1.1);
+  //    opacity: 0.5;
+  //  }
+  //
+  //  &:before{
+  //    background: #b957ad;
+  //    animation: vibrate-2 3.4s linear infinite both;
+  //  }
+  //
+  //  &:after{
+  //    background: red;
+  //    animation: vibrate-2 1.8s linear infinite both;
+  //    animation-delay: 2s
+  //  }
+  //}
+}
 
-    &:before, &:after{
-      content: "";
-      width: 100%;
-      height: 100%;
-      top: 0;
-      position: absolute;
-      z-index: -1;
-      filter: blur(10px);
-      transform: scale(1.1);
-      opacity: 0.5;
-    }
-
-    &:before{
-      background: #b957ad;
-      animation: vibrate-2 3.4s linear infinite both;
-    }
-
-    &:after{
-      background: red;
-      animation: vibrate-2 1.8s linear infinite both;
-      animation-delay: 2s
-    }
-  }
+.touch .vaporButton:after{
+  display: none;
 }

@@ -84,7 +84,7 @@ function ContactForm(props){
                         }
                         
                         <button type="submit"
-                                className="sendButton"
+                                className="sendButton vaporButton"
                                 disabled={isSending}
                         >
                                 <div className="frameContent">Send </div>

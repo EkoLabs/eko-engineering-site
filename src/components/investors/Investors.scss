@@ -43,10 +43,6 @@
             max-width: 56px;
             max-height: 56px;
           }
-  
-          &:hover {
-            transform: scale(1.2);
-          }
 
         }
 
@@ -116,4 +112,10 @@
       }
     }
 
+}
+
+.App:not(.touch) .investors .items .item{
+  &:hover {
+    transform: scale(1.2);
+  }
 }

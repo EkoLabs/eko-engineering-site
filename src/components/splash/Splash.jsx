@@ -16,7 +16,7 @@ function Splash(props) {
                     <h3>Join our team and help us blur the lines between TV and video games</h3>
                     {
                         !props.hideCTA &&
-                        (<a className="zoomInButton" href="/#careers">
+                        (<a className="zoomInButton vaporButton" href="/#careers">
                             <div className="frameContent">Zoom In</div>
                         </a>)
                     }

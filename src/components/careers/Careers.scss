@@ -5,6 +5,12 @@
   padding-top: 150px;
   position: relative;
 
+  @include for-phone-only {
+    .content {
+      padding: 0 15px;
+    }
+  }
+  
   .filters{
     position: absolute;
     visibility: hidden;
@@ -72,7 +78,8 @@
     min-width: 300px;
 
     @include for-phone-only {
-      margin-bottom: -20px;
+      margin-bottom: -40px;
+      margin-left: -40px;
     }
 
 
@@ -82,6 +89,12 @@
 
     &:nth-child(2n - 1){
       flex-direction: row-reverse;
+
+      @include for-phone-only {
+        margin-bottom: -40px;
+        margin-right: -40px;
+        margin-left: 0;
+      }
 
       .item{
         margin-left: 0px;
@@ -106,7 +119,11 @@
       min-width: 230px;
       position: relative;
 
-      svg{
+      @include for-phone-only {
+        min-width: 200px;
+      }
+
+        svg{
         position: relative;
         z-index: 10;
       }
@@ -135,6 +152,9 @@
         left: 80%;
         background: linear-gradient(to right,  rgba(173,85,177,1) 0%,rgba(173,85,177,0) 100%);
         z-index: 5;
+        @include for-phone-only {
+          top: 99px;
+         }
 
       }
     }
@@ -148,8 +168,8 @@
 
       @include for-phone-only {
         width: 100%;
-        text-align: center;
-        margin-left: 0;
+        text-align: left;
+        margin-left: -20px;
       }
 
       .title {
@@ -158,7 +178,11 @@
         margin-bottom: 10px;
         font-size: 31px;
         font-weight: 300;
-        font-family: "Stolzl";
+        font-family: "Stolzl-Light";
+
+        @include for-phone-only {
+          margin-top: 59px;
+        }
 
       }
 
@@ -207,6 +231,13 @@
     text-align: left;
     align-self: center;
 
+  }
+
+  .ctaDescription{
+    max-width: 500px;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
   }
 
   .ctaButton{

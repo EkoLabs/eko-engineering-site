@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Homepage from "./components/homepage/Homepage";
 import careersData from "./careersData";
 import PositionPage from "./components/careers/PositionPage";
+import {getUrlParameter, isTouchDevice} from "./utils";
 
 function App() {
 
@@ -18,8 +19,10 @@ function App() {
       />
   });
 
+    let isTouch = getUrlParameter('forcetouch') || isTouchDevice();
+
     return (
-        <div className="App">
+        <div className={`App ${isTouch?'touch':''}`}>
             <Router>
                 <Switch>
                   {careersRoutes}

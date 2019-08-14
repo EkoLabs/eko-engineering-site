@@ -1,4 +1,5 @@
 import React, { useEffect} from "react";
+import {isTouchDevice} from "../../utils";
 import BezierEasing from  "bezier-easing"
 import "./Projects.scss";
 import ScrollableAnchor from "react-scrollable-anchor";
@@ -141,8 +142,8 @@ function Projects(){
                 hexItem = (
                     <li className="hex"
                         key={x}
-                        onMouseEnter={() => mouseEnter(x)}
-                        onMouseLeave={() => mouseLeave(x)}
+                        onMouseEnter={() => { if (!isTouchDevice()) mouseEnter(x) }}
+                        onMouseLeave={() => { if (!isTouchDevice()) mouseLeave(x) }}
                     >
                         <div className="hexIn">
                             <a className="hexLink" href={itemData.URL} target="_blank" rel="noopener noreferrer">

@@ -14,6 +14,7 @@
 		font-size: 15px;
 		list-style-type: none;
 		padding: 0;
+		padding-top: 30px;
 		padding-bottom: 3.5vw;
 		z-index: 1;
 	}
@@ -188,6 +189,28 @@
 
 			.hexLink:before {
 				background: rgba(159, 52, 199, 0.8);
+			}
+		}
+
+	}
+}
+
+:not(.touch) .projects{
+
+}
+
+.touch .projects{
+	.hexGrid {
+
+		.hex {
+			opacity: 1;
+
+			.hexText {
+				opacity:1;
+			}
+
+			.hexLink:before {
+				background: rgba(159, 52, 199, 0.5);
 			}
 		}
 
