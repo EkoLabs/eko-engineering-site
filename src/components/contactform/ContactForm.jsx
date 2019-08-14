@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ContactForm.scss";
+import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx'
 import ScrollableAnchor from "react-scrollable-anchor";
 
 function ContactForm(props){
@@ -70,16 +71,18 @@ function ContactForm(props){
                         </div>
                         { positionForm &&
                             <div className="form-field cvRow">
-                                <input className="input-cv" type="file" name="cv" required/>
                                 <label className="label" htmlFor="cv">CV</label>
+                                <FileUploadInput name="cv" required/>
                             </div>
                         }
                         { !positionForm &&
                         <div className="form-field cvRow">
-                            <input className="input-cv" type="file" name="attachment"/>
-                            <label className="label" htmlFor="attachment">Attachment (CV, a picture of your dog, whatever - make us happy!)</label>
+                            <label className="label" >Attachment (CV, a picture of your dog, whatever - make us happy!)</label>
+                            <FileUploadInput name="attachment"/>
                         </div>
+
                         }
+                        
                         <button type="submit"
                                 className="sendButton"
                                 disabled={isSending}
