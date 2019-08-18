@@ -34,6 +34,15 @@
         .item-container {
             display: flex;
 
+            &.wearedevelopers .icon img{
+                top: 105px;
+            }
+
+            &.wedesignexperiences .icon img{
+                top: 118px;
+                left: calc(50% + 2px);
+            }
+
             @include for-phone-only{
              flex-direction: column;
                 align-items: center;

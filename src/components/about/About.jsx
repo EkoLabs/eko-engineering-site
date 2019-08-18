@@ -15,6 +15,7 @@ function About(props) {
             description: 'We come from diverse engineering backgrounds: from web and design to hardware and embedded systems. We’re also passionate about art, entertainment, technology and everything in between. It’s our unique mix of talents and passions which puts us at the forefront of interactive video.'
         },
         {
+            className: 'wedesignexperiences',
             icon: designIcon,
             title: 'We Design Experiences',
             description: 'We’re excited about making experiences that are not only clear but engaging and fun. Get ready for a world full of motion and animations over a wide range of clients such as webapps, mobile, Xbox, Steam, VR and smart TVs apps.'
@@ -25,6 +26,7 @@ function About(props) {
             description: 'Our core technology enables generating and manipulating media streams in real time. On top of that, our scalable cloud-based system serves our creators and millions of viewers. We’re constantly solving complex problems by combining proven solutions with bold ideas. '
         },
         {
+            className: 'wearedevelopers',
             icon: developersIcon,
             title: 'We ARE Developers',
             description: 'As a developer at eko, you’ll be creating the tech and infrastructure for a new era of digital storytelling. Choose your own hardware and software as you lead projects, take an active part in the creative process, enjoy a flat organizational structure and push interactive video to the edge, or over it!'
@@ -32,7 +34,7 @@ function About(props) {
     ];
 
     let items = itemData.map((item, i) => (
-        <div className="item-container" key={i}>
+        <div className={`item-container ${item.className}`} key={i}>
             <div className="icon">
                 <img src={item.icon} alt={item.title} />
                 <svg version="1.1" width="100%" viewBox="-100 -100 500 500">
