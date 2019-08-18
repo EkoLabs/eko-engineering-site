@@ -205,6 +205,16 @@
 		.hex {
 			opacity: 1;
 
+			.title{
+				font-size: 13px;
+				margin-bottom: 2px;
+			}
+
+			.subtitle{
+				margin-top: 0px;
+				font-size: 10px;
+			}
+
 			.hexText {
 				opacity:1;
 			}

@@ -23,6 +23,11 @@ let data = {
             subtitle: "Coke",
             imageURL: "https://d2zoj4vo9uf0uk.cloudfront.net/wp-content/uploads/2016/02/07010009/ad_sharing_image_1920x1080.jpg",
             URL: "https://helloeko.com/v/coke"
+        },        {
+            title: "One on One",
+            subtitle: "Detroit Pistons",
+            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/promotions/9olx9y/17_Homepage-Carousel.jpg",
+            URL: "https://helloeko.com/1on1/pistons?autoplay=true"
         },
         {
             title: "#WarGames",
@@ -31,7 +36,7 @@ let data = {
         },
         {
             title: "Tasty",
-            subtitle: "Create Your Own: Chocolate Chip Cookie",
+            subtitle: "Chocolate Chip Cookie",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/production/projects/An9Q5B/neta_eko_tasty_68_low_res_768x432-190625133839.jpg",
             URL: "https://helloeko.com/buzzfeed-tasty-eko-fast/cookies-fast?autoplay=true"
         },
@@ -129,7 +134,7 @@ function Projects(){
 
     let hexGrid = [];
     let activeHexes = [
-         5,6,7,
+         4, 5, 6, 7, 8,
         16,17,18,19,
          28,29,30
     ];
