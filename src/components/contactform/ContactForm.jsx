@@ -70,10 +70,10 @@ function ContactForm(props){
                                       required />
                         </div>
                         { positionForm &&
-                            <div className="form-field cvRow">
-                                <label className="label" htmlFor="cv">CV</label>
-                                <FileUploadInput name="cv" required/>
-                            </div>
+                        <div className="form-field cvRow">
+                            <label className="label" htmlFor="cv">CV</label>
+                            <FileUploadInput name="cv" required/>
+                        </div>
                         }
                         { !positionForm &&
                         <div className="form-field cvRow">

@@ -63,7 +63,10 @@
 
     &.cvRow{
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
+      label{
+        position: relative;
+      }
     }
 
     .input-cv + .label{
