@@ -56,7 +56,7 @@ function About(props) {
                 <div className="about-inner">
                     <svg className="defs">
                         <filter id="purple-glow" x="-5000%" y="-5000%" width="10000%" height="10000%">
-                            <feFlood result="flood" flood-color="#b75ab9" flood-opacity="0.6"></feFlood>
+                            <feFlood result="flood" floodColor="#b75ab9" floodOpacity="0.6"></feFlood>
                             <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
                             <feGaussianBlur in="mask" result="blurred" stdDeviation="25"></feGaussianBlur>
                             <feMerge>
