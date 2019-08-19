@@ -32,13 +32,14 @@ import "./Splash.scss";
     let brushSize = 30;
 
     let random = 2;
+    let canvasInitiated = false;
 
     const MAX_DRAWS = 3500;
 
     /// galaxy draw
 
     function initCanvas(canvas){
-
+        canvasInitiated = true;
         let totalWidth = canvas.offsetWidth;
         let totalHeight = canvas.offsetHeight;
 
@@ -240,7 +241,7 @@ function Splash(props) {
 
 
     useEffect(() => {
-        if (!isTouchDevice()) {
+        if (!isTouchDevice() && !canvasInitiated) {
             initCanvas(canvasRef.current);
         }
     });
