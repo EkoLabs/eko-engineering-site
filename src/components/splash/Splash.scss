@@ -80,7 +80,7 @@
 			display: block;
 			content: "";
 			width: 100%;
-			padding-bottom: 60%;
+			padding-bottom: 80%;
 		}
 
 		.titleContainer{
@@ -136,8 +136,10 @@
 			width: 100%;
 			font-size: 4.2vw;
 			margin-top: 0.2vw;
+			will-change: text-shadow;
 
-			@include neon;
+			//@include neon;
+			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
 
 			@include for-tablet-portrait-up{
 				font-size: 32px;
