@@ -123,8 +123,13 @@
 			color: rgba(255,255,255, 0);
 
 
-			@include for-desktop-up{
+			@include for-tablet-portrait-up{
+				margin-top: 12%;
+			}
 
+
+			@include for-phone-only{
+				margin-top: 22px;
 			}
 		}
 

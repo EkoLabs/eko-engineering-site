@@ -33,7 +33,7 @@ import "./Splash.scss";
 
     let random = 2;
 
-    const MAX_DRAWS = 3000;
+    const MAX_DRAWS = 3500;
 
     /// galaxy draw
 
