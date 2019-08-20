@@ -10,8 +10,6 @@ We're looking for a developer who not only loves JavaScript but also has the pas
 At Eko, you’ll be working on a platform that enables the creation and delivery of experiences that are somewhere between TV shows and video games. You’ll be serving millions of viewers. You’ll be taking JavaScript to the extreme. This means getting to the bits and bytes of rendering, I/O handling and data processing. You’ll be using cutting edge and experimental features. You’ll be facing the darkest corners of modern browsers and nodejs. You’ll be amazed by what can be done in JavaScript these days. It’s going to be fun!
 
 Yes, we use all the tools and libraries cool kids like (React, Redux, Angular, HapiJS to name a few...), but this shouldn’t be your reason for joining us. If you are all about creating mind-blowing experiences on the web, consider yourself invited!
-
-Check out our <a href="https://helloeko.com" target="_blank"  el="noopener noreferrer">website</a> and the <a href="https://developer.helloeko.com" target="_blank"  el="noopener noreferrer">developers site</a> to get a better sense of what it’s all about.
     `,
     positions: [
         {

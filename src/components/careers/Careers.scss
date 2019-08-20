@@ -118,12 +118,13 @@
       width: 230px;
       min-width: 230px;
       position: relative;
+      pointer-events: none;
 
       @include for-phone-only {
         min-width: 200px;
       }
 
-        svg{
+      svg{
         position: relative;
         z-index: 10;
       }
