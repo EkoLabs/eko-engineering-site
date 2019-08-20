@@ -7,7 +7,7 @@ function Gallery(props){
         let itemEl;
         if (item.title){
             itemEl = (
-                    <a href={item.URL}>
+                    <a href={item.URL} target="_blank" rel="noopener noreferrer">
                         <div className="vaporFrame">
                             <div className="frameContent">
                                 <div className="image" style={{backgroundImage: `url(${item.imageURL})`}}></div>

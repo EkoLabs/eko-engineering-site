@@ -34,6 +34,10 @@
         .item-container {
             display: flex;
 
+            p{
+                margin: 0;
+            }
+
             &.wearedevelopers .icon img{
                 top: 105px;
             }
@@ -118,7 +122,7 @@
                 @include for-phone-only {
                     width: 100%;
                     text-align: center;
-                    margin-left: -30px;
+                    margin-left: 0;
                 }
 
                 .title {

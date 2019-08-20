@@ -11,7 +11,7 @@ At Eko, you’ll be working on a platform that enables the creation and delivery
 
 Yes, we use all the tools and libraries cool kids like (React, Redux, Angular, HapiJS to name a few...), but this shouldn’t be your reason for joining us. If you are all about creating mind-blowing experiences on the web, consider yourself invited!
 
-Check out our [website](https://helloeko.com) and the [developers site](https://developer.helloeko.com) to get a better sense of what it’s all about.
+Check out our <a href="https://helloeko.com" target="_blank"  el="noopener noreferrer">website</a> and the <a href="https://developer.helloeko.com" target="_blank"  el="noopener noreferrer">developers site</a> to get a better sense of what it’s all about.
     `,
     positions: [
         {

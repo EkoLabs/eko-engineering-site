@@ -12,18 +12,19 @@ import devopsDoghouse from "./devops_doghouse.png";
 function Careers(){
 
     return (
-        <ScrollableAnchor id={'careers'}>
-            <section className="careers">
-                <svg className="filters" version="1.1" width="100%" viewBox="-100 -100 500 500">
-                    <defs>
-                        <filter id="scanlinesCutout">
-                            <feImage result="photo" xlinkHref={scanlines} width="500" height="500"/>
-                            <feComposite operator="in" in="photo" in2="SourceGraphic"/>
-                        </filter>
-                    </defs>
-                </svg>
+
+        <section className="careers">
+            <svg className="filters" version="1.1" width="100%" viewBox="-100 -100 500 500">
+                <defs>
+                    <filter id="scanlinesCutout">
+                        <feImage result="photo" xlinkHref={scanlines} width="500" height="500"/>
+                        <feComposite operator="in" in="photo" in2="SourceGraphic"/>
+                    </filter>
+                </defs>
+            </svg>
+            <ScrollableAnchor id={'careers'}>
                 <div className="content">
-                    <h4>Open positions</h4>
+                    <h4>Choose your own adventure</h4>
                     <ul className="positions">
                         <li className="position">
                             <div className="icon">
@@ -127,15 +128,15 @@ function Careers(){
 
 
                     <div className="ctaDescription">
-                        <em>Didn't find a good fit? Send us your resume anyway</em>
+                        <em>Didn't find a good fit? Send us your resume anyway!</em>
                         We’re always looking for cool people to join our team. Apply now and we’ll reach out to you whenever the right opportunity comes up.
                     </div>
                     <a href="#contact" className="sendResumeBtn vaporButton">
                         <div className="frameContent">Send resume</div>
                     </a>
                 </div>
-            </section>
-        </ScrollableAnchor>
+            </ScrollableAnchor>
+        </section>
     );
 }
 

@@ -18,7 +18,7 @@ function About(props) {
             className: 'wedesignexperiences',
             icon: designIcon,
             title: 'We Design Experiences',
-            description: 'We’re excited about making experiences that are not only clear but engaging and fun. Get ready for a world full of motion and animations over a wide range of clients such as webapps, mobile, Xbox, Steam, VR and smart TVs apps.'
+            description: 'We’re excited about making experiences that are not only clear but engaging and fun. Get ready for a world full of motion and animations over a wide range of clients such as webapps, mobile, Xbox, Steam, VR and smart TV apps.'
         },
         {
             icon: buildIcon,
@@ -29,7 +29,12 @@ function About(props) {
             className: 'wearedevelopers',
             icon: developersIcon,
             title: 'We ARE Developers',
-            description: 'As a developer at eko, you’ll be creating the tech and infrastructure for a new era of digital storytelling. Choose your own hardware and software as you lead projects, take an active part in the creative process, enjoy a flat organizational structure and push interactive video to the edge, or over it!'
+            description:
+                <React.Fragment>
+                    <p>As a developer at eko, you’ll be creating the tech and infrastructure for a new era of digital storytelling</p>
+                    <p>Choose your own hardware and software as you lead projects, take an active part in the creative process, enjoy a flat organizational structure and push interactive video to the edge, or over it!</p>
+                </React.Fragment>
+
         },
     ];
 

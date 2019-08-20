@@ -33,7 +33,7 @@ function Footer(props){
                 }, 
                 {
                     title: 'About Eko',
-                    URL: 'https://helloeko.com/'
+                    URL: 'https://company.helloeko.com/history'
                 }, 
                 {
                     title: 'Eko for Developers',
@@ -59,7 +59,7 @@ function Footer(props){
                     URL: 'https://twitter.com/ekoengi'
                 },
                 {
-                    title: 'LinkedIn',
+                    title: 'Connect with us on LinkedIn',
                     URL: 'https://www.linkedin.com/company/ekovideo'
                 },
             ],
