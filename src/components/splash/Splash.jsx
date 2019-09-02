@@ -252,7 +252,6 @@ function Splash(props) {
         <h3>Join our team and help us blur the lines between TV and video games</h3>
     </React.Fragment>
     );
-    console.log(props);
 
     if (props.titleText) {
         let splitTitle = props.titleText.split(' ');
