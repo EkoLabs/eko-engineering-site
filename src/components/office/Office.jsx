@@ -17,11 +17,14 @@ let images = [eko, ruel, mario, posters, drums, kitchen, shows, piano, juna,  pi
 function Office(){
     let data = {
         title: 'Behind the scenes',
-        items: images.map(imageURL => ({imageURL})),
+        items: images.map(imageURL => ({
+            imageURL: imageURL,
+            URL: imageURL
+        })),
         type: 'medium'
     };
 
-    return (<Gallery data={data} />)
+    return (<Gallery data={data} lightbox={true} />)
 }
 
 export default Office;

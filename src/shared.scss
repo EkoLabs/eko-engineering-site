@@ -123,6 +123,7 @@ $scale: 1.04;
     /*   border-image-width: 20; */
     border-image-slice: 20;
     border-image-outset: 4px;
+    transition: all 0.2s ease-out;
   }
 
   .frameContent{
@@ -130,6 +131,7 @@ $scale: 1.04;
     height: 100%;
     clip-path: polygon(0 15px, 15px 0, calc(100% - 6px) 0, 100% 6px,
             100% calc(100% - 15px), calc(100% - 15px) 100%, 6px 100%, 0 calc(100% - 6px));
+    transition: all 0.2s ease-out;
   }
 
   //.glow{

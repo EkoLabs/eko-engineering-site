@@ -39,7 +39,8 @@
 
   a{
     color: white;
-
+    transition: all 0.2s ease-out;
+    
     &:hover{
       color: #f2395a;
     }
@@ -78,6 +79,16 @@
     }
 
 
+  }
+}
+
+:not(.touch) .gallery .item a:hover{
+  .vaporFrame:before {
+    filter: hue-rotate(40deg);
+  }
+  .vaporFrame .frameContent {
+    transform: scale(0.98);
+    filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(300deg);
   }
 }
 
