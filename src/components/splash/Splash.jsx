@@ -246,6 +246,26 @@ function Splash(props) {
         }
     });
 
+    let titleText = (
+    <React.Fragment>
+        <h2>We're all about <em>choice</em></h2>
+        <h3>Join our team and help us blur the lines between TV and video games</h3>
+    </React.Fragment>
+    );
+    console.log(props);
+
+    if (props.titleText) {
+        let splitTitle = props.titleText.split(' ');
+        let nonEm = splitTitle.slice(0,1).join(" ");
+        let em = splitTitle.slice(1).join(" ");
+        titleText = (
+            <React.Fragment>
+                <h2 className="positionTitle">{nonEm} <em>{em}</em></h2>
+                <h3>Join our team and help us blur the lines between TV and video games</h3>
+            </React.Fragment>
+        );
+    }
+
     return (
         <section className="splash">
             <canvas ref={canvasRef} />
@@ -257,8 +277,7 @@ function Splash(props) {
                     </div>
                 </div>
                 <div className="right">
-                    <h2>We're all about <em>choice</em></h2>
-                    <h3>Join our team and help us blur the lines between TV and video games</h3>
+                    {titleText}
                     {
                         !props.hideCTA &&
                         (<a className="zoomInButton vaporButton" href="/#careers">

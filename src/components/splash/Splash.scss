@@ -187,6 +187,10 @@
 			text-transform: uppercase;
 			font-style: normal;
 		}
+
+		&.positionTitle em{
+			text-transform: none;
+		}
 	}
 
 	h3{

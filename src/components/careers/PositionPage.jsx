@@ -18,7 +18,7 @@ function PositionPage(props){
         <Fragment>
             <MobileMenu/>
             <Header/>
-            <Splash hideCTA/>
+            <Splash titleText={props.title} hideCTA/>
             <Position title={props.title} />
             <ContactForm formType="position" positionTitle={props.title} />
             <About showTitle={true}/>
