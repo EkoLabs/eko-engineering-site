@@ -12,8 +12,8 @@ function Gallery(props){
     function onItemClick(e, index){
         if (props.lightbox){
             setLightboxState({imageIndex: index, isOpen: true});
+            e.preventDefault();
         }
-        e.preventDefault();
     }
 
     let items = props.data.items.map((item, i)=> {
