@@ -98,6 +98,10 @@
     margin-bottom: 60px;
     font-weight: 200;
 
+    h5{
+      color: white;
+    }
+
     @include for-phone-only {
       width: 100%;
       max-width: 600px;
@@ -106,6 +110,11 @@
     a{
       color: #f8aa1a;
       white-space: nowrap;
+      transition: all 0.2s ease-out;
+
+      &:hover{
+        color: var(--color2);
+      }
     }
   }
 

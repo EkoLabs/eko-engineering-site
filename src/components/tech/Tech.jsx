@@ -24,22 +24,22 @@ function Tech(){
                         <div className="item">
                             <h5>Interactive Video Playback</h5>
                             <div className="text">
-                                Our core technology allows viewers to completely control the narrative by composing audio/video streams in real-time on multiple devices. Our intelligent video player & cloud-based media services predict & optimize available bandwidth to load potential paths ahead using advanced streaming algorithms.
-                                <a target="_blank" rel="noopener noreferrer" href="https://helloeko.com">Learn more</a>
+                                Our core technology allows viewers to completely control the narrative by composing audio/video streams in real-time on multiple devices. Our intelligent video player & cloud-based media services predict & optimize available bandwidth to load potential paths ahead using advanced streaming algorithms. 
+                                <a target="_blank" rel="noopener noreferrer" href="https://helloeko.com"> Learn more</a>
                             </div>
                         </div>
                         <div className="item">
                             <h5>Creation Tools</h5>
                             <div className="text">
                                 eko Studio: A powerful WYSIWYG editor that enables teams of film makers, editors, designers & developers to collaborate on an interactive video project from conception to delivery.
-                                <a target="_blank" rel="noopener noreferrer" href="https://studio.helloeko.com">Learn more</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://studio.helloeko.com"> Learn more</a>
                             </div>
                         </div>
                         <div className="item">
                             <h5>JavaScript Framework</h5>
                             <div className="text">
                                 A robust, modern framework for developing interactions that allows developers to completely customize eko projects by adding logic, UI, API integration or anything else they can dream of.
-                                <a  target="_blank" rel="noopener noreferrer" href="https://developer.helloeko.com">Learn more</a>
+                                <a  target="_blank" rel="noopener noreferrer" href="https://developer.helloeko.com"> Learn more</a>
                             </div>
                         </div>
                         <div className="item">
