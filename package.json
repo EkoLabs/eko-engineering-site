@@ -4,6 +4,7 @@
   "homepage": "https://eko.engineering",
   "private": true,
   "dependencies": {
+    "@zhyabs1314/react-image-lightbox": "^5.0.8",
     "bezier-easing": "^2.1.0",
     "gh-pages": "^2.0.1",
     "gsap": "^2.1.3",
