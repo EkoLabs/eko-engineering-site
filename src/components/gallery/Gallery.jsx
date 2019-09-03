@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Lightbox from 'react-image-lightbox';
+import Carousel, { Modal, ModalGateway } from 'react-images';
 import "./Gallery.scss";
 
 function Gallery(props){
@@ -43,7 +43,7 @@ function Gallery(props){
     });
 
     if (props.lightbox){
-        lightboxImages = props.data.items.map(item => item.imageURL);
+        lightboxImages = props.data.items.map(item => ({src: item.imageURL}));
     }
     
     return(
@@ -52,27 +52,20 @@ function Gallery(props){
                 <h4>{props.data.title}</h4>
                 <ul className="items">{items}</ul>
             </div>
-            {props.lightbox && lightbox.isOpen && (
-                <Lightbox
-                    enableZoom={false}
-                    mainSrc={lightboxImages[lightbox.imageIndex]}
-                    nextSrc={lightboxImages[(lightbox.imageIndex + 1) % lightboxImages.length]}
-                    prevSrc={lightboxImages[(lightbox.imageIndex + lightboxImages.length - 1) % lightboxImages.length]}
-                    onCloseRequest={() => setLightboxState({ isOpen: false })}
-                    onMovePrevRequest={() =>
-                        setLightboxState({
-                            imageIndex: (lightbox.imageIndex + lightboxImages.length - 1) % lightboxImages.length,
-                            isOpen: true
-                        })
-                    }
-                    onMoveNextRequest={() =>
-                        setLightboxState({
-                            imageIndex: (lightbox.imageIndex + 1) % lightboxImages.length,
-                            isOpen: true
-                        })
-                    }
-                />
-            )}
+            {props.lightbox &&
+                <ModalGateway>
+                    {lightbox.isOpen ? (
+                        <Modal onClose={() => setLightboxState({ isOpen: false })}
+                               allowFullscreen={false}
+                        >
+                            <Carousel currentIndex={lightbox.imageIndex}
+                                      views={lightboxImages}
+                                      hideControlsWhenIdle={100000}
+                            />
+                        </Modal>
+                    ) : null}
+                </ModalGateway>
+            }
         </section>
     )
 }
