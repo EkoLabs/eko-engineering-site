@@ -23,7 +23,7 @@ Want to learn more?
 * JavaScript - great coding skills and an appetite to learn more
 * CSS preprocessors like SASS/LESS/Stylus
 
-##### Nice To have
+##### Nice to Have
 
 * Experience with ES6
 * Client-side frameworks -  React, Angular or Vue
@@ -46,7 +46,7 @@ Want to learn more?
 * JavaScript ecosystem - packaging (yarn/npm), building (webpack), testing (mocha/jest/jasmine, headless browsers etc.), linting (jshint/eslint/jslint)
 
 
-##### Nice To have
+##### Nice to Have
 
 * Client-side frameworks -  React, Angular or Vue
 * Web animations - CSS animation and/or animation libraries like GSAP 
@@ -66,7 +66,7 @@ Want to learn more?
 
 
 
-##### Nice To have
+##### Nice to Have
 
 * DevOps tools and methodologies - CD/CI
 * Knowledge of SQL/noSQL databases
@@ -93,7 +93,7 @@ Want to learn more?
 * Infrastructure as code (Cloudformation / Terraform), monitoring
 
 
-##### Nice To have
+##### Nice to Have
 
 * DevOps tools and methodologies - CD/CI
 * Client-side frameworks -  React, Angular or Vue
@@ -109,7 +109,7 @@ Want to learn more?
 * CSS preprocessors like SASS/LESS/Stylus
 * SQL/noSQL databases
 
-##### Nice To have
+##### Nice to Have
 
 * Client-side frameworks -  React, Angular or Vue
 * Nodejs and server-side frameworks (Express/Hapi)
@@ -137,7 +137,7 @@ Want to learn more?
 * SQL/noSQL databases
 
 
-##### Nice To have
+##### Nice to Have
 
 * Client-side frameworks -  React, Angular or Vue
 * CSS - preprocessors like SASS/LESS/Stylus, CSS architecture methodologies like BEM/OOCSS/SMACSS
@@ -159,7 +159,7 @@ Want to learn more?
 * Good at seeing the bigger picture and system architecture planning
 
 
-##### Nice To have
+##### Nice to Have
 
 * Proven DevOps and Infrastructure experience will be an advantage
 * Degree in Computer Science (not a must; we're always looking for super talented people)
