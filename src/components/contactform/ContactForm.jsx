@@ -27,6 +27,7 @@ function ContactForm(props){
     let isSending = formState === 'sending';
     let success = formState === "success";
     let error = formState === "error";
+    let formDisabled = isSending || success;
     let positionForm = props.formType === 'position';
     let formAction = `https://formspree.io/${positionForm?'mpkkjwbx':'mdyydewx'}`;
 
@@ -94,7 +95,7 @@ function ContactForm(props){
                         
                         <button type="submit"
                                 className="sendButton vaporButton"
-                                disabled={isSending}
+                                disabled={formDisabled}
                         >
                                 <div className="frameContent">Send </div>
                         </button>
