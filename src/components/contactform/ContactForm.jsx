@@ -17,6 +17,7 @@ function ContactForm(props){
             .then(()=>setFormState("success"))
             .catch(()=>setFormState("error"));
 
+        window.fbq('track', 'Contact');
         e.preventDefault();
         return false;
     }
