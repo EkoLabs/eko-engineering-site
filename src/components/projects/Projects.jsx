@@ -10,67 +10,67 @@ let data = {
         {
             title: "Mind Blown",
             imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/promotions/4sbgwy/landingpages_mindblown.png",
-            URL: "https://helloeko.com/mindblown/stop-with-these-questions?autoplay=true"
+            URL: "https://eko.com/mindblown/stop-with-these-questions?autoplay=true"
         },
         {
             title: "Bob Dylan",
             subtitle: "Like a Rolling Stone",
             imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/projects/ljfeyc/Bob%20Dylan_Rolling_Stone_medium.png",
-            URL: "https://helloeko.com/music/like-a-rolling-stone?autoplay=true"
+            URL: "https://eko.com/music/like-a-rolling-stone?autoplay=true"
         },
         {
             title: "Marvel",
             subtitle: "Coke",
             imageURL: "https://d2zoj4vo9uf0uk.cloudfront.net/wp-content/uploads/2016/02/07010009/ad_sharing_image_1920x1080.jpg",
-            URL: "https://helloeko.com/v/coke"
+            URL: "https://eko.com/v/coke"
         },        {
             title: "One on One",
             subtitle: "Detroit Pistons",
             imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/promotions/9olx9y/17_Homepage-Carousel.jpg",
-            URL: "https://helloeko.com/1on1/pistons?autoplay=true"
+            URL: "https://eko.com/1on1/pistons?autoplay=true"
         },
         {
             title: "#WarGames",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/836b2709232e01b48f203673c213e2b8.jpg",
-            URL: "https://helloeko.com/wargames/episode-one-chasing-bryce?autoplay=true"
+            URL: "https://eko.com/wargames/episode-one-chasing-bryce?autoplay=true"
         },
         {
             title: "Tasty",
             subtitle: "Chocolate Chip Cookie",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/production/projects/An9Q5B/neta_eko_tasty_68_low_res_768x432-190625133839.jpg",
-            URL: "https://helloeko.com/buzzfeed-tasty-eko-fast/cookies-fast?autoplay=true"
+            URL: "https://eko.com/buzzfeed-tasty-eko-fast/cookies-fast?autoplay=true"
         },
         {
             title: "That Moment When",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/b706223d6acae0a7f478f77e2eb82be7.jpg",
-            URL: "https://helloeko.com/tmw/101?autoplay=true"
+            URL: "https://eko.com/tmw/101?autoplay=true"
         },
         {
             title: "Coldplay",
             subtitle: "Ink",
             imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/projects/oEZGcv/152112809764508.UHENiOdJpbM7vJfbnu3B_height640.png",
-            URL: "https://helloeko.com/music/coldplay-ink?autoplay=true"
+            URL: "https://eko.com/music/coldplay-ink?autoplay=true"
         },
         {
             title: "Charlie Gets Fired",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/falcon_storage/production/projects/agvsRG/charlie%201-171107213501-768.jpg",
-            URL: "https://helloeko.com/charlie/charlie-pitches-a-pilot?autoplay=true"
+            URL: "https://eko.com/charlie/charlie-pitches-a-pilot?autoplay=true"
         },
         {
             title: "Jeff Buckley",
             subtitle: "Just Like a Woman",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/falcon_storage/production/projects/InWy6m/jeff%20buckley_preview%202-171110165337.jpeg",
-            URL: "https://helloeko.com/v/jeff-buckley-just-like-a-woman?autoplay=true"
+            URL: "https://eko.com/v/jeff-buckley-just-like-a-woman?autoplay=true"
         },
         {
             title: "Possibilia",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/staging/episode/D3iXb9/Possibillia768x432_2.jpg",
-            URL: "https://helloeko.com/v/possibilia?autoplay=true"
+            URL: "https://eko.com/v/possibilia?autoplay=true"
         },
         {
             title: "Buzzfeed",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/remote_efu/upload/a912253eeec7e76bf25fc0024f61bbaa.jpg",
-            URL: "https://helloeko.com/buzzfeed-x-eko/V5oPXz?autoplay=true"
+            URL: "https://eko.com/buzzfeed-x-eko/V5oPXz?autoplay=true"
         },
     ]
 };

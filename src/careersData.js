@@ -1,6 +1,6 @@
 const careersData = {
     generalText: `
-eko is a media and technology company pioneering a new medium in which stories told in live action video are shaped by viewers as they unfold. Our award-winning shows are distributed through [helloeko.com](https://helloeko.com), affiliate partners, and social networks; and are viewable on desktop, mobile, connected TV’s, and VR.
+eko is a media and technology company pioneering a new medium in which stories told in live action video are shaped by viewers as they unfold. Our award-winning shows are distributed through [eko.com](https://eko.com), affiliate partners, and social networks; and are viewable on desktop, mobile, connected TV’s, and VR.
         
 We use JavaScript for (almost) everything, which means we’re looking for a developer who not only loves JavaScript but also has the passion, knowledge and ability to use it in ways that push the envelope of what can be done on the web.
 

@@ -29,23 +29,23 @@ function Footer(props){
             [
                 {
                     title: 'Eko',
-                    URL: 'https://helloeko.com/'
+                    URL: 'https://eko.com/'
                 }, 
                 {
                     title: 'About Eko',
-                    URL: 'https://company.helloeko.com/history'
+                    URL: 'https://company.eko.com/history'
                 }, 
                 {
                     title: 'Eko for Developers',
-                    URL: 'https://developer.helloeko.com/'
+                    URL: 'https://developer.eko.com/'
                 }, 
                 {
                     title: 'Eko for Brands',
-                    URL: 'https://company.helloeko.com/brands'
+                    URL: 'https://company.eko.com/brands'
                 }, 
                 {
                     title: 'Eko for Creators',
-                    URL: 'https://studio.helloeko.com/'
+                    URL: 'https://studio.eko.com/'
                 }, 
                 {
                     title: 'GitHub',
@@ -66,15 +66,15 @@ function Footer(props){
             [
                 {
                     title: 'Privacy Policy',
-                    URL: 'https://company.helloeko.com/legal/privacy'
+                    URL: 'https://company.eko.com/legal/privacy'
                 },
                 {
                     title: 'Terms',
-                    URL: 'https://company.helloeko.com/legal/website-terms-of-use'
+                    URL: 'https://company.eko.com/legal/website-terms-of-use'
                 },
                 {
                     title: 'Legal',
-                    URL: 'https://company.helloeko.com/legal/legal-terms'
+                    URL: 'https://company.eko.com/legal/legal-terms'
                 },
             ]
         ]
