@@ -3,12 +3,12 @@ import "./ContactForm.scss";
 import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx'
 import ScrollableAnchor from "react-scrollable-anchor";
 
-function ContactForm(props){
+function ContactForm(props) {
     const [formState, setFormState] = useState("idle");
 
     let formRef = React.createRef();
 
-    function doSubmit(e){
+    function doSubmit(e) {
         let form = formRef.current;
         let data = new FormData(form);
 
@@ -22,7 +22,24 @@ function ContactForm(props){
         return false;
     }
 
+    function getQueryParams() {
+        const queryParamsInterface = new URLSearchParams(window.location.search);
+        const entries = queryParamsInterface.entries();
+        let urlParams = {};
 
+        for (const [key, value] of entries) { 
+            urlParams[key] = value;
+        }
+
+        return urlParams;
+    }
+
+    function queryParamsFields() {
+        const queryParams = getQueryParams();
+
+        return Object.keys(queryParams)
+            .map(paramKey => <input key={paramKey} type="hidden" name={paramKey} value={queryParams[paramKey]} />)
+    }
 
     let isSending = formState === 'sending';
     let success = formState === "success";
@@ -44,8 +61,10 @@ function ContactForm(props){
                           ref={formRef}
                           onSubmit={doSubmit}
                     >
-                        <input type="hidden" name="_next" value=""/>
+                        { queryParamsFields() }
+                        <input type="hidden" name="_next" value="" />
                         { positionForm && <input type="hidden" name="positionTitle" value={props.positionTitle} /> }
+
                         <div className="form-field">
                             <input className="input-text"
                                    type="input-text"
@@ -53,7 +72,7 @@ function ContactForm(props){
                                    name="name"
                                    placeholder=" "
                                    required/>
-                                <label className="label" htmlFor="name">Name</label>
+                            <label className="label" htmlFor="name">Name</label>
                         </div>
                         <div className="form-field">
                             <input className="input-text"
@@ -65,6 +84,15 @@ function ContactForm(props){
                             <label className="label" htmlFor="email">E-mail</label>
                         </div>
                         <div className="form-field">
+                            <input className="input-text"
+                                    type="input-text"
+                                    maxLength="100"
+                                    name="howDidYouHearAboutUs"
+                                    placeholder=" "
+                                    required/>
+                            <label className="label" htmlFor="howDidYouHearAboutUs">How did you hear about us?</label>
+                        </div>
+                        <div className="form-field">
                             <textarea className="input-text"
                                       placeholder="Tell us something interesting about yourself"
                                       maxLength="2000"
@@ -74,7 +102,6 @@ function ContactForm(props){
                         <div className="form-field">
                             <label className="label" htmlFor="site">{ positionForm ? 'Applying for' : 'Relevant office'}</label>
                             <select name="site" required>
-                                <option value="">Select office location</option>
                                 <option value="NYC">NYC</option>
                                 <option value="Tel Aviv">Tel Aviv</option>
                             </select>
