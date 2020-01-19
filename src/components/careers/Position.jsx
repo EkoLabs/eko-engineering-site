@@ -6,17 +6,11 @@ import careersData from '../../careersData';
 
 function Position(props){
     let positionData = careersData.positions.find(position => position.title === props.title);
-    let introText;
-    if (positionData.introText) {
-        introText = <ReactMarkdown source={positionData.introText} />
-    } else {
-        introText = <ReactMarkdown source={careersData.generalText} />
-    }
-
     return (
         <section className="position">
             <div className="content">
-                {introText}
+                {/*<h4>{positionData.title}</h4>*/}
+                <ReactMarkdown source={careersData.generalText} />
                 Check out our <a href="https://eko.com" target="_blank" rel="noopener noreferrer">website</a> and the <a href="https://developer.eko.com" target="_blank"  rel="noopener noreferrer">developers site</a> to get a better sense of what it’s all about.
                 <hr/>
                 <ReactMarkdown source={positionData.text} />
