@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ContactForm.scss";
-import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx';
+import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx'
 import ScrollableAnchor from "react-scrollable-anchor";
 
 function ContactForm(props) {
@@ -10,15 +10,10 @@ function ContactForm(props) {
 
     function doSubmit(e) {
         let form = formRef.current;
-        let formData = new FormData(form);
-
-        // Attach time of submit to data
-        const timeOptions = {timeZone: "Asia/Jerusalem", hour12: false};
-        const israelTime = new Date().toLocaleString("he-IL", timeOptions);
-        formData.append('_date', israelTime);
+        let data = new FormData(form);
 
         setFormState("sending");
-        makeRequest(formData, form.method, form.action)
+        makeRequest(data, form.method, form.action)
             .then(()=>setFormState("success"))
             .catch(()=>setFormState("error"));
 
@@ -51,7 +46,7 @@ function ContactForm(props) {
     let error = formState === "error";
     let formDisabled = isSending || success;
     let positionForm = props.formType === 'position';
-    let formAction = `https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering`;
+    let formAction = `https://formspree.io/${positionForm?'mpkkjwbx':'mdyydewx'}`;
 
     let title = positionForm?`Shall we?`:'Questions about joining eko?';
     
@@ -143,11 +138,12 @@ function ContactForm(props) {
     );
 }
 
-function makeRequest(data, method, url) {
+function makeRequest (data, method, url) {
     return new Promise(function (resolve, reject) {
         let xhr = new XMLHttpRequest();
-        xhr.open(method, url, true);
+        xhr.open(method, url);
         xhr.onload = function () {
+            console.log('status',this.status);
             if (this.status >= 200 && this.status < 300) {
                 resolve(xhr.response);
             } else {
@@ -163,6 +159,7 @@ function makeRequest(data, method, url) {
                 statusText: xhr.statusText
             });
         };
+        xhr.setRequestHeader("accept", "application/json;charset=UTF-8");
         xhr.send(data);
     });
 }
