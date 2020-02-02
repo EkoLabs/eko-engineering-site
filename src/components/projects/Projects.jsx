@@ -8,9 +8,9 @@ import ScrollableAnchor from "react-scrollable-anchor";
 let data = {
     projects: [
         {
-            title: "Mind Blown",
-            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/promotions/4sbgwy/landingpages_mindblown.png",
-            URL: "https://eko.com/mindblown/stop-with-these-questions?autoplay=true"
+            title: "That Moment When",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/b706223d6acae0a7f478f77e2eb82be7.jpg",
+            URL: "https://eko.com/tmw/101?autoplay=true"
         },
         {
             title: "Bob Dylan",
@@ -19,11 +19,39 @@ let data = {
             URL: "https://eko.com/music/like-a-rolling-stone?autoplay=true"
         },
         {
+            title: "Wizard School Dropout",
+            imageURL: "https://eko.com/wp-content/uploads/2019/11/2042_Eko_WSD_3_Thumbnails_01_1920x1080.jpg",
+            URL: "https://eko.com/shows/the-choice-is-yours/wizard-school-dropout/eviction-notice/"
+        },
+        {
             title: "Marvel",
             subtitle: "Coke",
             imageURL: "https://d2zoj4vo9uf0uk.cloudfront.net/wp-content/uploads/2016/02/07010009/ad_sharing_image_1920x1080.jpg",
             URL: "https://eko.com/v/coke"
-        },        {
+        },
+        {
+            title: "The Coop",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/fl_lossy/falcon_storage/production/playlists/TheCoop/TheCoop_1-191120225227.jpg",
+            URL: "https://eko.com/the-coop/who-killed-ryan?autoplay=true"
+        },
+        {
+            title: "Epic Night",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/fl_lossy/falcon_storage/production/playlists/EpicNight/horiz-epic-night-191115192138.jpg",
+            URL: "https://eko.com/shows/the-choice-is-yours/epic-night/"
+        },
+        {
+            title: "Tasty",
+            subtitle: "Chocolate Chip Cookie",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/production/projects/An9Q5B/neta_eko_tasty_68_low_res_768x432-190625133839.jpg",
+            URL: "https://eko.com/buzzfeed-tasty-eko-fast/cookies-fast?autoplay=true"
+        },
+        {
+            title: "Clothes Call",
+            subtitle: "Create a Girls' Trip Look",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/fl_lossy/falcon_storage/production/projects/MexgR1/eko_cc_592x333_thumbnails_ep05-3-191212001525-768.jpg",
+            URL: "https://eko.com/clothes-call/girls-trip-vegas?autoplay=true"
+        },
+        {
             title: "One on One",
             subtitle: "Detroit Pistons",
             imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/promotions/9olx9y/17_Homepage-Carousel.jpg",
@@ -35,15 +63,15 @@ let data = {
             URL: "https://eko.com/wargames/episode-one-chasing-bryce?autoplay=true"
         },
         {
-            title: "Tasty",
-            subtitle: "Chocolate Chip Cookie",
-            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/production/projects/An9Q5B/neta_eko_tasty_68_low_res_768x432-190625133839.jpg",
-            URL: "https://eko.com/buzzfeed-tasty-eko-fast/cookies-fast?autoplay=true"
+            title: "Mind Blown",
+            imageURL: "https://d1w2zhnqcy4l8f.cloudfront.net/content/falcon/production/promotions/4sbgwy/landingpages_mindblown.png",
+            URL: "https://eko.com/mindblown/stop-with-these-questions?autoplay=true"
         },
         {
-            title: "That Moment When",
-            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/remote_efu/upload/b706223d6acae0a7f478f77e2eb82be7.jpg",
-            URL: "https://eko.com/tmw/101?autoplay=true"
+            title: "Cook Together",
+            subtitle: "Make Tacos like a Pro",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/fl_lossy/falcon_storage/production/projects/zRddYv/FalconProject_High_1920x1080-190916205902-768.jpg",
+            URL: "https://eko.com/cook-together/cook-tacos?autoplay=true"
         },
         {
             title: "Coldplay",
@@ -61,6 +89,11 @@ let data = {
             subtitle: "Just Like a Woman",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/falcon_storage/production/projects/InWy6m/jeff%20buckley_preview%202-171110165337.jpeg",
             URL: "https://eko.com/v/jeff-buckley-just-like-a-woman?autoplay=true"
+        },
+        {
+            title: "Timeline",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/fl_lossy/falcon_storage/production/playlists/5spbsps/horiz-timeline-191115192659.jpg",
+            URL: "https://eko.com/timeline/what-the-future?autoplay=true"
         },
         {
             title: "Possibilia",
@@ -135,8 +168,8 @@ function Projects(){
     let hexGrid = [];
     let activeHexes = [
          4, 5, 6, 7, 8,
-        16,17,18,19,
-         28,29,30
+        15, 16,17,18,19, 20,
+         27, 28,29,30, 31
     ];
     let projectDataIndex = 0;
     for (let x=0;x<35;x++){
