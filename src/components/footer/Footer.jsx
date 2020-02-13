@@ -28,28 +28,28 @@ function Footer(props){
             ],
             [
                 {
-                    title: 'Eko',
+                    title: 'eko',
                     URL: 'https://eko.com/'
                 }, 
                 {
-                    title: 'About Eko',
+                    title: 'About eko',
                     URL: 'https://company.eko.com/history'
                 }, 
                 {
-                    title: 'Eko for Developers',
+                    title: 'eko for Developers',
                     URL: 'https://developer.eko.com/'
                 }, 
                 {
-                    title: 'Eko for Brands',
+                    title: 'eko for Brands',
                     URL: 'https://company.eko.com/brands'
                 }, 
                 {
-                    title: 'Eko for Creators',
+                    title: 'eko for Creators',
                     URL: 'https://studio.eko.com/'
                 }, 
                 {
                     title: 'GitHub',
-                    URL: 'https://github.com/EkoLabs'
+                    URL: 'https://github.com/ekolabs'
                 }
             ],
             [

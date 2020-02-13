@@ -271,8 +271,8 @@ function Splash(props) {
             <div className="content">
                 <div className="left">
                     <div className="titleContainer">
-                        <h1>Eko</h1>
-                        <h2>Engineering</h2>
+                        <h1>eko</h1>
+                        <h2>engineering</h2>
                     </div>
                 </div>
                 <div className="right">

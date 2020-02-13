@@ -15,7 +15,7 @@ function Tech(){
                     <video className="reel" autoPlay loop muted playsInline webkit-playsinline="true" poster={videoPlaceholder}>
                         <source src={techVideo} type='video/mp4'/>
                         <img src={videoPlaceholder} title='Your browser does not support the <video> tag'
-                             alt="Eko Engineering Reel"/>
+                             alt="eko engineering reel"/>
                     </video>
                 </div>
                 <div className="content">
