@@ -49,22 +49,26 @@ function Footer(props){
                 }, 
                 {
                     title: 'GitHub',
-                    URL: 'https://github.com/ekolabs'
+                    URL: 'https://github.com/ekolabs',
+                    icon: 'fab fa-github'
                 }
             ],
             [
 
                 {
                     title: 'Follow us on Twitter',
-                    URL: 'https://twitter.com/ekoengi'
+                    URL: 'https://twitter.com/ekoengi',
+                    icon: 'fab fa-twitter'
                 },
                 {
                     title: 'Connect with us on LinkedIn',
-                    URL: 'https://www.linkedin.com/company/ekovideo'
+                    URL: 'https://www.linkedin.com/company/ekovideo',
+                    icon: 'fab fa-linkedin-in'
                 },
                 {
                     title: 'Hear us on Medium',
-                    URL: 'https://medium.com/ekoengineering'
+                    URL: 'https://medium.com/ekoengineering',
+                    icon: 'fab fa-medium-m'
                 }
             ],
             [
@@ -88,7 +92,9 @@ function Footer(props){
         <ul className="column" key={i}>
             {column.map(item => (
                 <li className="item" key={item.title}>
-                    <a className="title" href={item.URL} target={(!i) ? "" : "_blank"}>{item.title}</a>
+                    <a className="title" href={item.URL} target={(!i) ? "" : "_blank"}>
+                        {item.icon ? <i class={[item.icon, 'title-icon'].join(' ')}></i> : null}{item.title}
+                    </a>
                 </li>
             ))}
         </ul>

@@ -29,12 +29,16 @@
   }
 
   .title {
-    font-weight: bold; // font-weight is action funky when hovering. It affects other titles' weight.
+    font-weight: bold;
     color: white;
     font-size: 12px;
 
      &:hover {
        color: #96263a;
+     }
+
+     .title-icon {
+       margin-right: 7px;
      }
   }
 
