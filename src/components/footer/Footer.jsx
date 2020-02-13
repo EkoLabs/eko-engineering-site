@@ -62,6 +62,10 @@ function Footer(props){
                     title: 'Connect with us on LinkedIn',
                     URL: 'https://www.linkedin.com/company/ekovideo'
                 },
+                {
+                    title: 'Hear us on Medium',
+                    URL: 'https://medium.com/ekoengineering'
+                }
             ],
             [
                 {
