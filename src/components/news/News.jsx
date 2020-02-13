@@ -1,7 +1,7 @@
 import React from "react";
 import Gallery from "../gallery/Gallery";
 
-import NewYorker from "../../media/NewYorker.png";
+import AdAge from "../../media/AdAge.png";
 import Forbes from "../../media/Forbes.png";
 import RollingStone from "../../media/RollingStone.png";
 import Polygon from "../../media/Polygon.png";
@@ -12,10 +12,10 @@ function News(){
         type: 'large',
         items: [
             {
-                title: "The Story with a Thousand Endings",
-                subtitle: "The New Yorker",
-                imageURL: NewYorker,
-                URL: "https://www.newyorker.com/magazine/2017/01/30/alternate-endings"
+                title: "It's a Proctor & Gamble Super Bowl ad",
+                subtitle: "AdAge",
+                imageURL: AdAge,
+                URL: "https://adage.com/article/special-report-super-bowl/its-procter-gamble-super-bowl-ad-tide-returns-along-crowd-shaped-corporate-spot/2230371"
             },
             {
                 title: "Bob Dylan Goes Interactive in ‘Like a Rolling Stone’ Clip",
