@@ -93,7 +93,7 @@ function Footer(props){
             {column.map(item => (
                 <li className="item" key={item.title}>
                     <a className="title" href={item.URL} target={(!i) ? "" : "_blank"}>
-                        {item.icon ? <i class={[item.icon, 'title-icon'].join(' ')}></i> : null}{item.title}
+                        {item.icon ? <i className={[item.icon, 'title-icon'].join(' ')}></i> : null}{item.title}
                     </a>
                 </li>
             ))}
