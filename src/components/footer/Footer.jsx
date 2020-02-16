@@ -46,11 +46,6 @@ function Footer(props){
                 {
                     title: 'eko for Creators',
                     URL: 'https://studio.eko.com/'
-                }, 
-                {
-                    title: 'GitHub',
-                    URL: 'https://github.com/ekolabs',
-                    icon: 'fab fa-github'
                 }
             ],
             [
@@ -69,6 +64,11 @@ function Footer(props){
                     title: 'Hear us on Medium',
                     URL: 'https://medium.com/ekoengineering',
                     icon: 'fab fa-medium-m'
+                },
+                {
+                    title: 'Code with us on GitHub',
+                    URL: 'https://github.com/ekolabs',
+                    icon: 'fab fa-github'
                 }
             ],
             [
