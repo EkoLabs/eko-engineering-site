@@ -85,25 +85,30 @@ let data = {
             URL: "https://eko.com/charlie/charlie-pitches-a-pilot?autoplay=true"
         },
         {
+            title: "Timeline",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/fl_lossy/falcon_storage/production/playlists/5spbsps/horiz-timeline-191115192659.jpg",
+            URL: "https://eko.com/timeline/what-the-future?autoplay=true"
+        },
+        {
+            title: "KidHQ",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/v1582030228/eko.engineering/ToyLabWalmart-820x510.jpg",
+            URL: "https://kidhq.com/"
+        },
+        {
+            title: "Buzzfeed",
+            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/remote_efu/upload/a912253eeec7e76bf25fc0024f61bbaa.jpg",
+            URL: "https://eko.com/buzzfeed-x-eko/V5oPXz?autoplay=true"
+        },
+        {
             title: "Jeff Buckley",
             subtitle: "Just Like a Woman",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/falcon_storage/production/projects/InWy6m/jeff%20buckley_preview%202-171110165337.jpeg",
             URL: "https://eko.com/v/jeff-buckley-just-like-a-woman?autoplay=true"
         },
         {
-            title: "Timeline",
-            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_350,f_auto,q_auto/fl_lossy/falcon_storage/production/playlists/5spbsps/horiz-timeline-191115192659.jpg",
-            URL: "https://eko.com/timeline/what-the-future?autoplay=true"
-        },
-        {
             title: "Possibilia",
             imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/falcon_storage/staging/episode/D3iXb9/Possibillia768x432_2.jpg",
             URL: "https://eko.com/v/possibilia?autoplay=true"
-        },
-        {
-            title: "Buzzfeed",
-            imageURL: "https://res.cloudinary.com/dlkxfitke/image/upload/w_445,f_auto,q_auto/remote_efu/upload/a912253eeec7e76bf25fc0024f61bbaa.jpg",
-            URL: "https://eko.com/buzzfeed-x-eko/V5oPXz?autoplay=true"
         },
     ]
 };
@@ -169,7 +174,7 @@ function Projects(){
     let activeHexes = [
          4, 5, 6, 7, 8,
         15, 16,17,18,19, 20,
-         27, 28,29,30, 31
+         26, 27, 28,29,30, 31, 32
     ];
     let projectDataIndex = 0;
     for (let x=0;x<35;x++){
