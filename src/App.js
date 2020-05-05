@@ -31,7 +31,7 @@ function App() {
                 <Switch>
                   {careersRoutes}
                   { /* <Route path="/" exact component={Placeholder} /> */}
-                  <Route path="/sonorous" component={Sonorous} />
+                  <Route exact path="/sonorous" component={Sonorous} />
                   <Redirect exact from={easterEggCtaPath} to={easterEggUtmParams} />
                   <Route path="/" component={Homepage} />
             </Switch>
