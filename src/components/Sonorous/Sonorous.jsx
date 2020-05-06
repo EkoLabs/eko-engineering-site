@@ -1,10 +1,12 @@
-import React, {Fragment} from "react";
+import React, {Fragment, useState, useEffect} from "react";
 import Footer from "../footer/Footer";
 import "./Sonorous.scss";
 
 import iconApi from './browser_plugs.svg';
 import iconnMemoryManagement from './db_cogs.svg';
 import iconCrossBrowser from './devices.svg';
+
+const desktopBreakpoint = 900;
 
 
 let features = [
@@ -35,6 +37,17 @@ let features = [
 ));
 
 function Sonorous(props){
+    const [isDesktop, setDesktop] = useState(window.innerWidth > desktopBreakpoint);
+    const updateMedia = () => {
+        setDesktop(window.innerWidth > desktopBreakpoint);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
+
+    let codepenId = isDesktop ? 'PoPQwaz' : 'xxwRMBw';
 
     return (
         <Fragment>
@@ -54,13 +67,12 @@ function Sonorous(props){
                 <div className="content">
                     <header>
                         <h1>Sonorous</h1>
-                        <h2>Sonorous is built for the modern browser, enabling easy audio integration into web apps and games. As an abstraction over the WebAudio APIs</h2>
+                        <h2>Sonorous is a JavaScript audio library built for the modern browser. It enables easy audio integration into web apps and games using WebAudio APIs, with fine-grained control for those who need it, while handling any cross-browser issues for you.</h2>
                     </header>
-                    <iframe scrolling="no" title="Sonorous Track Mixer" className="codepen"
-                            src="https://codepen.io/OpherV/embed/PoPQwaz?height=265&theme-id=dark&default-tab=result"
+                    <iframe scrolling="no" title="Sonorous Example" className="codepen"
+                            src={`https://codepen.io/OpherV/embed/${codepenId}?height=265&theme-id=dark&default-tab=result`}
                             frameBorder="no" allowTransparency="true" allowFullScreen="true" loading="lazy">
-                        See the Pen <a href='https://codepen.io/OpherV/pen/xxwRMBw'>Sonorous Track Mixer</a> by Opher Vishnia
-                        (<a href='https://codepen.io/OpherV'>@OpherV</a>) on <a href='https://codepen.io'>CodePen</a>.
+                        See the Pen <a href='https://codepen.io/OpherV/pen/xxwRMBw'>Sonorous Example</a>
                     </iframe>
                     <svg className="defs">
                         <filter id="purple-glow" x="-5000%" y="-5000%" width="10000%" height="10000%">
