@@ -56,10 +56,10 @@ function Sonorous(props){
                         <h1>Sonorous</h1>
                         <h2>Sonorous is built for the modern browser, enabling easy audio integration into web apps and games. As an abstraction over the WebAudio APIs</h2>
                     </header>
-                    <iframe scrolling="no" title="Sonorous Boombox" className="codepen"
-                            src="https://codepen.io/OpherV/embed/xxwRMBw?height=265&theme-id=dark&default-tab=result"
+                    <iframe scrolling="no" title="Sonorous Track Mixer" className="codepen"
+                            src="https://codepen.io/OpherV/embed/PoPQwaz?height=265&theme-id=dark&default-tab=result"
                             frameBorder="no" allowTransparency="true" allowFullScreen="true" loading="lazy">
-                        See the Pen <a href='https://codepen.io/OpherV/pen/xxwRMBw'>Sonorous Boombox</a> by Opher Vishnia
+                        See the Pen <a href='https://codepen.io/OpherV/pen/xxwRMBw'>Sonorous Track Mixer</a> by Opher Vishnia
                         (<a href='https://codepen.io/OpherV'>@OpherV</a>) on <a href='https://codepen.io'>CodePen</a>.
                     </iframe>
                     <svg className="defs">
