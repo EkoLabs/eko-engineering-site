@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.af66d54c.chunk.css",
-    "main.js": "/static/js/main.98b3bc7a.chunk.js",
-    "main.js.map": "/static/js/main.98b3bc7a.chunk.js.map",
+    "main.css": "/static/css/main.84e293bf.chunk.css",
+    "main.js": "/static/js/main.5df36c77.chunk.js",
+    "main.js.map": "/static/js/main.5df36c77.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.795df84c.js",
     "runtime-main.js.map": "/static/js/runtime-main.795df84c.js.map",
-    "static/js/2.8dd22b6d.chunk.js": "/static/js/2.8dd22b6d.chunk.js",
-    "static/js/2.8dd22b6d.chunk.js.map": "/static/js/2.8dd22b6d.chunk.js.map",
+    "static/js/2.116bb799.chunk.js": "/static/js/2.116bb799.chunk.js",
+    "static/js/2.116bb799.chunk.js.map": "/static/js/2.116bb799.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d4e9373596086e49d1fbd87a61f1e3e4.js": "/precache-manifest.d4e9373596086e49d1fbd87a61f1e3e4.js",
+    "precache-manifest.9a7cd40b085d60b607531c7550a835d4.js": "/precache-manifest.9a7cd40b085d60b607531c7550a835d4.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.af66d54c.chunk.css.map": "/static/css/main.af66d54c.chunk.css.map",
-    "static/js/2.8dd22b6d.chunk.js.LICENSE.txt": "/static/js/2.8dd22b6d.chunk.js.LICENSE.txt",
+    "static/css/main.84e293bf.chunk.css.map": "/static/css/main.84e293bf.chunk.css.map",
+    "static/js/2.116bb799.chunk.js.LICENSE.txt": "/static/js/2.116bb799.chunk.js.LICENSE.txt",
     "static/media/AdAge.png": "/static/media/AdAge.e7720c4b.png",
     "static/media/Splash.scss": "/static/media/arcade.1b167a3a.png",
     "static/media/Forbes.png": "/static/media/Forbes.13d4041d.png",
@@ -39,7 +39,6 @@
     "static/media/devops_doghouse.png": "/static/media/devops_doghouse.0daa85ea.png",
     "static/media/drums.jpg": "/static/media/drums.600f5805.jpg",
     "static/media/eko.jpg": "/static/media/eko.b427bc8c.jpg",
-    "static/media/Header.scss": "/static/media/ekoengineering_logo.777fc117.svg",
     "static/media/frontend_corgi.png": "/static/media/frontend_corgi.628678f9.png",
     "static/media/fullstack_corgi.png": "/static/media/fullstack_corgi.a9e6b478.png",
     "static/media/icon_bulb.svg": "/static/media/icon_bulb.ea88df9e.svg",
@@ -55,6 +54,7 @@
     "static/media/posters.jpg": "/static/media/posters.f1f60329.jpg",
     "static/media/ruel.jpg": "/static/media/ruel.83eeda4d.jpg",
     "static/media/shows.jpg": "/static/media/shows.ddec05d0.jpg",
+    "static/media/sonorous_logo.svg": "/static/media/sonorous_logo.83f6c44b.svg",
     "static/media/App.scss": "/static/media/space_bg.6e8ac4a0.jpg",
     "static/media/tech_video.mp4": "/static/media/tech_video.9be249d2.mp4",
     "static/media/About.scss": "/static/media/terrain_bg.59d9039f.jpg",
@@ -62,8 +62,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.795df84c.js",
-    "static/js/2.8dd22b6d.chunk.js",
-    "static/css/main.af66d54c.chunk.css",
-    "static/js/main.98b3bc7a.chunk.js"
+    "static/js/2.116bb799.chunk.js",
+    "static/css/main.84e293bf.chunk.css",
+    "static/js/main.5df36c77.chunk.js"
   ]
 }
