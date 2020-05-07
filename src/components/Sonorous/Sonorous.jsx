@@ -2,11 +2,12 @@ import React, {Fragment, useState, useEffect} from "react";
 import Footer from "../footer/Footer";
 import "./Sonorous.scss";
 
+import logoImage from './sonorous_logo.svg';
 import iconApi from './browser_plugs.svg';
 import iconnMemoryManagement from './db_cogs.svg';
 import iconCrossBrowser from './devices.svg';
 
-const desktopBreakpoint = 900;
+const desktopBreakpoint = 1150;
 
 
 let features = [
@@ -66,8 +67,11 @@ function Sonorous(props){
             <section className="sonorous">
                 <div className="content">
                     <header>
-                        <h1>Sonorous</h1>
-                        <h2>Sonorous is a JavaScript audio library built for the modern browser. It enables easy audio integration into web apps and games using WebAudio APIs, with fine-grained control for those who need it, while handling any cross-browser issues for you.</h2>
+                        <img src={logoImage} alt="Sonorous Logo" title="Sonorous"/>
+                        <div className="text">
+                            <h1>Sonorous</h1>
+                            <h2>Sonorous is a JavaScript audio library built for the modern browser. It enables easy audio integration into web apps and games using WebAudio APIs, with fine-grained control for those who need it, while handling any cross-browser issues for you.</h2>
+                        </div>
                     </header>
                     <iframe scrolling="no" title="Sonorous Example" className="codepen"
                             src={`https://codepen.io/OpherV/embed/${codepenId}?height=265&theme-id=dark&default-tab=result`}
@@ -97,6 +101,7 @@ function Sonorous(props){
                     <li><a href="https://github.com/EkoLabs/sonorous/issues">Support</a></li>
                     <li><a href="https://github.com/EkoLabs/sonorous#contributing">Contribute</a></li>
                 </ul>
+            <section className="shoutout">by the <a href="/" className="logo">eko <span>Engineering</span></a> team </section>
             </section>
             <Footer/>
         </Fragment>

@@ -21,37 +21,51 @@
     position: relative;
     z-index: 10;
     max-width: 900px;
+    margin: 0 auto;
 
-    background-image: url(./sonorous_logo.svg);
-    background-repeat: no-repeat;;
-    background-size: 80%;
-    background-position: top center;
     display: flex;
     flex-direction: column;
-    text-align: left;
-    padding-top: 47%;
+    align-items: center;
+    padding: 30px 0;
 
-    @include for-desktop-up {
-      background-position: left;
-      background-size: 30%;
-      padding-top: 0;
-      padding-left: 26%;
-      margin: 0px auto 30px auto;
+    @include for-tablet-portrait-up {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    img {
+      margin: 30px;
+      width: 70%;
+
+      @include for-tablet-portrait-up{
+
+      }
+    }
+
+    .text{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include for-tablet-portrait-up {
+        padding-left: 30px;
+        width: auto;
+      }
     }
 
     h1 {
       color: #fbb03b;
-      font-size: 45px;
+      font-size: 50px;
       font-weight: 800;
       text-transform: uppercase;
       margin: 0;
       text-align: center;
 
-
-      @include for-desktop-up {
+      @include for-tablet-portrait-up {
         font-size: 55px;
         text-align: left;
       }
+
+
     }
 
     h2 {
@@ -60,7 +74,7 @@
       font-weight: 200;
       text-align: justify;
 
-      @include for-desktop-up {
+      @include for-tablet-portrait-up{
         font-size: 20px;
         text-align: left;
       }
@@ -227,6 +241,25 @@ section.menu{
       @include for-desktop-up {
         margin: 0;
       }
+    }
+
+  }
+}
+
+section.shoutout{
+  a.logo{
+    position: relative;
+    top: 2px;
+    color: rgba(255,255,255,0);
+    font-size: 30px;
+    background-image: url(../header/ekoengineering_logo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0 6px;
+
+    span {
+      padding-left: 5px;
+      font-size: 16px;
     }
 
   }
