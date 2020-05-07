@@ -101,8 +101,8 @@ function Sonorous(props){
                     <li><a href="https://github.com/EkoLabs/sonorous/issues">Support</a></li>
                     <li><a href="https://github.com/EkoLabs/sonorous#contributing">Contribute</a></li>
                 </ul>
-            <section className="shoutout">by the <a href="/" className="logo">eko <span>Engineering</span></a> team </section>
             </section>
+            <section className="shoutout">by the <a href="/" className="logo">eko <span>Engineering</span></a> team </section>
             <Footer/>
         </Fragment>
     )
