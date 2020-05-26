@@ -107,8 +107,8 @@ function ContactForm(props) {
                         <div className="form-field">
                             <label className="label" htmlFor="site">{ positionForm ? 'Applying for' : 'Relevant office'}</label>
                             <select name="site" required>
+                                <option value="Tel Aviv">Tel Aviv</option>
                                 <option value="NYC">NYC</option>
-                                <option selected value="Tel Aviv">Tel Aviv</option>
                             </select>
                         </div>
                         { positionForm &&
