@@ -265,6 +265,16 @@ section.shoutout{
   }
 }
 
+section.moreOpenSource{
+  margin: 50px 0;
+  font-size: 12px;
+
+  a{
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
 .github-corner{
   position: absolute;
   top:0;

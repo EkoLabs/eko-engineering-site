@@ -6,6 +6,7 @@ import logoImage from './sonorous_logo.svg';
 import iconApi from './browser_plugs.svg';
 import iconnMemoryManagement from './db_cogs.svg';
 import iconCrossBrowser from './devices.svg';
+import Header from "../header/Header";
 
 const desktopBreakpoint = 1150;
 
@@ -64,6 +65,7 @@ function Sonorous(props){
                         fill="currentColor" className="octo-body"></path>
                 </svg>
             </a>
+            <Header/>
             <section className="sonorous">
                 <div className="content">
                     <header>
@@ -103,6 +105,7 @@ function Sonorous(props){
                 </ul>
             </section>
             <section className="shoutout">by the <a href="/" className="logo">eko <span>Engineering</span></a> team </section>
+            <section className="moreOpenSource">More <a href="https://github.com/ekolabs">Open Source</a> projects coming soon!</section>
             <Footer/>
         </Fragment>
     )
