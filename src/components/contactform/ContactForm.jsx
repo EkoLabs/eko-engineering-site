@@ -51,7 +51,7 @@ function ContactForm(props) {
     let error = formState === "error";
     let formDisabled = isSending || success;
     let positionForm = props.formType === 'position';
-    let formAction = `https://o9mlqlmk5i.execute-api.us-east-1.amazonaws.com/eko-engineering`;
+    let formAction = `https://sggrm9siwb.execute-api.us-east-1.amazonaws.com/yariv-stage`;
 
     let title = positionForm?`Shall we?`:'Questions about joining eko?';
     
@@ -87,6 +87,15 @@ function ContactForm(props) {
                                    placeholder=" "
                                    required/>
                             <label className="label" htmlFor="email">E-mail</label>
+                        </div>
+                        <div className="form-field">
+                            <input className="input-text"
+                                   type="tel"
+                                   maxLength="100"
+                                   name="phone"
+                                   placeholder=" "
+                                   required/>
+                            <label className="label" htmlFor="phone">Phone</label>
                         </div>
                         <div className="form-field">
                             <input className="input-text"
