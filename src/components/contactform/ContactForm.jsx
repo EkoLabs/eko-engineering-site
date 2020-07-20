@@ -59,7 +59,7 @@ function ContactForm(props) {
     return (
         <ScrollableAnchor id={'contact'}>
             <section className="contact" id="contact">
-                <div className={`${success ? 'success-hide' : null} content`}>
+                <div className={`${success ? 'success-hide' : ''} content`}>
                     <h4>{title}</h4>
                     <form className="contact-form"
                           action={formAction}
@@ -175,7 +175,7 @@ function makeRequest(data, method, url) {
         xhr.open(method, url);
         xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
-                window.location.hash = "#contact"; // refocus on section
+                document.querySelector('section#contact').scrollIntoView({behavior: "smooth"}) // refocus on section
                 resolve(xhr.response);
             } else {
                 reject({
