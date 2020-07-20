@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ContactForm.scss";
+import Corgi from "../../media/thank-you-corgi.gif";
 import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx'
 import ScrollableAnchor from "react-scrollable-anchor";
 
@@ -58,7 +59,7 @@ function ContactForm(props) {
     return (
         <ScrollableAnchor id={'contact'}>
             <section className="contact" id="contact">
-                <div className="content">
+                <div className={`${success ? 'success-hide' : null} content`}>
                     <h4>{title}</h4>
                     <form className="contact-form"
                           action={formAction}
@@ -143,7 +144,23 @@ function ContactForm(props) {
                         {isSending &&
                         <div className="formMessage">Sending...</div> }
                         {success &&
-                        <div className="formMessage">Thanks! We’ll get back to you as soon as possible.</div> }
+                        <div className="formMessage success">
+
+                            <img src={Corgi} alt="A grateful corgi" className="thank-you-corgi"/>
+                            <div className="thank-you-title">
+                                <span className="highlighted">Thanks </span>for reaching out to us!
+                            </div>
+                            <div className="thank-you-subtitle">Be on the lookout for our confirmation email...</div>
+
+                            <div className="cta-message">In the meantime, check us out across the web if you want a sneak peek of life at eko:</div>
+                            <div className="cta-links">
+                                <a className='twitter' target="_blank" rel="noopener noreferrer" href="https://twitter.com/ekoengi">Follow us on Twitter</a>
+                                <a className='medium' target="_blank" rel="noopener noreferrer" href="https://medium.com/ekoengineering">Hear us on Medium</a>
+                                <a className='github' target="_blank" rel="noopener noreferrer" href="https://github.com/ekolabs">Code with us on GitHub</a>
+                            </div>
+                            
+                        </div>
+                        }
                         {error && <div className="formMessage">Whoops! Something went wrong. Try again?</div> }
                     </form>
                 </div>
@@ -158,6 +175,7 @@ function makeRequest(data, method, url) {
         xhr.open(method, url);
         xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
+                window.location.hash = "#contact"; // refocus on section
                 resolve(xhr.response);
             } else {
                 reject({
@@ -178,7 +196,7 @@ function makeRequest(data, method, url) {
             console.log({
                 status: this.status,
                 statusText: xhr.statusText
-            })
+            });
         };
         xhr.send(data);
     });

@@ -3,6 +3,15 @@
 
 .contact {
   padding-top: 50px;
+
+  .content {
+    &.success-hide form { padding-top: 0; }
+    &.success-hide h4,
+    &.success-hide .form-field,
+    &.success-hide .sendButton {
+      display: none;
+    }
+  }
   
   form{
     width: 100%;
@@ -106,5 +115,101 @@
   .sendButton{
     @include vaporButton('f2395a');
     width: auto;
+  }
+
+  .formMessage {
+    &.success {
+
+      margin-bottom: 140px;
+
+      .thank-you-corgi {
+        width: 100%;
+      }
+
+      .thank-you-title {
+        font-size: 39px;
+        font-weight: 700;
+        margin-top: -40px;
+
+        .highlighted {
+          color: var(--color3);
+        }
+
+        @include for-phone-only {
+          font-size: 34px;
+          margin-top: -20px;
+        }
+      }
+
+      .thank-you-subtitle {
+        font-size: 25px;
+        font-weight: 200;
+        margin-bottom: 60px;
+
+        @include for-phone-only {
+          font-size: 20px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .cta-message {
+        margin-bottom: 15px;
+      }
+
+      .cta-links {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          color: white;
+          font-weight: 700;
+          &:before {
+            font-family: "Font Awesome 5 Brands";
+            margin-right: 5px;
+          }
+          &:hover {
+            color: var(--color2);
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          @include for-phone-only {
+            display: inline-block;
+            margin-bottom: 15px;
+          }
+        }
+
+        .twitter {
+          &:before {
+            content: "\f099";
+          }
+        }
+
+        .medium {
+          &:before {
+            content: "\f3c7";
+          }
+        }
+
+        .github {
+          &:before {
+            content: "\f09b";
+          }
+        }
+
+        @include for-phone-only {
+          flex-direction: column;
+        }
+        
+      }
+
+      @include for-phone-only {
+        margin-bottom: 0;
+       }
+
+    }
   }
 }
