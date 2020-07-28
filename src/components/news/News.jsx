@@ -1,8 +1,8 @@
 import React from "react";
 import Gallery from "../gallery/Gallery";
 
-import AdAge from "../../media/AdAge.png";
-import Forbes from "../../media/Forbes.png";
+import Forbes_0 from "../../media/Forbes-0.jpg";
+import Forbes_1 from "../../media/Forbes-1.png";
 import RollingStone from "../../media/RollingStone.png";
 import Polygon from "../../media/Polygon.png";
 
@@ -12,10 +12,10 @@ function News(){
         type: 'large',
         items: [
             {
-                title: "It's a Proctor & Gamble Super Bowl ad",
-                subtitle: "AdAge",
-                imageURL: AdAge,
-                URL: "https://adage.com/article/special-report-super-bowl/its-procter-gamble-super-bowl-ad-tide-returns-along-crowd-shaped-corporate-spot/2230371"
+                title: "Camp Is In Session After All, Only It’s Virtual, At Camp By Walmart",
+                subtitle: "Forbes",
+                imageURL: Forbes_0,
+                URL: "https://www.forbes.com/sites/sharonedelson/2020/07/06/camp-is-in-session-after-all-only-its-virtual-at-camp-by-walmart/#603ba060581e"
             },
             {
                 title: "Bob Dylan Goes Interactive in ‘Like a Rolling Stone’ Clip",
@@ -32,7 +32,7 @@ function News(){
             {
                 title: "Walmart Toy Lab Is The Best Thing Walmart Has Done All Year",
                 subtitle: "Forbes",
-                imageURL: Forbes,
+                imageURL: Forbes_1,
                 URL: "https://www.forbes.com/sites/christopherwalton/2018/11/30/walmart-toy-lab-is-the-best-thing-walmart-has-done-all-year/#118db1e743e4"
             },
         ]
