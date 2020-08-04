@@ -71,7 +71,7 @@ function Sonorous(props){
                     <header>
                         <img src={logoImage} alt="Sonorous Logo" title="Sonorous"/>
                         <div className="text">
-                            <h1>Sonorous</h1>
+                            <h1>Sonorous<span> . js</span></h1>
                             <h2>Sonorous is a JavaScript audio library built for the modern browser. It enables easy audio integration into web apps and games using WebAudio APIs, with fine-grained control for those who need it, while handling any cross-browser issues for you.</h2>
                         </div>
                     </header>
