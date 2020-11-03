@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import Homepage from "./components/homepage/Homepage";
-import Sonorous from "./components/Sonorous/Sonorous";
+import Homepage from "./pages/homepage/Homepage";
+import Sonorous from "./pages/Sonorous/Sonorous";
 import careersData from "./careersData";
 import PositionPage from "./components/careers/PositionPage";
 import {getUrlParameter, isTouchDevice} from "./utils";
+import LandingPage from "./pages/landingPage/LandingPage";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
                   {careersRoutes}
                   { /* <Route path="/" exact component={Placeholder} /> */}
                   <Route exact path="/sonorous" component={Sonorous} />
+                  <Route exact path="/letstalk" component={LandingPage} />
                   <Redirect exact from={easterEggCtaPath} to={easterEggUtmParams} />
                   <Route path="/" component={Homepage} />
             </Switch>

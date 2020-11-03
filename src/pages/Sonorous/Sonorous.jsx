@@ -1,12 +1,12 @@
 import React, {Fragment, useState, useEffect} from "react";
-import Footer from "../footer/Footer";
+import Footer from "../../components/footer/Footer";
 import "./Sonorous.scss";
 
 import logoImage from './sonorous_logo.svg';
 import iconApi from './browser_plugs.svg';
 import iconnMemoryManagement from './db_cogs.svg';
 import iconCrossBrowser from './devices.svg';
-import Header from "../header/Header";
+import Header from "../../components/header/Header";
 
 const desktopBreakpoint = 1150;
 
@@ -47,7 +47,7 @@ function Sonorous(props){
     useEffect(() => {
         window.addEventListener("resize", updateMedia);
         return () => window.removeEventListener("resize", updateMedia);
-    });
+    }, []);
 
     let codepenId = isDesktop ? 'PoPQwaz' : 'xxwRMBw';
 
