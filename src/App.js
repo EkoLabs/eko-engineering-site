@@ -6,7 +6,8 @@ import Sonorous from "./pages/Sonorous/Sonorous";
 import careersData from "./careersData";
 import PositionPage from "./components/careers/PositionPage";
 import {getUrlParameter, isTouchDevice} from "./utils";
-import LandingPage from "./pages/landingPage/LandingPage";
+import LandingPageDev from "./pages/landingPageDev/LandingPageDev";
+import LandingPageQa from "./pages/landingPageQa/LandingPageQa";
 
 function App() {
 
@@ -33,7 +34,8 @@ function App() {
                   {careersRoutes}
                   { /* <Route path="/" exact component={Placeholder} /> */}
                   <Route exact path="/sonorous" component={Sonorous} />
-                  <Route exact path="/letstalk" component={LandingPage} />
+                  <Route exact path="/letstalkdev" component={LandingPageDev} />
+                  <Route exact path="/letstalkqa" component={LandingPageQa} />
                   <Redirect exact from={easterEggCtaPath} to={easterEggUtmParams} />
                   <Route path="/" component={Homepage} />
             </Switch>
