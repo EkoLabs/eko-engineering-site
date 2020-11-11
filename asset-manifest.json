@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.6deabbcf.chunk.css",
-    "main.js": "/static/js/main.0ac004bd.chunk.js",
-    "main.js.map": "/static/js/main.0ac004bd.chunk.js.map",
+    "main.css": "/static/css/main.b3c2364b.chunk.css",
+    "main.js": "/static/js/main.50a8a924.chunk.js",
+    "main.js.map": "/static/js/main.50a8a924.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3cf35031.js",
     "runtime-main.js.map": "/static/js/runtime-main.3cf35031.js.map",
-    "static/js/2.b0a708de.chunk.js": "/static/js/2.b0a708de.chunk.js",
-    "static/js/2.b0a708de.chunk.js.map": "/static/js/2.b0a708de.chunk.js.map",
+    "static/js/2.4f07c594.chunk.js": "/static/js/2.4f07c594.chunk.js",
+    "static/js/2.4f07c594.chunk.js.map": "/static/js/2.4f07c594.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.85fe42327164d609fe64c37e6837712e.js": "/precache-manifest.85fe42327164d609fe64c37e6837712e.js",
+    "precache-manifest.328b6bb03ee199e94f93482701a2a106.js": "/precache-manifest.328b6bb03ee199e94f93482701a2a106.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.6deabbcf.chunk.css.map": "/static/css/main.6deabbcf.chunk.css.map",
-    "static/js/2.b0a708de.chunk.js.LICENSE.txt": "/static/js/2.b0a708de.chunk.js.LICENSE.txt",
-    "static/media/LandingPage.scss": "/static/media/background.3e57ba37.png",
+    "static/css/main.b3c2364b.chunk.css.map": "/static/css/main.b3c2364b.chunk.css.map",
+    "static/js/2.4f07c594.chunk.js.LICENSE.txt": "/static/js/2.4f07c594.chunk.js.LICENSE.txt",
+    "static/media/LandingPageQa.scss": "/static/media/background.3e57ba37.png",
     "static/media/Forbes-0.jpg": "/static/media/Forbes-0.8a381bb2.jpg",
     "static/media/Forbes-1.png": "/static/media/Forbes-1.13d4041d.png",
     "static/media/Innovation_white.png": "/static/media/Innovation_white.99d839a4.png",
@@ -40,7 +40,7 @@
     "static/media/dog-buddies.jpg": "/static/media/dog-buddies.54c2c7a8.jpg",
     "static/media/Sonorous.scss": "/static/media/terrain_bg.7a7810c4.jpg",
     "static/media/frontend_corgi.png": "/static/media/frontend_corgi.628678f9.png",
-    "static/media/fullstack_corgi.png": "/static/media/fullstack_corgi.a9e6b478.png",
+    "static/media/fullstack_corgi.png": "/static/media/fullstack_corgi.d48df00b.png",
     "static/media/happy-coding-0.jpg": "/static/media/happy-coding-0.59508697.jpg",
     "static/media/happy-coding-1.jpg": "/static/media/happy-coding-1.36b7fafd.jpg",
     "static/media/happy-hour.jpg": "/static/media/happy-hour.32507b75.jpg",
@@ -64,8 +64,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3cf35031.js",
-    "static/js/2.b0a708de.chunk.js",
-    "static/css/main.6deabbcf.chunk.css",
-    "static/js/main.0ac004bd.chunk.js"
+    "static/js/2.4f07c594.chunk.js",
+    "static/css/main.b3c2364b.chunk.css",
+    "static/js/main.50a8a924.chunk.js"
   ]
 }
