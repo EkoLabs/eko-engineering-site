@@ -119,12 +119,12 @@
 		outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 		transform: rotate3d(0,0,1,-60deg) skewY(30deg);
 		background: grey;
+		will-change: transform;
 	}
 	
 	.hex{
 		position: relative;
 		visibility:hidden;
-		transform-style: preserve-3d;
 		outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 	}
 	.hex::after{
