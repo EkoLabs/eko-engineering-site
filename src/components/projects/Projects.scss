@@ -124,6 +124,7 @@
 	.hex{
 		position: relative;
 		visibility:hidden;
+		transform-style: preserve-3d;
 		outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 	}
 	.hex::after{
