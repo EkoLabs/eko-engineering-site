@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.983add21.chunk.css",
+    "main.css": "/static/css/main.89a76892.chunk.css",
     "main.js": "/static/js/main.8171f7ff.chunk.js",
     "main.js.map": "/static/js/main.8171f7ff.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3cf35031.js",
@@ -8,9 +8,9 @@
     "static/js/2.7ce35d83.chunk.js": "/static/js/2.7ce35d83.chunk.js",
     "static/js/2.7ce35d83.chunk.js.map": "/static/js/2.7ce35d83.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.604eb428841338fb8c01491fd851e12e.js": "/precache-manifest.604eb428841338fb8c01491fd851e12e.js",
+    "precache-manifest.1ef3c7d9400a83af0129e9eaa6c711da.js": "/precache-manifest.1ef3c7d9400a83af0129e9eaa6c711da.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.983add21.chunk.css.map": "/static/css/main.983add21.chunk.css.map",
+    "static/css/main.89a76892.chunk.css.map": "/static/css/main.89a76892.chunk.css.map",
     "static/js/2.7ce35d83.chunk.js.LICENSE.txt": "/static/js/2.7ce35d83.chunk.js.LICENSE.txt",
     "static/media/LandingPageQa.scss": "/static/media/background.3e57ba37.png",
     "static/media/Forbes-0.jpg": "/static/media/Forbes-0.8a381bb2.jpg",
@@ -65,7 +65,7 @@
   "entrypoints": [
     "static/js/runtime-main.3cf35031.js",
     "static/js/2.7ce35d83.chunk.js",
-    "static/css/main.983add21.chunk.css",
+    "static/css/main.89a76892.chunk.css",
     "static/js/main.8171f7ff.chunk.js"
   ]
 }
