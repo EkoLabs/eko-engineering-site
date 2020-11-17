@@ -162,7 +162,7 @@ export default function LandingPageDev(props){
                     <div class="caption2">We’re looking for good people, so if any or all speak to you, let’s talk.</div>
                 </div>
             </section>
-            <ContactForm formType={'position'}/>
+            <ContactForm formType={'position'} positionTitle="LandingPageDev"/>
             <Footer/>
         </div>
     );
