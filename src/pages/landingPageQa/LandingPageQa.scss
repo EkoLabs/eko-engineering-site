@@ -58,11 +58,6 @@
         -1px 1px 0 #000,
         1px 1px 0 #000;
 
-        em{
-          display: block;
-        }
-
-
         @include for-tablet-landscape-up {
           margin-top: 0px;
         }
