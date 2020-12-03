@@ -60,6 +60,20 @@
 		color: #c4a9b1;
 	}
 
-	                                                               
-
+	.inputfile-2.has-focus {
+		&:invalid {
+			& + label {
+				overflow: visible;
+				&:after {
+					content: 'CV Required';
+					position: absolute;
+					left: 0;
+					bottom: -5px;
+					color: #f2395a;
+					font-weight: bold;
+					transform: translateY(100%);
+				}
+			}
+		}
+	}
 }
