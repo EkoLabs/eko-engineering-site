@@ -121,20 +121,10 @@ function ContactForm(props) {
                                 {/* <option value="NYC">NYC</option> */}
                             </select>
                         </div>
-                        { positionForm &&
                         <div className="form-field cvRow">
                             <label className="label" htmlFor="cv">CV</label>
                             <FileUploadInput name="cv" required/>
                         </div>
-                        }
-                        { !positionForm &&
-                        <div className="form-field cvRow">
-                            <label className="label" >Attachment (CV, a picture of your dog, whatever - make us happy!)</label>
-                            <FileUploadInput name="attachment"/>
-                        </div>
-
-                        }
-                        
                         <button type="submit"
                                 className="sendButton vaporButton"
                                 disabled={formDisabled}
