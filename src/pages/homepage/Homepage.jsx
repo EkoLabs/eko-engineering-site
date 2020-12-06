@@ -7,7 +7,7 @@ import Projects from "../../components/projects/Projects";
 import News from "../../components/news/News";
 import Investors from "../../components/investors/Investors";
 import Careers from "../../components/careers/Careers";
-import ContactUsForm from "../../components/contactUsForm/ContactUsForm";
+import ContactForm from "../../components/contactform/ContactForm";
 import Footer from "../../components/footer/Footer";
 import Office from "../../components/office/Office";
 import MobileMenu from "../../components/mobilemenu/MobileMenu";
@@ -27,7 +27,7 @@ function Homepage(){
             <Office/>
             <News/>
             <Investors/>
-            <ContactUsForm/>
+            <ContactForm/>
             <Footer/>
         </Fragment>
     )
