@@ -50,7 +50,7 @@ function ContactForm(props) {
     let error = formState === "error";
     let formDisabled = isSending || success;
     let positionForm = props.formType === 'position';
-    let formAction = `https://hooks.slack.com/services/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`;
+    let formAction = `https://hooks.slack.com/services/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`;
     let title = 'Contact Us';
     
     return (
