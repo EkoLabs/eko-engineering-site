@@ -161,7 +161,7 @@
     }
 
     .item {
-      width: 200px;
+      width: 265px;
       box-sizing: border-box;
       text-align: left;
       margin-left: -30px;
@@ -182,18 +182,23 @@
         font-family: "Stolzl-Light";
 
         @include for-phone-only {
-          margin-top: 59px;
+          font-size: 14px;
+          margin-top: 76px;
         }
 
       }
 
-      .description{
+      .description {
         font-size: 17px;
         color: white;
         line-height: 1.2;
         font-weight: 200;
 
-        a{
+        @include for-phone-only {
+          font-size: 14px;
+        }
+
+        a {
           color: var(--color3);
           &:hover{
             color: var(--color2);
