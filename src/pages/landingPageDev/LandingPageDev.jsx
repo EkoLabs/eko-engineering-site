@@ -1,5 +1,5 @@
 
-import React, {Fragment} from "react";
+import React from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import ContactForm from "../../components/contactform/ContactForm";
@@ -38,7 +38,7 @@ export default function LandingPageDev(props){
                         <li>Take JavaScript to the extreme</li>
                         <li>Shape the future of eCommerce and digital entertainment</li>
                         <li>Deliver features to millions of viewers</li>
-                        <li>Oh, did we mention that you’ll be joining <a href="https://www.duns100.co.il/rating/%D7%94%D7%99%D7%99%D7%98%D7%A7/%D7%94%D7%A1%D7%98%D7%90%D7%A8%D7%98%D7%90%D7%A4%D7%99%D7%9D_%D7%A9%D7%94%D7%9B%D7%99_%D7%98%D7%95%D7%91_%D7%9C%D7%A2%D7%91%D7%95%D7%93_%D7%91%D7%94%D7%9D#eko" target="_blank">one of Israel’s top 20 startups to work for in 2020 by Dun & Bradstreet?</a></li>
+                        <li>Oh, did we mention that you’ll be joining <a rel="noopener noreferrer" href="https://www.duns100.co.il/rating/%D7%94%D7%99%D7%99%D7%98%D7%A7/%D7%94%D7%A1%D7%98%D7%90%D7%A8%D7%98%D7%90%D7%A4%D7%99%D7%9D_%D7%A9%D7%94%D7%9B%D7%99_%D7%98%D7%95%D7%91_%D7%9C%D7%A2%D7%91%D7%95%D7%93_%D7%91%D7%94%D7%9D#eko" target="_blank">one of Israel’s top 20 startups to work for in 2020 by Dun & Bradstreet?</a></li>
                     </ul>
                     <div class="wrapup">If you’ve read this far, there’s a good chance we’d make a perfect match!</div>
                 </div>

@@ -8,7 +8,7 @@ function isTouchDevice() {
         return window.matchMedia(query).matches;
     }
 
-    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+    if ((('ontouchstart' in window) || window.DocumentTouch) && document instanceof DocumentTouch) {
         return true;
     }
 

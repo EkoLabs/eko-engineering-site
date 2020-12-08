@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import {isTouchDevice} from "../../utils";
 import BezierEasing from  "bezier-easing"
 import "./Projects.scss";
@@ -119,7 +119,7 @@ function Projects(){
 
     let hoverTimeout;
 
-    useEffect(() => {
+    useEffect (() => {
         itemsCoords = [];
         for (const gridItem of gridRef.current.querySelectorAll('.hex')){
             let coords = getOffset(gridItem);

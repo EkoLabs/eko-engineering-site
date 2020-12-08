@@ -31,10 +31,10 @@ function Position(props){
 
                 <h5>Want To Get To Know Us Even Better?</h5>
                 <ul>
-                    <li>Play with our <a target='_blank' href="https://eko.com/">interactive videos</a> and visit our <a target='_blank' href="https://developer.eko.com">developers site</a>.</li>
-                    <li>Find out what makes us laugh on <a target='_blank' href="https://twitter.com/ekoengi?lang=en">Twitter</a>.</li>
-                    <li>Discover what keeps our wheels turning on <a target='_blank' href="https://medium.com/ekoengineering">Medium</a>.</li>
-                    <li>Check out our open source projects on <a target='_blank' href="https://github.com/EkoLabs">Github</a> (We're especially excited for <a target='_blank' href="https://eko.engineering/sonorous/">Sonorous</a> - our new library for audio on the web)</li>
+                    <li>Play with our <a target='_blank' rel="noopener noreferrer" href="https://eko.com/">interactive videos</a> and visit our <a target='_blank' rel="noopener noreferrer" href="https://developer.eko.com">developers site</a>.</li>
+                    <li>Find out what makes us laugh on <a target='_blank' rel="noopener noreferrer" href="https://twitter.com/ekoengi?lang=en">Twitter</a>.</li>
+                    <li>Discover what keeps our wheels turning on <a target='_blank' rel="noopener noreferrer" href="https://medium.com/ekoengineering">Medium</a>.</li>
+                    <li>Check out our open source projects on <a target='_blank' rel="noopener noreferrer" href="https://github.com/EkoLabs">Github</a> (We're especially excited for <a target='_blank' rel="noopener noreferrer" href="https://eko.engineering/sonorous/">Sonorous</a> - our new library for audio on the web)</li>
                 </ul>
 
                 <div className="legal">

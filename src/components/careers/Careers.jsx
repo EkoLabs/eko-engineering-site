@@ -1,6 +1,5 @@
 import React from "react";
 import ScrollableAnchor from 'react-scrollable-anchor'
-import careersData from "../../careersData";
 import "./Careers.scss";
 
 import scanlines from "./scanlines.png";

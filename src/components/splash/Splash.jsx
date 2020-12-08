@@ -65,8 +65,6 @@ import "./Splash.scss";
                 noiseY = adjustNoise(noise.simplex2(a * s, 10));
 
                 random += randomness / 1000;
-                const randX = noise.simplex3(1, 0, random);
-                const randY = noise.simplex3(3, 0, random);
                 let x = noiseX * totalWidth/2 * 0.7 + totalWidth/2; // + randX;
                 let y = noiseY * totalHeight/2 * 0.7 + totalHeight/2;// + randY;
                 
