@@ -3,7 +3,7 @@ import "./ContactUsForm.scss";
 import Corgi from "../../media/thank-you-corgi.gif";
 import ScrollableAnchor from "react-scrollable-anchor";
 
-function ContactForm(props) {
+function ContactUsForm(props) {
     const [formState, setFormState] = useState("idle");
     let formRef = React.createRef();
 
@@ -50,7 +50,8 @@ function ContactForm(props) {
     let error = formState === "error";
     let formDisabled = isSending || success;
     let positionForm = props.formType === 'position';
-    let formAction = `https://hooks.slack.com/services/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`;
+    let formAction = `https://z3kpjry4f0.execute-api.us-east-1.amazonaws.com/default/ekoEngineering-contactUsForm`;
+
     let title = 'Contact Us';
     
     return (
@@ -169,4 +170,4 @@ function postToSlack(data, method, url) {
     });
 }
 
-export default ContactForm;
+export default ContactUsForm;
