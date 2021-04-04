@@ -37,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "archiver": "^5.3.0",
+    "aws-sdk": "^2.879.0",
+    "yargs": "^16.2.0"
   }
 }
