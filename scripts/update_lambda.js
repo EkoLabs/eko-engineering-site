@@ -27,7 +27,7 @@ function updateLambdaCode(lambdaDirName){
                 console.log('Lambda code is identical. Skipping update');
             }
         })
-        .catch(err => { throw err });
+        .catch(err => { throw  new Error(err) });
 }
 
 function createZipAndUploadLambda(lambdaDirName, functionName, hash){
@@ -63,7 +63,7 @@ function createZipAndUploadLambda(lambdaDirName, functionName, hash){
             lambda.updateFunctionConfiguration(UPDATE_CONFIG).promise()
                 .then( response => lambda.updateFunctionCode(UPDATE_PARAMS).promise())
                 .then( response => console.log(`lambda code for ${lambdaDirName} updated!`))
-                .catch( err => { throw err });
+                .catch( err => { throw  new Error(err) });
         }
     });
 
