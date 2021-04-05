@@ -35,6 +35,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install and Deploy 🚀
+        env:
+          AWS_REGION: us-east-1
         run: |
           npm install
           npm run deployLambdas
