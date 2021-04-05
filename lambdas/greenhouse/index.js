@@ -23,7 +23,7 @@ function getFormData(event) {
         };
     }
 
-    if (forms.includes(formData.form)) {
+    if (formData.form) {
         // eko engineering form
         const submission = formData.submission;
 

@@ -70,6 +70,8 @@ function createZipAndUploadLambda(lambdaDirName, functionName, hash){
     archive.finalize();
  }
 
-updateLambdaCode("greenhouse");
+if (yargs.argv.lambda){
+    updateLambdaCode(yargs.argv.lambda);
+}
 
 module.exports = updateLambdaCode;
