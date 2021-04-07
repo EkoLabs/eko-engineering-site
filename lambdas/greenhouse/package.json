@@ -1,3 +1,7 @@
 {
-  "name": "eko-engineering-greenhouse"
+  "name": "eko-engineering-greenhouse",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "busboy": "^0.3.1"
+  }
 }
