@@ -26,7 +26,7 @@ let data = {
         {
             title: "Marvel",
             subtitle: "Coke",
-            imageURL: "https://d2zoj4vo9uf0uk.cloudfront.net/wp-content/uploads/2016/02/07010009/ad_sharing_image_1920x1080.jpg",
+            imageURL: "https://res.cloudinary.com/dc9sc6x9m/image/upload/v1618393974/ad_sharing_image_1920x1080_ouldjl.jpg",
             URL: "https://eko.com/v/coke"
         },
         {
@@ -182,6 +182,8 @@ function Projects(){
         let itemData = data.projects[projectDataIndex];
 
         if (activeHexes.includes(x) && itemData) {
+                let transformedImageUrl = `https://res.cloudinary.com/dlkxfitke/image/fetch/w_330/${itemData.imageURL}`
+
                 hexItem = (
                     <li className="hex"
                         key={x}
@@ -190,7 +192,7 @@ function Projects(){
                     >
                         <div className="hexIn">
                             <a className="hexLink" href={itemData.URL} target="_blank" rel="noopener noreferrer">
-                                <img src={itemData.imageURL} alt=""/>
+                                <img src={transformedImageUrl} alt=""/>
                                 <div className="hexText">
                                     <div className="title">{itemData.title}</div>
                                     { itemData.subtitle &&  <div className="subtitle">{itemData.subtitle}</div> }
