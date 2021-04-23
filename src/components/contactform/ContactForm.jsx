@@ -52,7 +52,7 @@ function ContactForm(props) {
     let error = formState === "error";
     let formDisabled = isSending || success;
     let positionForm = props.formType === 'position';
-    let formAction = `https://sggrm9siwb.execute-api.us-east-1.amazonaws.com/yariv-stage`;
+    let formAction = `https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering`;
 
     let title = positionForm?`Shall we?`:'Questions about joining eko?';
     
