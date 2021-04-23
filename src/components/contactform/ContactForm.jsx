@@ -151,7 +151,10 @@ function ContactForm(props) {
                             
                         </div>
                         }
-                        {error && <div className="formMessage">Whoops! Something went wrong. Try again?</div> }
+                        {error && <div className="formMessage">
+                            <h5>Whoops! Something went wrong.</h5>
+                            <div>Wow. That's embarrassing. In the meantime, while we wake up someone from devOps to fix that you can e-mail your CV and details to <a href="mailto:jobs.tlv@eko.com">jobs.tlv@eko.com</a></div>
+                        </div> }
                     </form>
                 </div>
             </section>
