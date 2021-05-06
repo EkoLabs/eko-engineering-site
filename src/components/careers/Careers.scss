@@ -85,6 +85,11 @@
 
     @include for-tablet-landscape-up{
       width: 45%;
+
+      // if odd number, align last one to the left
+      &:nth-child(2n-1):last-child{
+        margin-right: 45%;
+      }
     }
 
     &:nth-child(2n - 1){

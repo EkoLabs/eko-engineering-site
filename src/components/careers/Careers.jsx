@@ -125,30 +125,40 @@ function Careers(){
                                 <div className="description"><a href="/positions/devops-engineer">Engineer</a></div>
                             </div>
                         </li>
-                        <li className="position">
-                            <div className="icon">
-                                <svg version="1.1" width="100%" viewBox="-100 -100 500 500">
-                                    <defs>
-                                        <mask id="qaCorgi">
-                                            <polygon fill="white" points="300,150 300,350 0,280 0,150 75,20 225,20"></polygon>
-                                        </mask>
-                                    </defs>
-                                    <polygon fill="red" className="glow" points="300,150 225,280 75,280 0,150 75,20 225,20" transform="scale(1.3) translate(-37 -34)" filter="url(#purple-glow)"></polygon>
-                                    <polygon className="hex" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
-                                    <g mask="url(#qaCorgi)">
-                                        <image xlinkHref={qaCorgi} width="203" height="228" transform="scale(1.3) translate(22 32)" />
-                                        <g filter="url(#scanlinesCutout)" transform="translate(0 0)" opacity="0.4">
-                                            <image xlinkHref={qaCorgi} width="203" height="228" transform="scale(1.3) translate(22 32)" />
-                                        </g>
-                                    </g>
-
-                                </svg>
-                            </div>
-                            <div className="item">
-                                <div className="title">QA</div>
-                                <div className="description"><a href="/positions/manual-qa-engineer">Engineer</a></div>
-                            </div>
-                        </li>
+                        {
+                        // <li className="position">
+                        //     <div className="icon">
+                        //         <svg version="1.1" width="100%" viewBox="-100 -100 500 500">
+                        //             <defs>
+                        //                 <mask id="qaCorgi">
+                        //                     <polygon fill="white"
+                        //                              points="300,150 300,350 0,280 0,150 75,20 225,20"></polygon>
+                        //                 </mask>
+                        //             </defs>
+                        //             <polygon fill="red" className="glow"
+                        //                      points="300,150 225,280 75,280 0,150 75,20 225,20"
+                        //                      transform="scale(1.3) translate(-37 -34)"
+                        //                      filter="url(#purple-glow)"></polygon>
+                        //             <polygon className="hex"
+                        //                      points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
+                        //             <g mask="url(#qaCorgi)">
+                        //                 <image xlinkHref={qaCorgi} width="203" height="228"
+                        //                        transform="scale(1.3) translate(22 32)"/>
+                        //                 <g filter="url(#scanlinesCutout)" transform="translate(0 0)" opacity="0.4">
+                        //                     <image xlinkHref={qaCorgi} width="203" height="228"
+                        //                            transform="scale(1.3) translate(22 32)"/>
+                        //                 </g>
+                        //             </g>
+                        //
+                        //         </svg>
+                        //     </div>
+                        //     <div className="item">
+                        //         <div className="title">QA</div>
+                        //         <div className="description"><a href="/positions/manual-qa-engineer">Engineer</a>
+                        //         </div>
+                        //     </div>
+                        // </li>
+                        }
                         <li className="position">
                             <div className="icon">
                                 <svg version="1.1" width="100%" viewBox="-100 -100 500 500">
