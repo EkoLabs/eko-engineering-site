@@ -5,23 +5,9 @@ object-assign
 */
 
 /*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-/*!
  * Jump.js 1.0.1 - A small, modern, dependency-free smooth scrolling library.
  * Copyright (c) 2016 Michael Cavalea - https://github.com/callmecavs/jump.js
  * License: MIT
- */
-
-/*!
- * repeat-string <https://github.com/jonschlinkert/repeat-string>
- *
- * Copyright (c) 2014-2015, Jon Schlinkert.
- * Licensed under the MIT License.
  */
 
 /** @license React v0.19.1
