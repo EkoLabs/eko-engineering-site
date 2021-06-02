@@ -106,7 +106,7 @@ exports.handler = async (event, context) => {
     let encodedKey = Buffer.from(GREENHOUSE_KEY).toString('base64');
     let authHeader = `Basic ${encodedKey}`;
 
-    console.log('Posting candidate data to greenhouse');
+    console.log('Posting candidate data to greenhouse, url ', jobPostTarget);
     console.log(candidateData);
 
     await axios
