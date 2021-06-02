@@ -57,6 +57,8 @@ function createResponse(message) {
 
 
 exports.handler = async (event, context) => {
+    console.log('starting to parse')
+
     try {
         await parser(event);
     } catch (e){
@@ -103,6 +105,9 @@ exports.handler = async (event, context) => {
     let jobPostTarget = `https://boards-api.greenhouse.io/v1/boards/${jobData.boardToken}/jobs/${jobData.jobId}`
     let encodedKey = Buffer.from(GREENHOUSE_KEY).toString('base64');
     let authHeader = `Basic ${encodedKey}`;
+
+    console.log('Posting candidate data to greenhouse');
+    console.log(candidateData);
 
     await axios
         .post(jobPostTarget, {
