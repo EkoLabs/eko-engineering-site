@@ -46,7 +46,7 @@ Sure, we use all the tools and libraries cool kids like (React, Redux, Angular, 
         },
         {
             title: 'Something Else',
-            introText: `We don't have other openings right now, but we’re always looking for great people to join our team, so feel free to send us your resume anyhow. Who knows, we might have something for you in the future.`
+            greenhouseId: 5302745002
         }
     ]
 };
