@@ -16,7 +16,7 @@ function App() {
       return <Route path={positionSlug}
              exact
              render={props => {
-                 return <PositionPage {...props} title={positionData.title}/>
+                 return <PositionPage {...props} title={positionData.title} jobId={positionData.greenhouseId}/>
              }}
              key={positionData.title}
       />

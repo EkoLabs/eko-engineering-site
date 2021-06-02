@@ -4,6 +4,12 @@ import Corgi from "../../media/thank-you-corgi.gif";
 import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx'
 import ScrollableAnchor from "react-scrollable-anchor";
 
+const queryParams = getQueryParams();
+
+let formActions = [`https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering`,
+                   `https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering-greenhouse`
+];
+
 function ContactForm(props) {
     const [formState, setFormState] = useState("idle");
 
@@ -19,8 +25,12 @@ function ContactForm(props) {
         formData.append('_date', israelTime);
 
         setFormState("sending");
-        makeRequest(formData, form.method, form.action)
-            .then(()=>setFormState("success"))
+        let formPromises = formActions.map( url => makeRequest(formData, form.method, url));
+        Promise.all(formPromises)
+            .then(()=> {
+                setFormState("success");
+                document.querySelector('section#contact').scrollIntoView({behavior: "smooth"}) // refocus on section
+            })
             .catch(()=>setFormState("error"));
 
         window.fbq('track', 'Contact');
@@ -28,21 +38,7 @@ function ContactForm(props) {
         return false;
     }
 
-    function getQueryParams() {
-        const queryParamsInterface = new URLSearchParams(window.location.search);
-        const entries = queryParamsInterface.entries();
-        let urlParams = {};
-
-        for (const [key, value] of entries) { 
-            urlParams[key] = value;
-        }
-
-        return urlParams;
-    }
-
     function queryParamsFields() {
-        const queryParams = getQueryParams();
-
         return Object.keys(queryParams)
             .map(paramKey => <input key={paramKey} type="hidden" name={paramKey} value={queryParams[paramKey]} />)
     }
@@ -52,23 +48,21 @@ function ContactForm(props) {
     let error = formState === "error";
     let formDisabled = isSending || success;
     let positionForm = props.formType === 'position';
-    let formAction = `https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering`;
 
     let title = positionForm?`Shall we?`:'Questions about joining eko?';
-    
+
     return (
         <ScrollableAnchor id={'contact'}>
             <section className="contact" id="contact">
                 <div className={`${success ? 'success-hide' : ''} content`}>
                     <h4>{title}</h4>
                     <form className="contact-form"
-                          action={formAction}
                           method="POST"
                           ref={formRef}
                           onSubmit={doSubmit}
                     >
                         { queryParamsFields() }
-                        <input type="hidden" name="_next" value="" />
+                        <input type="hidden" name="jobId" value={props.jobId} />
                         { positionForm && <input type="hidden" name="positionTitle" value={props.positionTitle} /> }
 
                         <div className="form-field">
@@ -168,7 +162,6 @@ function makeRequest(data, method, url) {
         xhr.open(method, url);
         xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
-                document.querySelector('section#contact').scrollIntoView({behavior: "smooth"}) // refocus on section
                 resolve(xhr.response);
             } else {
                 reject({
@@ -193,6 +186,18 @@ function makeRequest(data, method, url) {
         };
         xhr.send(data);
     });
+}
+
+function getQueryParams() {
+    const queryParamsInterface = new URLSearchParams(window.location.search);
+    const entries = queryParamsInterface.entries();
+    let urlParams = {};
+
+    for (const [key, value] of entries) {
+        urlParams[key] = value;
+    }
+
+    return urlParams;
 }
 
 export default ContactForm;

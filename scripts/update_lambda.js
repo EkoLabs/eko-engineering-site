@@ -6,7 +6,7 @@ const hashFiles = require('hash-files');
 const yargs = require('yargs');
 const archiver = require('archiver');
 const AWS = require('aws-sdk');
-AWS.config.region = process.env.AWS_REGION; // set your Environment Variables...
+AWS.config.region = process.env.AWS_REGION || "us-east-1";
 
 const lambda = new AWS.Lambda();
 

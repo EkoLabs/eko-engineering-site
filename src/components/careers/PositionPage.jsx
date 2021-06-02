@@ -20,7 +20,7 @@ function PositionPage(props){
             <Header/>
             <Splash titleText={props.title} hideCTA/>
             <Position title={props.title} />
-            <ContactForm formType="position" positionTitle={props.title} />
+            <ContactForm formType="position" positionTitle={props.title} jobId={props.jobId}  />
             <About showTitle={true}/>
             <Tech/>
             <Projects/>

@@ -1,7 +1,9 @@
 const axios = require('axios')
+const Busboy = require('busboy');
+const getQuestionIds = require('jobBoardParser').getQuestionIds;
+
 const GREENHOUSE_KEY = process.env.GREENHOUSE_KEY;
 
-const Busboy = require('busboy');
 
 const parser = (event) => new Promise((resolve, reject) => {
     const busboy = new Busboy({
@@ -67,8 +69,14 @@ exports.handler = async (event, context) => {
 
     let jobData ={
         boardToken: "ekoisrael",
-        jobId: 5016885002
+        jobId: formData.jobId
     }
+
+    if (!formData.jobId){
+        console.error("Missing job id!");
+    }
+
+    let questionIds = await getQuestionIds(formData.jobId);
 
     // form has only one field for text, and greenhouse requires first and last names, so we split a first space
     let [firstName, ...moreNames] = formData.name.split(" ")
@@ -82,11 +90,15 @@ exports.handler = async (event, context) => {
         phone: formData.phone,
         resume_content: resumeContent,
         resume_content_filename: formData.files[0].fileName,
-        custom_fields: {
-            "how_did_you_hear_about_us": formData.howDidYouHearAboutUs,
-            "_something_interesting_about_yourself_": formData.message
-        },
     }
+
+    // translate between the form field names that we got from the site to the proper questions on GH
+    for (let key of Object.keys(questionIds)){
+        if (formData[key]){
+            candidateData[questionIds[key]] = formData[key];
+        }
+    }
+
 
     let jobPostTarget = `https://boards-api.greenhouse.io/v1/boards/${jobData.boardToken}/jobs/${jobData.jobId}`
     let encodedKey = Buffer.from(GREENHOUSE_KEY).toString('base64');
