@@ -43,9 +43,9 @@ const parser = (event) => new Promise((resolve, reject) => {
 });
 
 
-function createResponse(message) {
+function createResponse(message, statusCode) {
     return {
-        'statusCode': 200,
+        'statusCode': statusCode || 200,
         // 'headers': { 'Content-Type': 'application/json' },
         headers: {
             "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
@@ -76,6 +76,7 @@ exports.handler = async (event, context) => {
 
     if (!formData.jobId){
         console.error("Missing job id!");
+        return createResponse("Missing job id", 400);
     }
 
     let questionIds = await getQuestionIds(formData.jobId);
