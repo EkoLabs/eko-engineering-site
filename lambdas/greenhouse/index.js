@@ -1,5 +1,6 @@
 const axios = require('axios')
 const Busboy = require('busboy');
+const sanitizeFilename = require("sanitize-filename");
 const getQuestionIds = require('jobBoardParser').getQuestionIds;
 
 const GREENHOUSE_KEY = process.env.GREENHOUSE_KEY;
@@ -92,7 +93,7 @@ exports.handler = async (event, context) => {
         email: formData.email,
         phone: formData.phone,
         resume_content: resumeContent,
-        resume_content_filename: formData.files[0].fileName,
+        resume_content_filename: sanitizeFilename(formData.files[0].fileName),
     }
 
     // translate between the form field names that we got from the site to the proper questions on GH
@@ -124,6 +125,7 @@ exports.handler = async (event, context) => {
         .catch(error => {
             console.error('Greenhouse post error!', error);
             console.error('Dumping form data', JSON.stringify(event.body));
+            return createResponse("Error posting to greenhouse", 500);
         })
 
     return createResponse();
