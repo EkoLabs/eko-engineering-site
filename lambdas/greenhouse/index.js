@@ -1,6 +1,5 @@
 const axios = require('axios')
 const Busboy = require('busboy');
-const sanitizeFilename = require("sanitize-filename");
 const getQuestionIds = require('jobBoardParser').getQuestionIds;
 
 const GREENHOUSE_KEY = process.env.GREENHOUSE_KEY;
@@ -46,7 +45,7 @@ const parser = (event) => new Promise((resolve, reject) => {
 
 function createResponse(message, statusCode) {
     return {
-        'statusCode': statusCode || 200,
+        'statusCode': (typeof statusCode !== 'undefined') ? statusCode : 200,
         // 'headers': { 'Content-Type': 'application/json' },
         headers: {
             "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
@@ -130,3 +129,8 @@ exports.handler = async (event, context) => {
 
     return createResponse();
 };
+
+
+function sanitizeFilename(s){
+    return s.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+}
