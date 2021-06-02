@@ -132,5 +132,5 @@ exports.handler = async (event, context) => {
 
 
 function sanitizeFilename(s){
-    return s.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    return s.replace(/[^a-z0-9\.]/gi, '_').toLowerCase();
 }
