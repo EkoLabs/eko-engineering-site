@@ -4,6 +4,8 @@ import Corgi from "../../media/thank-you-corgi.gif";
 import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx'
 import ScrollableAnchor from "react-scrollable-anchor";
 
+import careersData from '../../careersData';
+
 const queryParams = getQueryParams();
 
 let formActions = [`https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering`,
@@ -11,6 +13,7 @@ let formActions = [`https://04g1c14c98.execute-api.us-east-1.amazonaws.com/defau
 ];
 
 function ContactForm(props) {
+    let positionData = careersData.positions.find(position => position.title === props.positionTitle);
     const [formState, setFormState] = useState("idle");
 
     let formRef = React.createRef();
@@ -62,7 +65,7 @@ function ContactForm(props) {
                           onSubmit={doSubmit}
                     >
                         { queryParamsFields() }
-                        <input type="hidden" name="jobId" value={props.jobId} />
+                        <input type="hidden" name="jobId" value={positionData.greenhouseId} />
                         { positionForm && <input type="hidden" name="positionTitle" value={props.positionTitle} /> }
 
                         <div className="form-field">

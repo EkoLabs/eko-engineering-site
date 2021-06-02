@@ -7,7 +7,6 @@ import careersData from "./careersData";
 import PositionPage from "./components/careers/PositionPage";
 import {getUrlParameter, isTouchDevice} from "./utils";
 import LandingPageDev from "./pages/landingPageDev/LandingPageDev";
-import LandingPageQa from "./pages/landingPageQa/LandingPageQa";
 
 function App() {
 
@@ -16,7 +15,7 @@ function App() {
       return <Route path={positionSlug}
              exact
              render={props => {
-                 return <PositionPage {...props} title={positionData.title} jobId={positionData.greenhouseId}/>
+                 return <PositionPage {...props} title={positionData.title}/>
              }}
              key={positionData.title}
       />
@@ -35,7 +34,7 @@ function App() {
                   { /* <Route path="/" exact component={Placeholder} /> */}
                   <Route exact path="/sonorous" component={Sonorous} />
                   <Route exact path="/letstalkdev" component={LandingPageDev} />
-                  <Route exact path="/letstalkqa" component={LandingPageQa} />
+                  {/*<Route exact path="/letstalkqa" component={LandingPageQa} />*/}
                   <Redirect exact from={easterEggCtaPath} to={easterEggUtmParams} />
                   <Route path="/" component={Homepage} />
             </Switch>
