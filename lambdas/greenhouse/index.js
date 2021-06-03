@@ -136,9 +136,9 @@ exports.handler = async (event, context) => {
         })
 
     if (hasError){
-        sendToSlack(`⚠️ ERROR ⚠ ️: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+        await sendToSlack(`⚠️ ERROR ⚠ ️: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
     } else {
-        sendToSlack(`New candidate: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+        await sendToSlack(`New candidate: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
     }
 
     if (hasError){
@@ -150,6 +150,7 @@ exports.handler = async (event, context) => {
 
 
 async function sendToSlack(message){
+    console.log("Sending message to slack:", message);
     return await axios
         .post('https://hooks.slack.com/services/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', message)
         .then(() => console.log('Successfully posted to slack'))
