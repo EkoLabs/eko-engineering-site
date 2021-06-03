@@ -136,12 +136,31 @@ exports.handler = async (event, context) => {
         })
 
     if (hasError){
+        await sendToSlack(`⚠️ ERROR ⚠ ️: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+    } else {
+        await sendToSlack(`New candidate: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+    }
+
+    if (hasError){
         return createResponse("Error posting to greenhouse", 500);
     } else {
         return createResponse();
     }
 };
 
+
+async function sendToSlack(message){
+    return await fetch('https://hooks.slack.com/services/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', {
+        method: 'POST',
+        body: message,
+    })
+    .then(() => {
+        console.log('Successfully posted to slack');
+    })
+    .catch((error) => {
+        console.error('Failed forwarding to Slack', error);
+    });
+}
 
 function sanitizeFilename(s){
     return s.replace(/[^a-z0-9\.]/gi, '_').toLowerCase();
