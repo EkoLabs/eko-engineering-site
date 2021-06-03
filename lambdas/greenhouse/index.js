@@ -118,8 +118,8 @@ exports.handler = async (event, context) => {
                 "Content-Type": "application/json"
             }})
         .then(res => {
+            console.log('response', res)
             console.log(`statusCode: ${res.statusCode}`)
-            // console.log('res', res)
         })
         .catch(error => {
             console.error('Greenhouse post error!', error);

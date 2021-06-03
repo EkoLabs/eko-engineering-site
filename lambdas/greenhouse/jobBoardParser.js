@@ -27,7 +27,7 @@ function getQuestionIds(jobId){
                     }
                     questionIds[key] = questionData.fields[0].name;
                 }
-                console.log(questionIds);
+                // console.log(questionIds);
                 resolve(questionIds);
             })
             .catch(error => thr(error));
