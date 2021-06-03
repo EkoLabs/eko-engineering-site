@@ -83,12 +83,18 @@ exports.handler = async (event, context) => {
 
     // form has only one field for text, and greenhouse requires first and last names, so we split a first space
     let [firstName, ...moreNames] = formData.name.split(" ")
+    let lastName = moreNames.join(" ");
+
+    // Greenhouse requires a last name in the job board ingestion API. Some people don't enter that :(
+    if (lastName === ""){
+        lastName = "NO_LAST_NAME";
+    }
 
     let resumeContent = formData.files[0].file.toString('base64');
 
     let candidateData = {
         first_name: firstName,
-        last_name: moreNames.join(" "),
+        last_name: lastName,
         email: formData.email,
         phone: formData.phone,
         resume_content: resumeContent,
@@ -110,6 +116,8 @@ exports.handler = async (event, context) => {
     console.log('Posting candidate data to greenhouse, url ', jobPostTarget);
     console.log(candidateData);
 
+    let hasError = null;
+
     await axios
         .post(jobPostTarget, {
             ...candidateData
@@ -124,10 +132,14 @@ exports.handler = async (event, context) => {
         .catch(error => {
             console.error('Greenhouse post error!', error);
             console.error('Dumping form data', JSON.stringify(event.body));
-            return createResponse("Error posting to greenhouse", 500);
+            hasError = true;
         })
 
-    return createResponse();
+    if (hasError){
+        return createResponse("Error posting to greenhouse", 500);
+    } else {
+        return createResponse();
+    }
 };
 
 
