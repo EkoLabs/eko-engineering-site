@@ -3,6 +3,7 @@ const Busboy = require('busboy');
 const getQuestionIds = require('jobBoardParser').getQuestionIds;
 
 const GREENHOUSE_KEY = process.env.GREENHOUSE_KEY;
+const SLACK_HOOK = process.env.SLACK_HOOK;
 
 
 const parser = (event) => new Promise((resolve, reject) => {
@@ -150,9 +151,9 @@ exports.handler = async (event, context) => {
 
 
 async function sendToSlack(message){
-    console.log("Sending message to slack:", message);
+    console.log("Sending message to slack:", message, SLACK_HOOK);
     return await axios
-        .post('https://hooks.slack.com/services/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', message)
+        .post(SLACK_HOOK, message)
         .then(() => console.log('Successfully posted to slack'))
         .catch((error) => console.error('Failed forwarding to Slack', error));
 }
