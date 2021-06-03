@@ -1,6 +1,6 @@
 const axios = require('axios')
 const Busboy = require('busboy');
-const getQuestionIds = require('jobBoardParser').getQuestionIds;
+const getQuestionIds = require('./jobBoardParser').getQuestionIds;
 
 const GREENHOUSE_KEY = process.env.GREENHOUSE_KEY;
 const SLACK_HOOK = process.env.SLACK_HOOK;
@@ -137,9 +137,9 @@ exports.handler = async (event, context) => {
         })
 
     if (hasError){
-        await sendToSlack(`⚠️ ERROR ⚠ ️: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+        await sendToSlack(':warning', 'ERROR', `${candidateData.first_name} ${candidateData.last_name}` ,`${candidateData.email}`);
     } else {
-        await sendToSlack(`New candidate: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+        await sendToSlack(':new:', `New candidate`, `${candidateData.first_name} ${candidateData.last_name}`, `${candidateData.email}`);
     }
 
     if (hasError){
@@ -150,10 +150,17 @@ exports.handler = async (event, context) => {
 };
 
 
-async function sendToSlack(message){
+async function sendToSlack(icon_emoji, message, name, email){
+
+    let outputMessage = JSON.stringify({
+        username: name,
+        icon_emoji: icon_emoji,
+        text: `${message}\n✉️ ${email}`,
+    });
+
     console.log("Sending message to slack:", message, SLACK_HOOK);
     return await axios
-        .post(SLACK_HOOK, message)
+        .post(SLACK_HOOK, outputMessage)
         .then(() => console.log('Successfully posted to slack'))
         .catch((error) => console.error('Failed forwarding to Slack', error));
 }
