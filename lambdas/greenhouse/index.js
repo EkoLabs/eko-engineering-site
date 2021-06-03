@@ -136,9 +136,9 @@ exports.handler = async (event, context) => {
         })
 
     if (hasError){
-        await sendToSlack(`⚠️ ERROR ⚠ ️: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+        sendToSlack(`⚠️ ERROR ⚠ ️: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
     } else {
-        await sendToSlack(`New candidate: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
+        sendToSlack(`New candidate: ${candidateData.first_name} ${candidateData.last_name} / ${candidateData.email}`);
     }
 
     if (hasError){
@@ -150,16 +150,10 @@ exports.handler = async (event, context) => {
 
 
 async function sendToSlack(message){
-    return await fetch('https://hooks.slack.com/services/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', {
-        method: 'POST',
-        body: message,
-    })
-    .then(() => {
-        console.log('Successfully posted to slack');
-    })
-    .catch((error) => {
-        console.error('Failed forwarding to Slack', error);
-    });
+    return await axios
+        .post('https://hooks.slack.com/services/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', message)
+        .then(() => console.log('Successfully posted to slack'))
+        .catch((error) => console.error('Failed forwarding to Slack', error));
 }
 
 function sanitizeFilename(s){
