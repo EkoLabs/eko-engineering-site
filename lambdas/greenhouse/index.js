@@ -91,7 +91,18 @@ exports.handler = async (event, context) => {
         lastName = "NO_LAST_NAME";
     }
 
-    let resumeContent = formData.files[0].file.toString('base64');
+    let resumeFile = formData.files[0];
+    let resumeFilename;
+    let resumeContent;
+
+    if (resumeFile){
+        resumeContent = resumeFile.file.toString('base64');
+        resumeFilename = sanitizeFilename(resumeFile.fileName);
+    } else {
+        console.error("no resume file found!");
+        hasError = true;
+    }
+
 
     let candidateData = {
         first_name: firstName,
@@ -99,7 +110,7 @@ exports.handler = async (event, context) => {
         email: formData.email,
         phone: formData.phone,
         resume_content: resumeContent,
-        resume_content_filename: sanitizeFilename(formData.files[0].fileName),
+        resume_content_filename: resumeFilename,
     }
 
     // translate between the form field names that we got from the site to the proper questions on GH
