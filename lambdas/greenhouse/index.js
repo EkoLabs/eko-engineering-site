@@ -150,7 +150,7 @@ exports.handler = async (event, context) => {
     if (hasError){
         await sendToSlack(':warning', 'ERROR', `${candidateData.first_name} ${candidateData.last_name}` ,`${candidateData.email}`);
     } else {
-        await sendToSlack(':new:', `New candidate`, `${candidateData.first_name} ${candidateData.last_name}`, `${candidateData.email}`);
+        await sendToSlack(':new:', `💻 ${formData.positionTitle}`, `${candidateData.first_name} ${candidateData.last_name}`, `${candidateData.email}`);
     }
 
     if (hasError){
