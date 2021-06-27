@@ -153,9 +153,9 @@ exports.handler = async (event, context) => {
         let message = `💻 ${formData.positionTitle}`;
 
         // get utm params from form data
-        for (let key of formData){
-            if (key.includes("utm_")){
-                message+=`\n🏷️ ${key}: ${formData[key]}`;
+        for (let key of Object.keys(formData)){
+            if (key.includes("utm_")) {
+                message += `\n🏷️ ${key}: ${formData[key]}`;
             }
         }
 
