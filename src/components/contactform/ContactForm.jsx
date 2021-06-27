@@ -1,12 +1,11 @@
 import React, { useState } from "react";
+import ScrollableAnchor from "react-scrollable-anchor";
 import "./ContactForm.scss";
 import Corgi from "../../media/thank-you-corgi.gif";
 import FileUploadInput from '../FileUploadInput/FileUploadInput.jsx'
-import ScrollableAnchor from "react-scrollable-anchor";
+import {getAllUTMParams} from "../../UTM_service";
 
 import careersData from '../../careersData';
-
-const queryParams = getQueryParams();
 
 let formActions = [`https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering`,
                    `https://04g1c14c98.execute-api.us-east-1.amazonaws.com/default/eko-engineering-greenhouse`
@@ -42,8 +41,9 @@ function ContactForm(props) {
     }
 
     function queryParamsFields() {
-        return Object.keys(queryParams)
-            .map(paramKey => <input key={paramKey} type="hidden" name={paramKey} value={queryParams[paramKey]} />)
+        let utmParams = getAllUTMParams();
+        return Object.keys(utmParams)
+            .map(param => <input key={param} type="hidden" name={param} value={utmParams[param]} />)
     }
 
     let isSending = formState === 'sending';
@@ -190,17 +190,4 @@ function makeRequest(data, method, url) {
         xhr.send(data);
     });
 }
-
-function getQueryParams() {
-    const queryParamsInterface = new URLSearchParams(window.location.search);
-    const entries = queryParamsInterface.entries();
-    let urlParams = {};
-
-    for (const [key, value] of entries) {
-        urlParams[key] = value;
-    }
-
-    return urlParams;
-}
-
 export default ContactForm;
