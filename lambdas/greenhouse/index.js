@@ -150,7 +150,16 @@ exports.handler = async (event, context) => {
     if (hasError){
         await sendToSlack(':warning', 'ERROR', `${candidateData.first_name} ${candidateData.last_name}` ,`${candidateData.email}`);
     } else {
-        await sendToSlack(':new:', `💻 ${formData.positionTitle}`, `${candidateData.first_name} ${candidateData.last_name}`, `${candidateData.email}`);
+        let message = `💻 ${formData.positionTitle}`;
+
+        // get utm params from form data
+        for (let key of formData){
+            if (key.includes("utm_")){
+                message+=`\n🏷️ ${key}: ${formData[key]}`;
+            }
+        }
+
+        await sendToSlack(':new:', message, `${candidateData.first_name} ${candidateData.last_name}`, `${candidateData.email}`);
     }
 
     if (hasError){
