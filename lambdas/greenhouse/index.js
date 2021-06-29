@@ -95,6 +95,8 @@ exports.handler = async (event, context) => {
     let resumeFilename;
     let resumeContent;
 
+    let hasError = null;
+
     if (resumeFile){
         resumeContent = resumeFile.file.toString('base64');
         resumeFilename = sanitizeFilename(resumeFile.fileName);
@@ -127,8 +129,6 @@ exports.handler = async (event, context) => {
 
     console.log('Posting candidate data to greenhouse, url ', jobPostTarget);
     console.log(candidateData);
-
-    let hasError = null;
 
     await axios
         .post(jobPostTarget, {
