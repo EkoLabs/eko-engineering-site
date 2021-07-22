@@ -111,6 +111,7 @@ exports.handler = async (event, context) => {
         resumeFilename = sanitizeFilename(resumeFile.fileName);
     } else {
         console.error("no resume file found!");
+        console.error('Dumping event:', JSON.stringify(event));
         hasError = true;
     }
 
