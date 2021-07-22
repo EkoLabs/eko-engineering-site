@@ -7,8 +7,17 @@ const SLACK_HOOK = process.env.SLACK_HOOK;
 
 
 const parser = (event) => new Promise((resolve, reject) => {
+
+    // busboy sometimes fails on lambdas when headers contain "Content-Type" instead of lowercase "content-type" *shrug*
+    // see https://github.com/mscdex/busboy/issues/210
+    // eg https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Feko-engineering-greenhouse/log-events/2021$252F07$252F06$252F$255B$2524LATEST$255D63b60025fc614f168540cd5503617ebb
+    let normalizedHeaders = Object.keys(event.headers).reduce((newHeaders, key) => {
+        newHeaders[key.toLowerCase()] = event.headers[key];
+        return newHeaders;
+    }, {});
+
     const busboy = new Busboy({
-        headers: event.headers
+        headers: normalizedHeaders
     });
 
     let result = {
