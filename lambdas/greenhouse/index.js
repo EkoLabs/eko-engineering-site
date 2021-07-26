@@ -92,7 +92,7 @@ exports.handler = async (event, context) => {
     let questionIds = await getQuestionIds(formData.jobId);
 
     // form has only one field for text, and greenhouse requires first and last names, so we split a first space
-    let [firstName, ...moreNames] = formData.name.split(" ")
+    let [firstName, ...moreNames] = formData.name.trim().split(" ")
     let lastName = moreNames.join(" ");
 
     // Greenhouse requires a last name in the job board ingestion API. Some people don't enter that :(
