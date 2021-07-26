@@ -25,7 +25,11 @@ const parser = (event) => new Promise((resolve, reject) => {
     };
 
     busboy.on('file', (fieldname, file, filename, encoding, mimetype) => {
+        console.log('busboy got file', fieldname, filename, encoding, mimetype);
+
         file.on('data', data => {
+            console.log('busboy got file data');
+
             result.files.push({
                 file: data,
                 fileName: filename,
