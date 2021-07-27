@@ -46,6 +46,7 @@ const parser = (event) => new Promise((resolve, reject) => {
         try {
             result[fieldname] = JSON.parse(value);
         } catch (err) {
+            console.log(`busboy: json field parse error ${fieldname}`, value, err);
             result[fieldname] = value;
         }
     });
