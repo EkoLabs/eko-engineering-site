@@ -36,6 +36,10 @@ const parser = (event) => new Promise((resolve, reject) => {
                 contentType: mimetype
             });
         });
+
+        file.on('end', function() {
+            console.log('busboy: File [' + fieldname + '] Finished');
+        });
     });
 
     busboy.on('field', (fieldname, value) => {
