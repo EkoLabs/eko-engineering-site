@@ -29,14 +29,15 @@ const parser = (event) => new Promise((resolve, reject) => {
 
         file.on('data', data => {
             console.log('busboy got file data');
-        });
 
-        file.on('end', function() {
             result.files.push({
                 file: data,
                 fileName: filename,
                 contentType: mimetype
             });
+        });
+
+        file.on('end', function() {
             console.log('busboy: File [' + fieldname + '] Finished');
         });
     });
