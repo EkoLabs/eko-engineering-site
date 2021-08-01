@@ -75,7 +75,8 @@ function createResponse(message, statusCode) {
 
 
 exports.handler = async (event, context) => {
-    console.log('starting to parse')
+    console.log('starting to parse');
+    console.log('body', JSON.stringify(event.body));
 
     try {
         await parser(event);
