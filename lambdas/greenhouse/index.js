@@ -29,15 +29,14 @@ const parser = (event) => new Promise((resolve, reject) => {
 
         file.on('data', data => {
             console.log('busboy got file data');
+        });
 
+        file.on('end', function() {
             result.files.push({
                 file: data,
                 fileName: filename,
                 contentType: mimetype
             });
-        });
-
-        file.on('end', function() {
             console.log('busboy: File [' + fieldname + '] Finished');
         });
     });
@@ -46,7 +45,6 @@ const parser = (event) => new Promise((resolve, reject) => {
         try {
             result[fieldname] = JSON.parse(value);
         } catch (err) {
-            console.log(`busboy: json field parse error ${fieldname}`, value, err);
             result[fieldname] = value;
         }
     });
