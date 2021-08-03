@@ -76,13 +76,14 @@ function createResponse(message, statusCode) {
 
 exports.handler = async (event, context) => {
     console.log('starting to parse');
+    console.log('event', JSON.stringify(event));
     console.log('body', JSON.stringify(event.body));
 
     try {
         await parser(event);
     } catch (e){
         console.error('parse error!', e);
-        console.error('Dumping event:', JSON.stringify(event));
+        // console.error('Dumping event:', JSON.stringify(event));
     }
     let formData = event.body;
 
@@ -120,7 +121,7 @@ exports.handler = async (event, context) => {
         resumeFilename = sanitizeFilename(resumeFile.fileName);
     } else {
         console.error("no resume file found!");
-        console.error('Dumping event:', JSON.stringify(event));
+        // console.error('Dumping event:', JSON.stringify(event));
         hasError = true;
     }
 
