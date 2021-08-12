@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.3daf9ea3.chunk.css",
-    "main.js": "/static/js/main.c0b8ec8f.chunk.js",
-    "main.js.map": "/static/js/main.c0b8ec8f.chunk.js.map",
+    "main.css": "/static/css/main.15a31bc1.chunk.css",
+    "main.js": "/static/js/main.8925b3c5.chunk.js",
+    "main.js.map": "/static/js/main.8925b3c5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3cf35031.js",
     "runtime-main.js.map": "/static/js/runtime-main.3cf35031.js.map",
-    "static/js/2.b07a9079.chunk.js": "/static/js/2.b07a9079.chunk.js",
-    "static/js/2.b07a9079.chunk.js.map": "/static/js/2.b07a9079.chunk.js.map",
+    "static/js/2.334a3100.chunk.js": "/static/js/2.334a3100.chunk.js",
+    "static/js/2.334a3100.chunk.js.map": "/static/js/2.334a3100.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.bffc40e5cf1ff746a743b99a617dab65.js": "/precache-manifest.bffc40e5cf1ff746a743b99a617dab65.js",
+    "precache-manifest.e73084dd1a3b259c14b3dac92d3dd272.js": "/precache-manifest.e73084dd1a3b259c14b3dac92d3dd272.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.3daf9ea3.chunk.css.map": "/static/css/main.3daf9ea3.chunk.css.map",
-    "static/js/2.b07a9079.chunk.js.LICENSE.txt": "/static/js/2.b07a9079.chunk.js.LICENSE.txt",
+    "static/css/main.15a31bc1.chunk.css.map": "/static/css/main.15a31bc1.chunk.css.map",
+    "static/js/2.334a3100.chunk.js.LICENSE.txt": "/static/js/2.334a3100.chunk.js.LICENSE.txt",
     "static/media/LandingPageDev.scss": "/static/media/background.3e57ba37.png",
     "static/media/Forbes-0.jpg": "/static/media/Forbes-0.8a381bb2.jpg",
     "static/media/Forbes-1.png": "/static/media/Forbes-1.13d4041d.png",
@@ -40,6 +40,7 @@
     "static/media/Sonorous.scss": "/static/media/terrain_bg.7a7810c4.jpg",
     "static/media/frontend_corgi.png": "/static/media/frontend_corgi.4f15d366.png",
     "static/media/fullstack_corgi.png": "/static/media/fullstack_corgi.b7b21a23.png",
+    "static/media/github_icon.png": "/static/media/github_icon.71da360f.png",
     "static/media/happy-coding-0.jpg": "/static/media/happy-coding-0.59508697.jpg",
     "static/media/happy-coding-1.jpg": "/static/media/happy-coding-1.36b7fafd.jpg",
     "static/media/happy-hour.jpg": "/static/media/happy-hour.32507b75.jpg",
@@ -65,8 +66,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3cf35031.js",
-    "static/js/2.b07a9079.chunk.js",
-    "static/css/main.3daf9ea3.chunk.css",
-    "static/js/main.c0b8ec8f.chunk.js"
+    "static/js/2.334a3100.chunk.js",
+    "static/css/main.15a31bc1.chunk.css",
+    "static/js/main.8925b3c5.chunk.js"
   ]
 }
