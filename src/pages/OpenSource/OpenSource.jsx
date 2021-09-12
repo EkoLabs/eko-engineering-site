@@ -91,7 +91,7 @@ function OpenSource(props){
                 {featuredProjects}
             </ul>
 
-            <h5>More from EkoLabs<small> (the fancy name for our <a href="https://github.com/EkoLabs">Github</a> page)</small></h5>
+            <h5 className="ornament">More from EkoLabs<small> (the fancy name for our <a href="https://github.com/EkoLabs">Github</a> page)</small></h5>
             <svg version="1.1" width="100%" viewBox="-100 -100 500 500" className="svgDef">
                 <defs>
                     <mask id="hexMask">
