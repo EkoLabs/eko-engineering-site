@@ -136,6 +136,10 @@ h5.ornament{
   @include for-phone-only {
     text-align: center;
     margin-bottom: 30px;
+
+    small{
+      display: block;
+    }
   }
 
   small{
@@ -166,6 +170,10 @@ h5.ornament{
                          top 11px left 13px,
                          center right 1px,
                          right -10px top 30px;
+
+    @include for-phone-only {
+      top: 15px;
+    }
   }
 
 }

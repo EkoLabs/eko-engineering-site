@@ -14,8 +14,8 @@ let featuredProjects = [
         description: "a JavaScript audio library that streamlines working with web audio, enabling easy audio integration into web apps and games"
     },
     {
-        url: "https://github.com/EkoLabs/iframily",
-        thumbnail:"https://user-images.githubusercontent.com/3951311/81201022-71e32280-8fcd-11ea-9b9d-6adcf7fa6394.png",
+        url: "/iframily",
+        thumbnail:"https://camo.githubusercontent.com/9720e251a8dae2a3eda2f89d4bb9db497eb50c0349dc9efed0e53f3b45ad6157/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f656b6f2e636f6d2f732f696672616d696c792f636f646570656e2d7465747269732e706e67",
         name: 'iFramily',
         description: "Simplifies working and establishing communication between frames. It provides a simpler API than postMessage, which includes Promise-based responses, message queuing, and holding on to messages until both frames are ready to talk."
     },
@@ -49,10 +49,10 @@ let projects = [
         description: "A lightweight SDK that allows for easy integration of eko videos into webpages"
     },
     {
-        url: "https://github.com/EkoLabs/eko-js-sdk",
+        url: "https://github.com/EkoLabs/eko-react-sdk",
         thumbnail:githubIcon,
         name: 'eko-react-sdk',
-        description: "A react-based library for managing complex animations"
+        description: "A React component wrapper for eko-js-sdk which enables easy integration of eko videos into React apps"
     },
     {
         url: "https://github.com/EkoLabs/ios-native-sdk",
