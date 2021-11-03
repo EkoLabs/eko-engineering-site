@@ -45,6 +45,10 @@ Sure, we use all the tools and libraries cool kids like (React, Redux, Angular, 
             greenhouseId: 5030468002
         },
         {
+            title: 'Product Manager',
+            greenhouseId: 5653911002
+        },
+        {
             title: 'QA Engineer',
             greenhouseId: null
         },

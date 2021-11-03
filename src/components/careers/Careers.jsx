@@ -7,6 +7,7 @@ import frontEndCorgi from "./frontend_corgi.png";
 import backEndCorgi from "./backend_corgi.png";
 import fullstackCorgi from "./fullstack_corgi.png";
 import devopsCorgi from "./devops_corgi.png";
+import productCorgi from "./product_corgi.png";
 import qaCorgi from "./qa_corgi.png";
 import koala from "./koala.png";
 
@@ -123,6 +124,29 @@ function Careers(){
                             <div className="item">
                                 <div className="title">DevOps</div>
                                 <div className="description"><a href="/positions/devops-engineer">Engineer</a></div>
+                            </div>
+                        </li>
+                        <li className="position">
+                            <div className="icon">
+                                <svg version="1.1" width="100%" viewBox="-100 -100 500 500">
+                                    <defs>
+                                        <mask id="productCorgi">
+                                            <polygon fill="white" points="300,300 225,280 75,280 0,150 0,-100 400,-100 400,100"></polygon>
+                                        </mask>
+                                    </defs>
+                                    <polygon fill="red" className="glow" points="300,150 225,280 75,280 0,150 75,20 225,20" transform="scale(1.3) translate(-37 -34)" filter="url(#purple-glow)"></polygon>
+                                    <polygon className="hex" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
+                                    <g mask="url(#productCorgi)">
+                                        <image xlinkHref={productCorgi} width="203" height="228" transform="scale(2.1) translate(5 -48)" />
+                                        <g filter="url(#scanlinesCutout)" transform="translate(0 0)" opacity="0.4">
+                                            <image xlinkHref={productCorgi} width="203" height="228" transform="scale(2.1) translate(5 -48)" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div className="item">
+                                <div className="title">Product</div>
+                                <div className="description"><a href="/positions/product-manager">Manager</a></div>
                             </div>
                         </li>
                         {
