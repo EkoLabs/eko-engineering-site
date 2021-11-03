@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.4dfc9117.chunk.css",
-    "main.js": "/static/js/main.130e9054.chunk.js",
-    "main.js.map": "/static/js/main.130e9054.chunk.js.map",
+    "main.js": "/static/js/main.3de7ca5e.chunk.js",
+    "main.js.map": "/static/js/main.3de7ca5e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3cf35031.js",
     "runtime-main.js.map": "/static/js/runtime-main.3cf35031.js.map",
-    "static/js/2.8184226f.chunk.js": "/static/js/2.8184226f.chunk.js",
-    "static/js/2.8184226f.chunk.js.map": "/static/js/2.8184226f.chunk.js.map",
+    "static/js/2.aa5f7683.chunk.js": "/static/js/2.aa5f7683.chunk.js",
+    "static/js/2.aa5f7683.chunk.js.map": "/static/js/2.aa5f7683.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.919ee1a4db88415651733417a3696093.js": "/precache-manifest.919ee1a4db88415651733417a3696093.js",
+    "precache-manifest.43174cd7c06f6046b33187109ecf8ec9.js": "/precache-manifest.43174cd7c06f6046b33187109ecf8ec9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.4dfc9117.chunk.css.map": "/static/css/main.4dfc9117.chunk.css.map",
-    "static/js/2.8184226f.chunk.js.LICENSE.txt": "/static/js/2.8184226f.chunk.js.LICENSE.txt",
+    "static/js/2.aa5f7683.chunk.js.LICENSE.txt": "/static/js/2.aa5f7683.chunk.js.LICENSE.txt",
     "static/media/LandingPageDev.scss": "/static/media/background.3e57ba37.png",
     "static/media/Forbes-0.jpg": "/static/media/Forbes-0.8a381bb2.jpg",
     "static/media/Forbes-1.png": "/static/media/Forbes-1.13d4041d.png",
@@ -56,6 +56,7 @@
     "static/media/lunch.jpg": "/static/media/lunch.3ac26c11.jpg",
     "static/media/maayan.jpg": "/static/media/maayan.6299b364.jpg",
     "static/media/Tech.scss": "/static/media/paper_bg.063d920c.jpg",
+    "static/media/product_corgi.png": "/static/media/product_corgi.36021b38.png",
     "static/media/qa_corgi.png": "/static/media/qa_corgi.7c28f7cd.png",
     "static/media/ran.jpg": "/static/media/ran.3c7511e8.jpg",
     "static/media/ruel.jpg": "/static/media/ruel.2f5ad18f.jpg",
@@ -69,8 +70,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3cf35031.js",
-    "static/js/2.8184226f.chunk.js",
+    "static/js/2.aa5f7683.chunk.js",
     "static/css/main.4dfc9117.chunk.css",
-    "static/js/main.130e9054.chunk.js"
+    "static/js/main.3de7ca5e.chunk.js"
   ]
 }
