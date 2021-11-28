@@ -19,12 +19,6 @@ let featuredProjects = [
         name: 'iFramily',
         description: "Simplifies working and establishing communication between frames. It provides a simpler API than postMessage, which includes Promise-based responses, message queuing, and holding on to messages until both frames are ready to talk."
     },
-    {
-        url: "https://github.com/EkoLabs/react-native-background-downloader",
-        thumbnail: "https://camo.githubusercontent.com/217ce718b1223d4366aae38e1430b51ef1c586c0fbd29b87e4bbfbdb2056335f/68747470733a2f2f643177327a686e716379346c38662e636c6f756466726f6e742e6e65742f636f6e74656e742f66616c636f6e2f70726f64756374696f6e2f70726f6a656374732f563545454f585f666173742f524e42442d3139303730323038333335382e706e67",
-        name: 'react-native-background-downloader',
-        description: "A library for React-Native to help you download large files on iOS and Android both in the foreground and most importantly in the background."
-    },
 ]
     .map((item, i) => (
         <li className={`item-container`} key={i}>
