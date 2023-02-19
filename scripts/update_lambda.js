@@ -106,6 +106,10 @@ function createZip(lambdaDirPath){
     return promise;
 }
 
+function delay(t, v) {
+    return new Promise(resolve => setTimeout(resolve, t, v));
+}
+
 function uploadLambda(functionName, zipFilePath, description){
     let UPDATE_CONFIG = {
         FunctionName: functionName,
@@ -121,6 +125,7 @@ function uploadLambda(functionName, zipFilePath, description){
         console.log("Dry run - skipping actual upload")
     } else {
         lambda.updateFunctionConfiguration(UPDATE_CONFIG).promise()
+            .then( resposne => delay(3000))
             .then( response => lambda.updateFunctionCode(UPDATE_PARAMS).promise())
             .then( response => console.log(`lambda code for ${functionName} updated!`))
             .catch( err => { throw  new Error(err) });
