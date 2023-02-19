@@ -143,9 +143,11 @@ exports.handler = async (event, context) => {
     }
 
 
-    const greenhouseKey = (await archer.get('eko-engineering-site')).greenhouse_key;
+    const keys = await archer.get('eko-engineering-site');
+    console.log('got keys from archer');
+    const greenhouse_key = keys.greenhouse_key;
     let jobPostTarget = `https://boards-api.greenhouse.io/v1/boards/${jobData.boardToken}/jobs/${jobData.jobId}`
-    let encodedKey = Buffer.from(greenhouseKey).toString('base64');
+    let encodedKey = Buffer.from(greenhouse_key).toString('base64');
     let authHeader = `Basic ${encodedKey}`;
 
     console.log('Posting candidate data to greenhouse, url ', jobPostTarget);
