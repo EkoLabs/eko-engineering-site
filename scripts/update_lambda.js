@@ -14,6 +14,12 @@ let noUpload = yargs.argv.noUpload;
 
 const GLOB = '**/*.!(zip)';
 
+// this silly thing is a solution to
+// https://stackoverflow.com/questions/70286698/aws-lambda-resourceconflictexception-on-deployment
+function transformDescription(hash){
+    return `${hash} aws:states:opt-out`;
+}
+
 function updateLambdaCode(lambdaDirName){
     let package = require(`../lambdas/${lambdaDirName}/package.json`);
     let functionName = package.name;
@@ -33,11 +39,12 @@ function updateLambdaCode(lambdaDirName){
     .then(promiseValues => {
         [zipFilePath, contentHash, lambdaValue] = promiseValues;
 
-        if (lambdaValue.Description !== contentHash){
-            console.log(`Old lambda code hash is ${lambdaValue.Description}, new is ${contentHash}. Updating lambda code`);
+        let transformedDescription = transformDescription(contentHash);
+        if (lambdaValue.Description !== transformedDescription){
+            console.log(`Old lambda code hash is ${lambdaValue.Description}, new is ${transformedDescription}. Updating lambda code`);
             uploadLambda(functionName, zipFilePath, contentHash)
         } else {
-            console.log(lambdaValue.Description, contentHash);
+            console.log(lambdaValue.Description, transformDescription(contentHash));
             console.log('Lambda code is identical. Skipping update');
         }
     })
