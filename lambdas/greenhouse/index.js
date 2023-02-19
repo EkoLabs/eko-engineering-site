@@ -142,7 +142,7 @@ exports.handler = async (event, context) => {
         }
     }
 
-
+    console.log('getting keys from archer');
     const keys = await archer.get('eko-engineering-site');
     console.log('got keys from archer');
     const greenhouse_key = keys.greenhouse_key;

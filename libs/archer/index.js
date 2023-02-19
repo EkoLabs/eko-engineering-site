@@ -63,6 +63,7 @@ class Archer {
         // create secret name string
         let path = secretNameTemplate(this.env, domain);
         // fetch secret from secrets manager
+        console.log('aa', this.env, domain);
         try {
             console.log(`[archer] getting for path ${path}`);
             let secreteObj = await getSecret(path);
