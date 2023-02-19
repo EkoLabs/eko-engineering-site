@@ -8,28 +8,38 @@ AWS.config.update({
 const smngr = new AWS.SecretsManager();
 
 function getSecret(secretName) {
+    console.log('000');
     const paramsPromise = new Promise((resolve, reject) => {
         const params = {
             SecretId: secretName,
         };
+        console.log('111');
         smngr.getSecretValue(params, (err, data) => {
+            console.log('222');
             if (err) {
+                console.log('3333', err);
                 reject(err);
             } else {
                 let secretStr;
+                console.log('444');
                 if ('SecretString' in data) {
+                    console.log('555');
                     secretStr = data.SecretString;
                 } else if ('SecretBinary' in data) {
+                    console.log('666');
                     try {
+                        console.log('777');
                         const buff = Buffer.from(data.SecretBinary, 'base64');
                         secretStr = buff.toString('ascii');
                     } catch (buffErr) {
+                        console.log('888', buffErr);
                         reject(buffErr);
                     }
                 } else {
+                    console.log('999');
                     reject(new Error('no secret in response'));
                 }
-
+                console.log('1000');
                 resolve(secretStr);
             }
         });
@@ -63,7 +73,6 @@ class Archer {
         // create secret name string
         let path = secretNameTemplate(this.env, domain);
         // fetch secret from secrets manager
-        console.log('aa', this.env, domain);
         try {
             console.log(`[archer] getting for path ${path}`);
             let secreteObj = await getSecret(path);
