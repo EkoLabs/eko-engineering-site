@@ -3,7 +3,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "busboy": "^0.3.1",
-    "throw": "^1.1.1",
-    "archer": "../../libs/archer"
+    "throw": "^1.1.1"
   }
 }
