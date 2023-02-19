@@ -109,7 +109,8 @@ function createZip(lambdaDirPath){
 function uploadLambda(functionName, zipFilePath, description){
     let UPDATE_CONFIG = {
         FunctionName: functionName,
-        Description: description
+        Description: description,
+        Runtime: 'nodejs16.x'
     };
     let UPDATE_PARAMS = {
         FunctionName: functionName,
