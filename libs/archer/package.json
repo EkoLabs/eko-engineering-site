@@ -1,0 +1,12 @@
+{
+  "name": "archer",
+  "version": "2.0.10",
+  "description": "Access credentials with AWS secrets manager",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.670.0"
+  }
+}
